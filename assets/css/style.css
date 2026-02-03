@@ -703,8 +703,16 @@ body.editing-mode .section-delete-btn {
     .floating-toolbar,
     .section-delete-btn,
     .marker-delete-btn,
-    .btn-toggle-sidebar {
+    .btn-toggle-sidebar,
+    .user-actions-floating,
+    .header-tools {
         display: none !important;
+    }
+
+    .layout {
+        display: block;
+        overflow: visible;
+        height: auto;
     }
 
     .main-content {
@@ -721,13 +729,22 @@ body.editing-mode .section-delete-btn {
         margin-bottom: 20px;
     }
 
+    .secao-conteudo {
+        break-inside: auto;
+    }
+
     /* Keep headings with their images/content */
-    h3 {
+    h3,
+    .secao-conteudo h3 {
         break-after: avoid;
         page-break-after: avoid;
+        orphans: 3;
+        widows: 3;
     }
 
     .img-container {
+        break-inside: avoid;
+        page-break-inside: avoid;
         break-before: avoid;
         page-break-before: avoid;
     }

@@ -18,14 +18,22 @@
             <button class="header-btn" id="btn-edit-header" onclick="toggleEditMode()" title="Ativar Edição">
                 <span class="material-icons-round" id="icon-edit-header">edit</span>
             </button>
-            <button class="header-btn" onclick="handleMDExport()" title="Exportar Markdown">
-                <span class="material-icons-round">text_snippet</span>
-            </button>
-            <div class="header-divider"></div>
             <button class="header-btn logout-btn" onclick="adminLogout()" title="Sair">
                 <span class="material-icons-round">logout</span>
             </button>
-            <div class="header-divider"></div>
+        </div>
+
+        <!-- Public User Tools (Always visible) -->
+        <div class="header-tools">
+            <button class="header-btn" onclick="handleMDExport()" title="Baixar Markdown">
+                <span class="material-icons-round">text_snippet</span>
+            </button>
+            <button class="header-btn" onclick="shareManual()" title="Baixar HTML">
+                <span class="material-icons-round">download</span>
+            </button>
+            <button class="header-btn" onclick="window.print()" title="Imprimir PDF">
+                <span class="material-icons-round">print</span>
+            </button>
         </div>
 
         <span class="badge-versao editable-text">Versão {{ page.versao | default: "1.0" }}</span>

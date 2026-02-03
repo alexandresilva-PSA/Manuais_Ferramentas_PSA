@@ -34,10 +34,6 @@ function upgradeImagesToZoom() {
             <button class="btn-float" onclick="controlZoom(this, -0.2)" title="Menos Zoom">
                 <span class="material-icons-round">remove</span>
             </button>
-            <div style="width:1px; height:16px; background:#ddd; margin:0 4px;"></div>
-            <button class="btn-float" onclick="addMarker(this)" title="Adicionar Marcação">
-                <span class="material-icons-round" style="color:#EF4444">radio_button_unchecked</span>
-            </button>
         `;
         wrapper.appendChild(toolbar);
 
