@@ -1,4 +1,3 @@
-```
 ---
 layout: manual
 title: "DIFAL Inteligente"
