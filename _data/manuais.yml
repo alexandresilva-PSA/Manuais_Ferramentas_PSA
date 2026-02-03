@@ -1,31 +1,27 @@
-# Metadados dos Manuais PSA
-# Este arquivo é lido pelo Jekyll para gerar a navegação
+- title: "DIFAL Inteligente"
+  url: "/manuais/difal-inteligente/"
+  icon: "psychology"
+  version: "v1.5"
+  updated: "02/2026"
+  description: "Auditoria especializada para análise de itens e seleção de alíquotas. Permite validar a classificação fiscal e definir as regras tributárias de destino para o cálculo do diferencial."
 
-manuais:
-  - id: consulta-xmls
-    titulo: "Consulta de XMLs"
-    descricao: "Pesquisa e exportação de documentos fiscais eletrônicos"
-    versao: "3.0"
-    icone: "description"
-    cor: "#14B8A6"
+- title: "Consulta de XMLs"
+  url: "/manuais/consulta-xmls/"
+  icon: "inventory_2"
+  version: "v3.0"
+  updated: "01/2026"
+  description: "Central de consulta e quebra de documentos fiscais (NF-e/CT-e). Realize a busca filtrada, visualize os dados estruturados e faça downloads em lote dos arquivos XML."
 
-  - id: efd-icms
-    titulo: "EFD ICMS/IPI"
-    descricao: "Consulta e análise de arquivos SPED Fiscal"
-    versao: "1.0"
-    icone: "receipt_long"
-    cor: "#0D9488"
+- title: "Consulta EFD ICMS IPI"
+  url: "/manuais/efd-icms/"
+  icon: "analytics"
+  version: "v1.0"
+  updated: "02/2026"
+  description: "Ferramenta de quebra e consulta de arquivos SPED Fiscal. Processa o arquivo TXT para exibir os registros e blocos de forma organizada, facilitando a conferência das apurações."
 
-  - id: efd-contribuicoes
-    titulo: "EFD Contribuições"
-    descricao: "Consulta e exportação de escrituração PIS/COFINS"
-    versao: "2.0"
-    icone: "analytics"
-    cor: "#0F766E"
-
-  - id: difal-inteligente
-    titulo: "DIFAL Inteligente"
-    descricao: "Auditoria automatizada de diferencial de alíquotas"
-    versao: "1.0"
-    icone: "balance"
-    cor: "#84CC16"
+- title: "EFD Contribuições"
+  url: "/manuais/efd-contribuicoes/"
+  icon: "savings"
+  version: "v2.0"
+  updated: "02/2026"
+  description: "Consulta e estruturação do SPED Contribuições. Realiza a quebra do arquivo para visualização detalhada dos registros de PIS/COFINS, permitindo a exportação e conferência dos dados."

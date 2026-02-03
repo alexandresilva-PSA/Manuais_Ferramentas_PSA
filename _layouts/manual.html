@@ -35,7 +35,18 @@
         <!-- Main Content -->
         <main class="main-content">
             <div class="content-wrapper">
+                {% capture manual_content %}
                 {{ content }}
+                {% endcapture %}
+
+                {% comment %}
+                Resolve relative image paths to absolute URLs automatically.
+                This handles 'src="imagens/' by prepending the absolute site and page path.
+                {% endcomment %}
+
+                {% assign base_img_path = page.url | append: 'imagens/' | absolute_url %}
+                {% capture src_with_base %}src="{{ base_img_path }}{% endcapture %}
+                {{ manual_content | replace: 'src="imagens/', src_with_base }}
             </div>
         </main>
     </div>

@@ -32,49 +32,84 @@ function toggleEditMode() {
 
 // Export read-only HTML version
 function shareManual() {
+    // 1. Clone the entire document
     const clone = document.documentElement.cloneNode(true);
+    const baseUrl = window.location.href;
 
-    // 1. Remove admin toolbar
+    // 2. Remove administrative/editing elements
     const toolbar = clone.querySelector('#admin-toolbar');
     if (toolbar) toolbar.remove();
 
-    // 2. Remove section delete buttons
-    clone.querySelectorAll('.section-delete-btn').forEach(b => b.remove());
+    clone.querySelectorAll('.section-delete-btn, .marker-delete-btn').forEach(b => b.remove());
 
-    // 3. Remove marker delete buttons
-    clone.querySelectorAll('.marker-delete-btn').forEach(b => b.remove());
-
-    // 4. In floating toolbar, remove only the add marker button
+    // 3. Clean up floating toolbars (remove "Add Marker" button, keep zoom)
     clone.querySelectorAll('.floating-toolbar').forEach(ft => {
         const btnMarker = ft.querySelector('button[onclick*="addMarker"]');
         if (btnMarker) btnMarker.remove();
 
-        // Remove visual separator
         const divider = ft.querySelector('div[style*="width:1px"]');
         if (divider) divider.remove();
     });
 
-    // 5. Remove contenteditable (Read-Only)
+    // 4. Resolve Relative URLs to Absolute
+    // This ensures the downloaded HTML works standalone by fetching assets from the server
+
+    // Resolve Images
+    clone.querySelectorAll('img').forEach(img => {
+        const src = img.getAttribute('src');
+        if (src && !src.startsWith('http') && !src.startsWith('data:')) {
+            img.setAttribute('src', new URL(src, baseUrl).href);
+        }
+    });
+
+    // Resolve CSS
+    clone.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && !href.startsWith('http')) {
+            link.setAttribute('href', new URL(href, baseUrl).href);
+        }
+    });
+
+    // Resolve Scripts (and remove editor.js)
+    clone.querySelectorAll('script').forEach(script => {
+        const src = script.getAttribute('src');
+        if (src) {
+            if (src.includes('editor.js')) {
+                script.remove();
+            } else if (!src.startsWith('http')) {
+                script.setAttribute('src', new URL(src, baseUrl).href);
+            }
+        }
+    });
+
+    // 5. Remove contenteditable and editing classes
     clone.querySelectorAll('[contenteditable="true"]').forEach(el => {
         el.removeAttribute('contenteditable');
         el.classList.remove('editable-text', 'editable-area');
     });
 
     const body = clone.querySelector('body');
-    body.classList.remove('editing-mode');
+    if (body) body.classList.remove('editing-mode');
 
     // 6. Generate and download HTML
+    const pageTitle = document.querySelector('.header-title')?.textContent.trim() || 'Manual';
+    const fileName = `Manual_${pageTitle.replace(/[^a-z0-9]/gi, '_')}.html`;
+
     const htmlContent = '<!DOCTYPE html>\n' + clone.outerHTML;
     const blob = new Blob([htmlContent], { type: 'text/html' });
     const url = URL.createObjectURL(blob);
 
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'Manual_Leitura.html';
+    a.download = fileName;
     document.body.appendChild(a);
     a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+
+    // Cleanup with a small delay to ensure download starts in all browsers
+    setTimeout(() => {
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }, 100);
 }
 
 // Delete section
@@ -107,15 +142,21 @@ function exportAndCommit() {
     const markdown = convertToMarkdown();
 
     // 2. Download MD file
+    const pageTitle = document.querySelector('.header-title')?.textContent.trim() || 'manual';
+    const fileName = `manual_${pageTitle.replace(/[^a-z0-9]/gi, '_')}.md`;
+
     const blob = new Blob([markdown], { type: 'text/markdown' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'manual_editado.md';
+    a.download = fileName;
     document.body.appendChild(a);
     a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+
+    setTimeout(() => {
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }, 100);
 
     // 3. Open GitHub for commit (configure your repo URL)
     const githubUrl = window.PSA_GITHUB_URL || 'https://github.com';
