@@ -64,14 +64,15 @@ function initScrollHighlight() {
     sections.forEach(section => observer.observe(section));
 }
 
-// Sidebar Search Filter
+// Search System (Sidebar Filter + Content Highlight)
 function filterSidebarItems() {
     const input = document.getElementById('sidebar-search-input');
     if (!input) return;
 
     const filter = input.value.toLowerCase();
-    const navGroups = document.querySelectorAll('.nav-group');
 
+    // 1. Filter Sidebar
+    const navGroups = document.querySelectorAll('.nav-group');
     navGroups.forEach(group => {
         let groupHasVisibleItems = false;
         const items = group.querySelectorAll('.nav-item');
@@ -86,7 +87,7 @@ function filterSidebarItems() {
             }
         });
 
-        // Behavior: Expand matching groups, collapse unsuccessful ones
+        // Expand matching groups
         if (filter.length > 0) {
             if (groupHasVisibleItems) {
                 group.classList.remove('collapsed');
@@ -95,11 +96,82 @@ function filterSidebarItems() {
                 group.style.display = 'none';
             }
         } else {
-            // Revert to default state (collapsed) when search is empty
             group.classList.add('collapsed');
             group.style.display = 'block';
         }
     });
+
+    // 2. Highlight Text in Content
+    highlightSearchText(filter);
+}
+
+function highlightSearchText(query) {
+    const content = document.querySelector('.main-content');
+    if (!content) return;
+
+    // Remove previous highlights
+    // We use a safe approach: replacing mark tags with their text content
+    const marks = content.querySelectorAll('mark.search-highlight');
+    marks.forEach(mark => {
+        mark.outerHTML = mark.textContent;
+    });
+
+    // Normalize
+    content.normalize();
+
+    if (!query || query.length < 2) return;
+
+    // Recursive text node walker
+    const walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, {
+        acceptNode: function (node) {
+            // Skip text inside scripts or styles
+            if (node.parentElement.tagName === 'SCRIPT' ||
+                node.parentElement.tagName === 'STYLE') {
+                return NodeFilter.FILTER_REJECT;
+            }
+            return NodeFilter.FILTER_ACCEPT;
+        }
+    });
+
+    const nodesToHighlight = [];
+    while (walker.nextNode()) {
+        const node = walker.currentNode;
+        if (node.nodeValue.toLowerCase().includes(query)) {
+            nodesToHighlight.push(node);
+        }
+    }
+
+    // Apply Highlight
+    let firstMatch = null;
+    nodesToHighlight.forEach(node => {
+        const span = document.createElement('span');
+        const text = node.nodeValue;
+        const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+
+        // Replace matches with mark tags
+        const newHtml = text.replace(regex, '<mark class="search-highlight">$1</mark>');
+
+        span.innerHTML = newHtml;
+
+        // Replace text node with new HTML structure
+        if (span.innerHTML !== text) { // Only if replacement happened
+            // We need to insert the children of span before the text node and remove the text node
+            const fragment = document.createDocumentFragment();
+            while (span.firstChild) {
+                fragment.appendChild(span.firstChild);
+            }
+            node.parentNode.replaceChild(fragment, node);
+
+            if (!firstMatch) {
+                firstMatch = document.querySelector('mark.search-highlight');
+            }
+        }
+    });
+
+    // Scroll to first match
+    if (firstMatch) {
+        firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
 }
 
 // --- INITIALIZATION ---

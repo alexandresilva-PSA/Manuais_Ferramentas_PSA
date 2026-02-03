@@ -1,6 +1,7 @@
+```
 ---
 layout: manual
-title: "Manuais PSA Elevate"
+title: "DIFAL Inteligente"
 versao: "1.0"
 github_url: "https://github.com/psa-elevate/difal-inteligente"
 toc:

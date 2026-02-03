@@ -1,7 +1,7 @@
 ---
 layout: manual
 title: "Consulta de EFD Contribuições"
-versao: "2.0"
+versao: "1.0"
 github_url: "https://github.com/psa-elevate/efd-contribuicoes"
 toc:
   - id: secao-1

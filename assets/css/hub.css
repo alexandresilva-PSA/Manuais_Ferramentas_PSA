@@ -15,11 +15,14 @@
     padding: 2rem !important;
     background-color: var(--content-bg) !important;
     transition: background-color 0.3s;
+    min-height: 100vh;
+    overflow: visible;
 }
 
 .content-wrapper {
     max-width: 1200px !important;
     margin: 0 auto;
+    padding-bottom: 4rem;
 }
 
 /* Hero Section */

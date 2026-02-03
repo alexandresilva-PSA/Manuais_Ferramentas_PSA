@@ -44,9 +44,13 @@
     --sidebar-bg: #1e293b;
     --card-bg: #1e293b;
     --content-bg: #0b1120;
-    --text-main: #cbd5e1;
+    --text-main: #F9FAFB;
     --header-bg: #0f172a;
     --border-color: #334155;
+    
+    /* Dark mode accent - teal instead of lime */
+    --lime-500: #0F766E;
+    --lime-400: #14B8A6;
 }
 
 /* --- RESET --- */
@@ -722,31 +726,59 @@ body.editing-mode .section-delete-btn {
     }
 
     .secao {
-        break-inside: avoid;
-        page-break-inside: avoid;
+        break-inside: auto;
         border: 1px solid #ddd;
         box-shadow: none;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        padding: 0.5rem;
+    }
+
+    .secao-header {
+        padding: 0.5rem 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .secao-header h2 {
+        font-size: 1.1rem;
     }
 
     .secao-conteudo {
-        break-inside: auto;
+        padding: 0.5rem 1rem;
     }
 
-    /* Keep headings with their images/content */
-    h3,
     .secao-conteudo h3 {
+        font-size: 0.9rem;
+        margin: 0.5rem 0 0.25rem 0;
         break-after: avoid;
         page-break-after: avoid;
-        orphans: 3;
-        widows: 3;
+    }
+
+    .secao-conteudo p {
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
     }
 
     .img-container {
+        margin: 0.5rem 0;
         break-inside: avoid;
         page-break-inside: avoid;
-        break-before: avoid;
-        page-break-before: avoid;
+    }
+
+    .img-wrapper {
+        max-height: 220px;
+        overflow: hidden;
+    }
+
+    .img-screenshot {
+        max-height: 200px;
+        width: auto;
+        max-width: 100%;
+    }
+
+    .img-caption {
+        font-size: 0.7rem;
+        margin-top: 0.25rem;
     }
 
     body {
@@ -754,10 +786,16 @@ body.editing-mode .section-delete-btn {
         overflow: visible;
         background: white;
         color: black;
+        font-size: 10pt;
     }
 
     .content-wrapper {
         max-width: 100%;
         padding: 0;
+    }
+
+    .dica, .aviso {
+        padding: 0.5rem;
+        font-size: 0.8rem;
     }
 }
