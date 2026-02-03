@@ -31,7 +31,7 @@ search_enabled: false
             </div>
         </div>
         <div class="hub-card-body">
-            <p>{{ manual.description }}</p>
+            {{ manual.description | markdownify }}
         </div>
         <div class="hub-card-footer">
             <span class="hub-update-date">Atualizado em: {{ manual.updated }}</span>
