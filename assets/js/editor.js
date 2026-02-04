@@ -243,7 +243,7 @@ function convertToMarkdown() {
                     absoluteSrc = `${githubBaseUrl}/manuais/${manualSlug}/${cleanSrc}`;
                 }
             }
-            output = `\n![${alt}](${absoluteSrc})\n\n`;
+            output = `\n![${alt}](${encodeURI(absoluteSrc)})\n\n`;
         }
         // Listas
         else if (tag === 'ul') {
@@ -362,6 +362,31 @@ function initEditorExtras() {
         btn.onclick = () => deleteSection(btn);
         header.appendChild(btn);
     });
+}
+
+// Download Server-Generated PDF
+function downloadGeneratedPDF() {
+    // 1. Determine Slug
+    let manualSlug = '';
+    if (window.location.pathname.includes('/manuais/')) {
+        manualSlug = window.location.pathname.split('/manuais/')[1].split('/')[0];
+    } else {
+        const pathParts = window.location.pathname.split('/').filter(p => p && p !== 'Manuais_Ferramentas_PSA');
+        if (pathParts.length > 0) manualSlug = pathParts[pathParts.length - 1];
+    }
+
+    if (!manualSlug) {
+        alert('Não foi possível identificar o manual para gerar o PDF.');
+        return;
+    }
+
+    // 2. Construct URL
+    // GitHub Pages structure: root/assets/pdfs/manual_slug.pdf
+    const githubBaseUrl = 'https://alexandresilva-psa.github.io/Manuais_Ferramentas_PSA';
+    const pdfUrl = `${githubBaseUrl}/assets/pdfs/manual_${manualSlug}.pdf`;
+
+    // 3. Open/Download
+    window.open(pdfUrl, '_blank');
 }
 
 // Global initialization

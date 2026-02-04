@@ -1,0 +1,12 @@
+{
+  "name": "psa-manual-hub-scripts",
+  "version": "1.0.0",
+  "description": "Scripts for PSA Manual Hub automation",
+  "scripts": {
+    "pdf": "node scripts/generate_pdf.js"
+  },
+  "dependencies": {
+    "puppeteer": "^21.0.0",
+    "http-server": "^14.1.1"
+  }
+}
