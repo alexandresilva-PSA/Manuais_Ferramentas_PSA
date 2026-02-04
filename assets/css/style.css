@@ -47,7 +47,7 @@
     --text-main: #F9FAFB;
     --header-bg: #0f172a;
     --border-color: #334155;
-    
+
     /* Dark mode accent - teal instead of lime */
     --lime-500: #0F766E;
     --lime-400: #14B8A6;
@@ -747,38 +747,52 @@ body.editing-mode .section-delete-btn {
     }
 
     .secao-conteudo h3 {
-        font-size: 0.9rem;
-        margin: 0.5rem 0 0.25rem 0;
+        font-size: 1.1rem;
+        /* Aumentado para melhor leitura */
+        margin: 3rem 0 1rem 0;
+        /* Mais espaço antes para forçar quebra natural */
         break-after: avoid;
         page-break-after: avoid;
+        break-inside: avoid;
+        page-break-inside: avoid;
     }
 
     .secao-conteudo p {
-        font-size: 0.8rem;
-        margin-bottom: 0.5rem;
-        line-height: 1.4;
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+        line-height: 1.5;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        white-space: pre-wrap;
+        /* Garante que texto não encavale */
     }
 
     .img-container {
-        margin: 0.5rem 0;
+        margin: 2.5rem 0;
+        /* Espaçamento maior entre imagens */
         break-inside: avoid;
         page-break-inside: avoid;
     }
 
     .img-wrapper {
-        max-height: 220px;
+        max-height: 350px;
+        /* Permitir imagens um pouco maiores */
         overflow: hidden;
+        border: none;
+        /* Remover borda na impressão para limpeza */
     }
 
     .img-screenshot {
-        max-height: 200px;
+        max-height: 320px;
         width: auto;
         max-width: 100%;
     }
 
     .img-caption {
-        font-size: 0.7rem;
-        margin-top: 0.25rem;
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+        font-style: italic;
+        color: #555;
     }
 
     body {
@@ -794,7 +808,8 @@ body.editing-mode .section-delete-btn {
         padding: 0;
     }
 
-    .dica, .aviso {
+    .dica,
+    .aviso {
         padding: 0.5rem;
         font-size: 0.8rem;
     }

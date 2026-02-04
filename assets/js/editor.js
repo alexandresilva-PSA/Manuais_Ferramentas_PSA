@@ -134,87 +134,156 @@ function handleMDExport() {
 /**
  * Converte o conteúdo HTML atual para Markdown (simplificado)
  */
+/**
+ * Converte o conteúdo HTML atual para Markdown completo
+ * Inclui Front Matter real e URLs absolutas para imagens
+ */
 function convertToMarkdown() {
-    const content = document.querySelector('.content-wrapper');
-    if (!content) return '# Manual\n\nConteúdo não encontrado.';
+    // 1. Coletar dados globais para Front Matter
+    const pageTitle = document.querySelector('.header-title')?.textContent.trim() || 'Manual';
+    const versao = document.querySelector('.badge-versao')?.textContent.trim() || '1.0';
+    const githubUrl = window.PSA_GITHUB_URL || 'https://github.com';
 
-    // Base URL do GitHub Pages para imagens
+    // 2. Construir TOC dinamicamente baseada no DOM atual
+    let tocYaml = 'toc:\n';
+    const secoes = document.querySelectorAll('.secao');
+
+    secoes.forEach(secao => {
+        const id = secao.id;
+        const h2 = secao.querySelector('.secao-header h2')?.textContent.trim() || 'Sem Título';
+
+        tocYaml += `  - id: ${id}\n`;
+        tocYaml += `    title: "${h2.replace(/"/g, '\\"')}"\n`;
+
+        // Subitems (H3)
+        const subitems = secao.querySelectorAll('.secao-conteudo h3');
+        if (subitems.length > 0) {
+            tocYaml += `    items:\n`;
+            subitems.forEach(h3 => {
+                const subId = h3.id;
+                const subTitle = h3.textContent.trim();
+                tocYaml += `      - id: ${subId}\n`;
+                tocYaml += `        title: "${subTitle.replace(/"/g, '\\"')}"\n`;
+            });
+        }
+    });
+
+    // 3. Montar Front Matter
+    let md = `---\n`;
+    md += `layout: manual\n`;
+    md += `title: "${pageTitle}"\n`;
+    md += `versao: "${versao}"\n`;
+    md += `github_url: "${githubUrl}"\n`;
+    md += `${tocYaml}`;
+    md += `---\n\n`;
+
+    // 4. Converter Conteúdo
     const githubBaseUrl = 'https://alexandresilva-psa.github.io/Manuais_Ferramentas_PSA';
-
-    // Tenta detectar o slug do manual atual
+    // Recuperar slug do manual para montar URLs corretas
     let manualSlug = '';
     if (window.location.pathname.includes('/manuais/')) {
         manualSlug = window.location.pathname.split('/manuais/')[1].split('/')[0];
     } else {
-        // Fallback: tenta pegar do URL atual se não estiver na estrutura padrão
         const pathParts = window.location.pathname.split('/').filter(p => p && p !== 'Manuais_Ferramentas_PSA');
         if (pathParts.length > 0) manualSlug = pathParts[pathParts.length - 1];
     }
 
-    let md = '';
-    const title = document.querySelector('.header-title');
-    const version = document.querySelector('.badge-versao');
+    const processNode = (node) => {
+        if (node.nodeType === Node.TEXT_NODE) {
+            return node.textContent; // Text puro, MD lida com espaços
+        }
 
-    if (title) md += `# ${title.textContent.trim()}\n\n`;
-    if (version) md += `**${version.textContent.trim()}**\n\n---\n\n`;
+        if (node.nodeType !== Node.ELEMENT_NODE) return '';
 
-    // Process sections
-    content.querySelectorAll('.secao').forEach(secao => {
-        const h2 = secao.querySelector('.secao-header h2');
-        if (h2) md += `## ${h2.textContent.trim()}\n\n`;
+        const tag = node.tagName.toLowerCase();
+        let output = '';
+
+        // H3 (Subtítulos)
+        if (tag === 'h3') {
+            const id = node.id;
+            // Adicionar âncora invisível ou confiar no Jekyll auto-link? 
+            // O TOC usa IDs, e os H3 no MD original geram IDs automáticos.
+            // Para garantir compatibilidade com o sidebar, precisamos manter os IDs nos headers?
+            // Jekyll kramdown suporta `### Título {#id}`
+            output = `\n### ${node.textContent.trim()}\n\n`;
+        }
+        // Parágrafos
+        else if (tag === 'p') {
+            if (node.classList.contains('img-caption')) {
+                // Legenda da imagem: ignorar aqui, tratado junto com a img se possível, ou apenas texto itálico
+                output = `*${node.textContent.trim()}*\n\n`;
+            } else {
+                // Processar filhos para manter formatação inline (strong, em, a)
+                let pContent = '';
+                node.childNodes.forEach(child => pContent += processNode(child));
+                output = `${pContent.trim()}\n\n`;
+            }
+        }
+        // Formatting
+        else if (tag === 'strong' || tag === 'b') {
+            output = `**${node.textContent.trim()}**`;
+        }
+        else if (tag === 'em' || tag === 'i') {
+            output = `*${node.textContent.trim()}*`;
+        }
+        else if (tag === 'code') {
+            output = `\`${node.textContent}\``;
+        }
+        // Imagens
+        else if (tag === 'img') {
+            const alt = node.alt || 'Imagem';
+            let src = node.getAttribute('src');
+            let absoluteSrc = src;
+
+            if (src && !src.startsWith('http') && !src.startsWith('data:')) {
+                const cleanSrc = src.replace(/^(\.\.\/)+/, '').replace(/^\//, '');
+                if (cleanSrc.startsWith('assets/')) {
+                    absoluteSrc = `${githubBaseUrl}/${cleanSrc}`;
+                } else {
+                    absoluteSrc = `${githubBaseUrl}/manuais/${manualSlug}/${cleanSrc}`;
+                }
+            }
+            output = `\n![${alt}](${absoluteSrc})\n\n`;
+        }
+        // Listas
+        else if (tag === 'ul') {
+            node.querySelectorAll('li').forEach(li => {
+                let liContent = '';
+                li.childNodes.forEach(child => liContent += processNode(child));
+                output += `- ${liContent.trim()}\n`;
+            });
+            output += '\n';
+        }
+        else if (tag === 'ol') {
+            let idx = 1;
+            node.querySelectorAll('li').forEach(li => {
+                let liContent = '';
+                li.childNodes.forEach(child => liContent += processNode(child));
+                output += `${idx}. ${liContent.trim()}\n`;
+                idx++;
+            });
+            output += '\n';
+        }
+        // Containers (divs de imagem, wrappers)
+        else if (tag === 'div' || tag === 'span' || tag === 'section') {
+            node.childNodes.forEach(child => output += processNode(child));
+        }
+
+        return output;
+    };
+
+    // Iterar Seções (H2 são definidos pela estrutura .secao)
+    secoes.forEach(secao => {
+        const h2 = secao.querySelector('.secao-header h2')?.textContent.trim();
+        if (h2) md += `## ${h2}\n\n`;
 
         const conteudo = secao.querySelector('.secao-conteudo');
         if (conteudo) {
-            // Processa recursivamente para capturar img dentro de div container
-            const processNode = (node) => {
-                if (node.nodeType === Node.ELEMENT_NODE) {
-                    const tag = node.tagName.toLowerCase();
-                    const text = node.textContent.trim();
-
-                    if (tag === 'h3') md += `### ${text}\n\n`;
-                    else if (tag === 'p' && !node.classList.contains('img-caption')) {
-                        if (text) md += `${text}\n\n`;
-                    }
-                    else if (tag === 'img') {
-                        const alt = node.alt || 'Imagem';
-                        let src = node.getAttribute('src');
-
-                        // Converte para URL absoluta do GitHub
-                        let absoluteSrc = src;
-                        if (!src.startsWith('http')) {
-                            // Limpa paths relativos como ../
-                            const cleanSrc = src.replace(/^(\.\.\/)+/, '').replace(/^\//, '');
-
-                            // Se já tem o caminho completo assets/, usa direto
-                            if (cleanSrc.startsWith('assets/')) {
-                                absoluteSrc = `${githubBaseUrl}/${cleanSrc}`;
-                            } else {
-                                // Se é relativo ao manual (imagens/...)
-                                absoluteSrc = `${githubBaseUrl}/manuais/${manualSlug}/${cleanSrc}`;
-                            }
-                        }
-
-                        md += `![${alt}](${absoluteSrc})\n\n`;
-                    }
-                    else if (tag === 'ul') {
-                        node.querySelectorAll('li').forEach(li => {
-                            md += `- ${li.textContent.trim()}\n`;
-                        });
-                        md += '\n';
-                    }
-                    else if (tag === 'div' && node.classList.contains('img-container')) {
-                        // Process children of img-container
-                        node.childNodes.forEach(child => processNode(child));
-                    }
-                    else if (tag === 'div' && node.classList.contains('img-wrapper')) {
-                        node.childNodes.forEach(child => processNode(child));
-                    }
-                }
-            };
-
-            conteudo.childNodes.forEach(node => processNode(node));
+            conteudo.childNodes.forEach(node => {
+                md += processNode(node);
+            });
         }
-        md += '\n---\n\n';
+        md += `\n`; // Espaço entre seções
     });
 
     return md;
