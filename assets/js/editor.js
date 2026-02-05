@@ -7,15 +7,22 @@ let isEditing = false;
 let isAdmin = false;
 
 /**
- * Verifica acesso administrativo (LocalStorage ou URL ?key=)
+ * Hash de senha usando SHA-256
  */
+async function hashPassword(password) {
+    const encoder = new TextEncoder();
+    const data = encoder.encode(password);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
 /**
  * Verifica acesso administrativo (URL ?key=)
- * Persistência apenas em memória (Session-like) via URL hash ou nada.
+ * Persistência apenas em memória (Session-like).
  * Removido localStorage inseguro.
  */
 async function checkAdminAccess() {
-    // Check URL for key
     const urlParams = new URLSearchParams(window.location.search);
     const key = urlParams.get('key');
 
@@ -24,18 +31,13 @@ async function checkAdminAccess() {
         if (targetHash) {
             const currentHash = await hashPassword(key);
             if (currentHash === targetHash) {
-                // Apenas libera a interface, sem salvar nada permanente
                 revealAdminInterface();
-                
-                // Content cleaning: remove key from URL
                 const newUrl = window.location.pathname + window.location.hash;
                 window.history.replaceState({}, document.title, newUrl);
             }
         }
     }
 }
-
-// ... helper hashPassword ...
 
 function revealAdminInterface() {
     isAdmin = true;
@@ -47,11 +49,31 @@ function revealAdminInterface() {
 }
 
 function adminLogout() {
-    // Recarregar a página limpa o estado de memória
     window.location.href = window.location.pathname;
 }
 
-// ... toggleEditMode ...
+/**
+ * Alterna entre modo leitura e modo edição
+ */
+function toggleEditMode() {
+    isEditing = !isEditing;
+    const body = document.body;
+    const btnIcon = document.getElementById('icon-edit-header');
+
+    if (isEditing) {
+        body.classList.add('editing-mode');
+        if (btnIcon) btnIcon.textContent = 'save';
+        document.querySelectorAll('.editable-text, .editable-area').forEach(el => {
+            el.contentEditable = "true";
+        });
+    } else {
+        body.classList.remove('editing-mode');
+        if (btnIcon) btnIcon.textContent = 'edit';
+        document.querySelectorAll('.editable-text, .editable-area').forEach(el => {
+            el.contentEditable = "false";
+        });
+    }
+}
 
 /**
  * Lógica unificada de exportação de Markdown
@@ -61,7 +83,6 @@ function handleMDExport() {
     const pageTitle = document.querySelector('.header-title')?.textContent.trim() || 'manual';
     const fileName = `manual_${pageTitle.replace(/[^a-z0-9]/gi, '_')}.md`;
 
-    // Download local
     const blob = new Blob([markdown], { type: 'text/markdown' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -75,7 +96,6 @@ function handleMDExport() {
         URL.revokeObjectURL(url);
     }, 100);
 
-    // Se for Admin (Modo Edição Ativo ou Interface Visível), abre GitHub
     if (isAdmin) {
         const repoUrl = window.PSA_GITHUB_URL || 'https://github.com';
         const currentPath = window.location.pathname;
@@ -97,13 +117,11 @@ function handleMDExport() {
  * Lógica de Imagem: Split-based para evitar duplicidade
  */
 function convertToMarkdown() {
-    // 1. Dados Globais
     const pageTitle = document.querySelector('.header-title')?.textContent.trim() || 'Manual';
     const versao = document.querySelector('.badge-versao')?.textContent.trim() || '1.0';
     const githubUrl = window.PSA_GITHUB_URL || 'https://github.com';
     const githubBaseUrl = 'https://alexandresilva-psa.github.io/Manuais_Ferramentas_PSA';
 
-    // 2. Construir TOC (Mantido logicamente igual, omitido por brevidade se não mudou)
     let tocYaml = 'toc:\n';
     const secoes = document.querySelectorAll('.secao');
     secoes.forEach(secao => {
@@ -114,15 +132,13 @@ function convertToMarkdown() {
         if (subitems.length > 0) {
             tocYaml += `    items:\n`;
             subitems.forEach(h3 => {
-                 tocYaml += `      - id: ${h3.id}\n        title: "${h3.textContent.trim().replace(/"/g, '\\"')}"\n`;
+                tocYaml += `      - id: ${h3.id}\n        title: "${h3.textContent.trim().replace(/"/g, '\\"')}"\n`;
             });
         }
     });
 
-    // 3. Front Matter
     let md = `---\nlayout: manual\ntitle: "${pageTitle}"\nversao: "${versao}"\ngithub_url: "${githubUrl}"\n${tocYaml}---\n\n`;
 
-    // Slug Detection
     let manualSlug = '';
     if (window.location.pathname.includes('/manuais/')) {
         manualSlug = window.location.pathname.split('/manuais/')[1].split('/')[0];
@@ -149,22 +165,22 @@ function convertToMarkdown() {
         else if (tag === 'em' || tag === 'i') output = `*${node.textContent.trim()}*`;
         else if (tag === 'code') output = `\`${node.textContent}\``;
         else if (tag === 'ul') {
-             node.querySelectorAll('li').forEach(li => {
-                 let liContent = '';
-                 li.childNodes.forEach(c => liContent += processNode(c));
-                 output += `- ${liContent.trim()}\n`;
-             });
-             output += '\n';
+            node.querySelectorAll('li').forEach(li => {
+                let liContent = '';
+                li.childNodes.forEach(c => liContent += processNode(c));
+                output += `- ${liContent.trim()}\n`;
+            });
+            output += '\n';
         }
         else if (tag === 'ol') {
-             let idx = 1;
-             node.querySelectorAll('li').forEach(li => {
-                 let liContent = '';
-                 li.childNodes.forEach(c => liContent += processNode(c));
-                 output += `${idx}. ${liContent.trim()}\n`;
-                 idx++;
-             });
-             output += '\n';
+            let idx = 1;
+            node.querySelectorAll('li').forEach(li => {
+                let liContent = '';
+                li.childNodes.forEach(c => liContent += processNode(c));
+                output += `${idx}. ${liContent.trim()}\n`;
+                idx++;
+            });
+            output += '\n';
         }
         else if (tag === 'img') {
             const alt = node.alt || 'Imagem';
@@ -172,34 +188,22 @@ function convertToMarkdown() {
             let finalUrl = src;
 
             if (src && !src.startsWith('http') && !src.startsWith('data:')) {
-                // LÓGICA SPLIT SIMPLIFICADA
-                // Queremos: 
-                // Admin (Repo): "imagens/arquivo.png"
-                // User (Obsidian): "https://alexandre.../manuais/slug/imagens/arquivo.png"
-                
-                // Tenta extrair o nome do arquivo final (assumindo estrutura padrao)
-                // Se o src for ".../imagens/foto.png", pega "imagens/foto.png"
                 let relativePart = src;
                 if (src.includes('/imagens/')) {
                     const parts = src.split('/imagens/');
-                    relativePart = 'imagens/' + parts[parts.length - 1]; // Pega a ultima parte
+                    relativePart = 'imagens/' + parts[parts.length - 1];
                 } else if (src.includes('assets/')) {
-                     // Caso seja asset global
-                     const parts = src.split('assets/');
-                     relativePart = 'assets/' + parts[parts.length - 1];
+                    const parts = src.split('assets/');
+                    relativePart = 'assets/' + parts[parts.length - 1];
                 }
 
                 if (isAdmin) {
-                    // Modo Edição: Caminho relativo do repo
                     finalUrl = relativePart;
                 } else {
-                    // Modo Leitura: Caminho Absoluto Web
-                    // Se for asset global
                     if (relativePart.startsWith('assets/')) {
-                         finalUrl = `${githubBaseUrl}/${relativePart}`;
+                        finalUrl = `${githubBaseUrl}/${relativePart}`;
                     } else {
-                         // Se for manual
-                         finalUrl = `${githubBaseUrl}/manuais/${manualSlug}/${relativePart}`;
+                        finalUrl = `${githubBaseUrl}/manuais/${manualSlug}/${relativePart}`;
                     }
                 }
             }
@@ -223,54 +227,45 @@ function convertToMarkdown() {
 }
 
 /**
- * Export HTML
- * Fix: Absolute CSS Paths
+ * Export HTML - Fix: Absolute CSS Paths
  */
 function shareManual() {
     const clone = document.documentElement.cloneNode(true);
     const githubBaseUrl = 'https://alexandresilva-psa.github.io/Manuais_Ferramentas_PSA';
 
-    // Limpeza
     clone.querySelectorAll('#header-admin-tools, .section-delete-btn, .marker-delete-btn').forEach(el => el.remove());
-    clone.querySelectorAll('script').forEach(s => s.remove()); // Remove scripts para ser estatico limpo
+    clone.querySelectorAll('script').forEach(s => s.remove());
 
-    // Fix CSS Links (Ensure Absolute)
     clone.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
         const href = link.getAttribute('href');
         if (href && !href.startsWith('http')) {
-            // Se for /assets..., vira https://.../assets...
-            // Remove ../ e / inicial
             const clean = href.replace(/^(\.\.\/)+/, '').replace(/^\//, '');
             link.href = `${githubBaseUrl}/${clean}`;
         }
     });
 
-    // Fix Images
     clone.querySelectorAll('img').forEach(img => {
         const src = img.getAttribute('src');
         if (src && !src.startsWith('http') && !src.startsWith('data:')) {
-             if (src.includes('/imagens/')) {
-                 const parts = src.split('/imagens/');
-                 const relativePart = 'imagens/' + parts[parts.length - 1];
-                 // Manual context
-                 let manualSlug = '';
-                 if (window.location.pathname.includes('/manuais/')) manualSlug = window.location.pathname.split('/manuais/')[1].split('/')[0];
-                 img.src = `${githubBaseUrl}/manuais/${manualSlug}/${relativePart}`;
-             } else if (src.includes('assets/')) {
-                  const parts = src.split('assets/');
-                  img.src = `${githubBaseUrl}/assets/${parts[parts.length - 1]}`;
-             }
+            if (src.includes('/imagens/')) {
+                const parts = src.split('/imagens/');
+                const relativePart = 'imagens/' + parts[parts.length - 1];
+                let manualSlug = '';
+                if (window.location.pathname.includes('/manuais/')) manualSlug = window.location.pathname.split('/manuais/')[1].split('/')[0];
+                img.src = `${githubBaseUrl}/manuais/${manualSlug}/${relativePart}`;
+            } else if (src.includes('assets/')) {
+                const parts = src.split('assets/');
+                img.src = `${githubBaseUrl}/assets/${parts[parts.length - 1]}`;
+            }
         }
     });
-    
-    // Fix Links (Anchors)
+
     clone.querySelectorAll('a').forEach(a => {
-         const href = a.getAttribute('href');
-         if (href && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith('mailto')) {
-              // Resolve similar to images default
-              const clean = href.replace(/^(\.\.\/)+/, '').replace(/^\//, '');
-              a.href = `${githubBaseUrl}/${clean}`;
-         }
+        const href = a.getAttribute('href');
+        if (href && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith('mailto')) {
+            const clean = href.replace(/^(\.\.\/)+/, '').replace(/^\//, '');
+            a.href = `${githubBaseUrl}/${clean}`;
+        }
     });
 
     const pageTitle = document.querySelector('.header-title')?.textContent.trim() || 'Manual';
@@ -286,11 +281,10 @@ function shareManual() {
  * Client-Side PDF Generation (html2pdf.js)
  */
 async function downloadGeneratedPDF() {
-    // 1. Load library dynamically if not present
     if (typeof html2pdf === 'undefined') {
         const script = document.createElement('script');
         script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
-        script.onload = generateClientPDF; // Call after load
+        script.onload = generateClientPDF;
         document.head.appendChild(script);
     } else {
         generateClientPDF();
@@ -300,26 +294,42 @@ async function downloadGeneratedPDF() {
 function generateClientPDF() {
     const element = document.querySelector('.content-wrapper') || document.body;
     const pageTitle = document.querySelector('.header-title')?.textContent.trim() || 'Manual';
-    
+
     const opt = {
-        margin:       10,
-        filename:     `manual_${pageTitle.replace(/[^a-z0-9]/gi, '_')}.pdf`,
-        image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2, useCORS: true },
-        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
-        pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] }
+        margin: 10,
+        filename: `manual_${pageTitle.replace(/[^a-z0-9]/gi, '_')}.pdf`,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
     };
 
-    // Temporarily hide admin tools if visible
     const adminTools = document.querySelectorAll('.section-delete-btn');
     adminTools.forEach(el => el.style.display = 'none');
 
     html2pdf().set(opt).from(element).save().then(() => {
-        // Restore UI
         adminTools.forEach(el => el.style.display = '');
     });
 }
 
+function deleteSection(btn) {
+    if (confirm('Tem certeza que deseja excluir esta seção inteira?')) {
+        btn.closest('.secao').remove();
+    }
+}
+
+function initEditorExtras() {
+    document.querySelectorAll('.secao-header').forEach(header => {
+        if (header.querySelector('.section-delete-btn')) return;
+
+        const btn = document.createElement('button');
+        btn.className = 'section-delete-btn';
+        btn.innerHTML = '<span class="material-icons-round">delete_forever</span>';
+        btn.title = "Excluir esta seção";
+        btn.onclick = () => deleteSection(btn);
+        header.appendChild(btn);
+    });
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     initEditorExtras();
