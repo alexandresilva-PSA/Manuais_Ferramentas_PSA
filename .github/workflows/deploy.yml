@@ -33,19 +33,6 @@ jobs:
           source: ./
           destination: ./_site
 
-      # PDF Generation Step
-      - name: Install Node.js for PDF Gen
-        uses: actions/setup-node@v4
-        with:
-            node-version: '20'
-            cache: 'npm'
-
-      - name: Install Dependencies
-        run: npm ci
-
-      - name: Generate PDFs
-        run: node scripts/generate_pdf.js
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 

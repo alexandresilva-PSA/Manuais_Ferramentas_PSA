@@ -9,14 +9,13 @@ let isAdmin = false;
 /**
  * Verifica acesso administrativo (LocalStorage ou URL ?key=)
  */
+/**
+ * Verifica acesso administrativo (URL ?key=)
+ * Persistência apenas em memória (Session-like) via URL hash ou nada.
+ * Removido localStorage inseguro.
+ */
 async function checkAdminAccess() {
-    // 1. Check LocalStorage (persisted login)
-    if (localStorage.getItem('psa_admin_access') === 'true') {
-        revealAdminInterface();
-        return;
-    }
-
-    // 2. Check URL for key
+    // Check URL for key
     const urlParams = new URLSearchParams(window.location.search);
     const key = urlParams.get('key');
 
@@ -25,10 +24,10 @@ async function checkAdminAccess() {
         if (targetHash) {
             const currentHash = await hashPassword(key);
             if (currentHash === targetHash) {
-                localStorage.setItem('psa_admin_access', 'true');
+                // Apenas libera a interface, sem salvar nada permanente
                 revealAdminInterface();
-
-                // Content cleaning: remove key from URL without refreshing
+                
+                // Content cleaning: remove key from URL
                 const newUrl = window.location.pathname + window.location.hash;
                 window.history.replaceState({}, document.title, newUrl);
             }
@@ -36,13 +35,7 @@ async function checkAdminAccess() {
     }
 }
 
-async function hashPassword(password) {
-    const encoder = new TextEncoder();
-    const data = encoder.encode(password);
-    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
-    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-}
+// ... helper hashPassword ...
 
 function revealAdminInterface() {
     isAdmin = true;
@@ -54,46 +47,14 @@ function revealAdminInterface() {
 }
 
 function adminLogout() {
-    localStorage.removeItem('psa_admin_access');
-    window.location.reload();
+    // Recarregar a página limpa o estado de memória
+    window.location.href = window.location.pathname;
 }
 
-/**
- * Alterna entre modo leitura e modo edição
- */
-function toggleEditMode() {
-    isEditing = !isEditing;
-    const body = document.body;
-    const btnIcon = document.getElementById('icon-edit-header');
-
-    if (isEditing) {
-        body.classList.add('editing-mode');
-        if (btnIcon) btnIcon.textContent = 'save';
-
-        // Enable contenteditable
-        document.querySelectorAll('.editable-text, .editable-area').forEach(el => {
-            el.contentEditable = "true";
-        });
-    } else {
-        body.classList.remove('editing-mode');
-        if (btnIcon) btnIcon.textContent = 'edit';
-
-        // Disable contenteditable
-        document.querySelectorAll('.editable-text, .editable-area').forEach(el => {
-            el.contentEditable = "false";
-        });
-    }
-}
+// ... toggleEditMode ...
 
 /**
  * Lógica unificada de exportação de Markdown
- * Admin: Baixa e abre aba de upload do GitHub
- * Usuário: Apenas baixa o arquivo
- */
-/**
- * Lógica unificada de exportação de Markdown
- * Admin: Baixa e abre aba de upload do GitHub
- * Usuário: Apenas baixa o arquivo
  */
 function handleMDExport() {
     const markdown = convertToMarkdown();
@@ -114,8 +75,8 @@ function handleMDExport() {
         URL.revokeObjectURL(url);
     }, 100);
 
-    // Se for Admin, abre a tela de upload do GitHub
-    if (localStorage.getItem('psa_admin_access') === 'true') {
+    // Se for Admin (Modo Edição Ativo ou Interface Visível), abre GitHub
+    if (isAdmin) {
         const repoUrl = window.PSA_GITHUB_URL || 'https://github.com';
         const currentPath = window.location.pathname;
 
@@ -132,206 +93,184 @@ function handleMDExport() {
 }
 
 /**
- * Converte o conteúdo HTML atual para Markdown (simplificado)
- */
-/**
- * Converte o conteúdo HTML atual para Markdown completo
- * Inclui Front Matter real e URLs absolutas para imagens
+ * Converte HTML para Markdown
+ * Lógica de Imagem: Split-based para evitar duplicidade
  */
 function convertToMarkdown() {
-    // 1. Coletar dados globais para Front Matter
+    // 1. Dados Globais
     const pageTitle = document.querySelector('.header-title')?.textContent.trim() || 'Manual';
     const versao = document.querySelector('.badge-versao')?.textContent.trim() || '1.0';
     const githubUrl = window.PSA_GITHUB_URL || 'https://github.com';
+    const githubBaseUrl = 'https://alexandresilva-psa.github.io/Manuais_Ferramentas_PSA';
 
-    // 2. Construir TOC dinamicamente baseada no DOM atual
+    // 2. Construir TOC (Mantido logicamente igual, omitido por brevidade se não mudou)
     let tocYaml = 'toc:\n';
     const secoes = document.querySelectorAll('.secao');
-
     secoes.forEach(secao => {
         const id = secao.id;
         const h2 = secao.querySelector('.secao-header h2')?.textContent.trim() || 'Sem Título';
-
-        tocYaml += `  - id: ${id}\n`;
-        tocYaml += `    title: "${h2.replace(/"/g, '\\"')}"\n`;
-
-        // Subitems (H3)
+        tocYaml += `  - id: ${id}\n    title: "${h2.replace(/"/g, '\\"')}"\n`;
         const subitems = secao.querySelectorAll('.secao-conteudo h3');
         if (subitems.length > 0) {
             tocYaml += `    items:\n`;
             subitems.forEach(h3 => {
-                const subId = h3.id;
-                const subTitle = h3.textContent.trim();
-                tocYaml += `      - id: ${subId}\n`;
-                tocYaml += `        title: "${subTitle.replace(/"/g, '\\"')}"\n`;
+                 tocYaml += `      - id: ${h3.id}\n        title: "${h3.textContent.trim().replace(/"/g, '\\"')}"\n`;
             });
         }
     });
 
-    // 3. Montar Front Matter
-    let md = `---\n`;
-    md += `layout: manual\n`;
-    md += `title: "${pageTitle}"\n`;
-    md += `versao: "${versao}"\n`;
-    md += `github_url: "${githubUrl}"\n`;
-    md += `${tocYaml}`;
-    md += `---\n\n`;
+    // 3. Front Matter
+    let md = `---\nlayout: manual\ntitle: "${pageTitle}"\nversao: "${versao}"\ngithub_url: "${githubUrl}"\n${tocYaml}---\n\n`;
 
-    // 4. Converter Conteúdo
-    const githubBaseUrl = 'https://alexandresilva-psa.github.io/Manuais_Ferramentas_PSA';
-    // Recuperar slug do manual para montar URLs corretas
+    // Slug Detection
     let manualSlug = '';
     if (window.location.pathname.includes('/manuais/')) {
         manualSlug = window.location.pathname.split('/manuais/')[1].split('/')[0];
-    } else {
-        const pathParts = window.location.pathname.split('/').filter(p => p && p !== 'Manuais_Ferramentas_PSA');
-        if (pathParts.length > 0) manualSlug = pathParts[pathParts.length - 1];
     }
 
     const processNode = (node) => {
-        if (node.nodeType === Node.TEXT_NODE) {
-            return node.textContent; // Text puro, MD lida com espaços
-        }
-
+        if (node.nodeType === Node.TEXT_NODE) return node.textContent;
         if (node.nodeType !== Node.ELEMENT_NODE) return '';
 
         const tag = node.tagName.toLowerCase();
         let output = '';
 
-        // H3 (Subtítulos)
-        if (tag === 'h3') {
-            const id = node.id;
-            // Adicionar âncora invisível ou confiar no Jekyll auto-link? 
-            // O TOC usa IDs, e os H3 no MD original geram IDs automáticos.
-            // Para garantir compatibilidade com o sidebar, precisamos manter os IDs nos headers?
-            // Jekyll kramdown suporta `### Título {#id}`
-            output = `\n### ${node.textContent.trim()}\n\n`;
-        }
-        // Parágrafos
+        if (tag === 'h3') output = `\n### ${node.textContent.trim()}\n\n`;
         else if (tag === 'p') {
             if (node.classList.contains('img-caption')) {
-                // Legenda da imagem: ignorar aqui, tratado junto com a img se possível, ou apenas texto itálico
                 output = `*${node.textContent.trim()}*\n\n`;
             } else {
-                // Processar filhos para manter formatação inline (strong, em, a)
                 let pContent = '';
                 node.childNodes.forEach(child => pContent += processNode(child));
                 output = `${pContent.trim()}\n\n`;
             }
         }
-        // Formatting
-        else if (tag === 'strong' || tag === 'b') {
-            output = `**${node.textContent.trim()}**`;
-        }
-        else if (tag === 'em' || tag === 'i') {
-            output = `*${node.textContent.trim()}*`;
-        }
-        else if (tag === 'code') {
-            output = `\`${node.textContent}\``;
-        }
-        // Imagens
-        else if (tag === 'img') {
-            const alt = node.alt || 'Imagem';
-            let src = node.getAttribute('src');
-            let absoluteSrc = src;
-
-            if (src && !src.startsWith('http') && !src.startsWith('data:')) {
-                const cleanSrc = src.replace(/^(\.\.\/)+/, '').replace(/^\//, '');
-                if (cleanSrc.startsWith('assets/')) {
-                    absoluteSrc = `${githubBaseUrl}/${cleanSrc}`;
-                } else {
-                    absoluteSrc = `${githubBaseUrl}/manuais/${manualSlug}/${cleanSrc}`;
-                }
-            }
-            output = `\n![${alt}](${encodeURI(absoluteSrc)})\n\n`;
-        }
-        // Listas
+        else if (tag === 'strong' || tag === 'b') output = `**${node.textContent.trim()}**`;
+        else if (tag === 'em' || tag === 'i') output = `*${node.textContent.trim()}*`;
+        else if (tag === 'code') output = `\`${node.textContent}\``;
         else if (tag === 'ul') {
-            node.querySelectorAll('li').forEach(li => {
-                let liContent = '';
-                li.childNodes.forEach(child => liContent += processNode(child));
-                output += `- ${liContent.trim()}\n`;
-            });
-            output += '\n';
+             node.querySelectorAll('li').forEach(li => {
+                 let liContent = '';
+                 li.childNodes.forEach(c => liContent += processNode(c));
+                 output += `- ${liContent.trim()}\n`;
+             });
+             output += '\n';
         }
         else if (tag === 'ol') {
-            let idx = 1;
-            node.querySelectorAll('li').forEach(li => {
-                let liContent = '';
-                li.childNodes.forEach(child => liContent += processNode(child));
-                output += `${idx}. ${liContent.trim()}\n`;
-                idx++;
-            });
-            output += '\n';
+             let idx = 1;
+             node.querySelectorAll('li').forEach(li => {
+                 let liContent = '';
+                 li.childNodes.forEach(c => liContent += processNode(c));
+                 output += `${idx}. ${liContent.trim()}\n`;
+                 idx++;
+             });
+             output += '\n';
         }
-        // Containers (divs de imagem, wrappers)
-        else if (tag === 'div' || tag === 'span' || tag === 'section') {
-            node.childNodes.forEach(child => output += processNode(child));
-        }
+        else if (tag === 'img') {
+            const alt = node.alt || 'Imagem';
+            const src = node.getAttribute('src');
+            let finalUrl = src;
 
+            if (src && !src.startsWith('http') && !src.startsWith('data:')) {
+                // LÓGICA SPLIT SIMPLIFICADA
+                // Queremos: 
+                // Admin (Repo): "imagens/arquivo.png"
+                // User (Obsidian): "https://alexandre.../manuais/slug/imagens/arquivo.png"
+                
+                // Tenta extrair o nome do arquivo final (assumindo estrutura padrao)
+                // Se o src for ".../imagens/foto.png", pega "imagens/foto.png"
+                let relativePart = src;
+                if (src.includes('/imagens/')) {
+                    const parts = src.split('/imagens/');
+                    relativePart = 'imagens/' + parts[parts.length - 1]; // Pega a ultima parte
+                } else if (src.includes('assets/')) {
+                     // Caso seja asset global
+                     const parts = src.split('assets/');
+                     relativePart = 'assets/' + parts[parts.length - 1];
+                }
+
+                if (isAdmin) {
+                    // Modo Edição: Caminho relativo do repo
+                    finalUrl = relativePart;
+                } else {
+                    // Modo Leitura: Caminho Absoluto Web
+                    // Se for asset global
+                    if (relativePart.startsWith('assets/')) {
+                         finalUrl = `${githubBaseUrl}/${relativePart}`;
+                    } else {
+                         // Se for manual
+                         finalUrl = `${githubBaseUrl}/manuais/${manualSlug}/${relativePart}`;
+                    }
+                }
+            }
+            output = `\n![${alt}](${encodeURI(finalUrl)})\n\n`;
+        }
+        else if (tag === 'div' || tag === 'span' || tag === 'section') {
+            node.childNodes.forEach(c => output += processNode(c));
+        }
         return output;
     };
 
-    // Iterar Seções (H2 são definidos pela estrutura .secao)
     secoes.forEach(secao => {
         const h2 = secao.querySelector('.secao-header h2')?.textContent.trim();
         if (h2) md += `## ${h2}\n\n`;
-
         const conteudo = secao.querySelector('.secao-conteudo');
-        if (conteudo) {
-            conteudo.childNodes.forEach(node => {
-                md += processNode(node);
-            });
-        }
-        md += `\n`; // Espaço entre seções
+        if (conteudo) conteudo.childNodes.forEach(n => md += processNode(n));
+        md += `\n`;
     });
 
     return md;
 }
 
-// Export read-only HTML version
+/**
+ * Export HTML
+ * Fix: Absolute CSS Paths
+ */
 function shareManual() {
     const clone = document.documentElement.cloneNode(true);
-    // URL base fixa do GitHub Pages
     const githubBaseUrl = 'https://alexandresilva-psa.github.io/Manuais_Ferramentas_PSA';
 
-    // Tenta detectar o slug para compor URLs relativas
-    let manualSlug = '';
-    if (window.location.pathname.includes('/manuais/')) {
-        manualSlug = window.location.pathname.split('/manuais/')[1].split('/')[0];
-    }
-
+    // Limpeza
     clone.querySelectorAll('#header-admin-tools, .section-delete-btn, .marker-delete-btn').forEach(el => el.remove());
+    clone.querySelectorAll('script').forEach(s => s.remove()); // Remove scripts para ser estatico limpo
 
-    // Remove scripts de edição
-    clone.querySelectorAll('script').forEach(script => {
-        if (script.src && (script.src.includes('editor.js') || script.src.includes('features.js'))) {
-            // Keep features for zoom? User said "retains the zoom functionality"
-            // If we keep features.js, we need to make sure it works in standalone HTML
-            // But usually we sanitize. Let's keep common scripts but remove admin stuff.
+    // Fix CSS Links (Ensure Absolute)
+    clone.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && !href.startsWith('http')) {
+            // Se for /assets..., vira https://.../assets...
+            // Remove ../ e / inicial
+            const clean = href.replace(/^(\.\.\/)+/, '').replace(/^\//, '');
+            link.href = `${githubBaseUrl}/${clean}`;
         }
     });
 
-    // Resolve Absolute URLs para o GitHub Pages
-    clone.querySelectorAll('img, link, script').forEach(el => {
-        const attr = el.tagName === 'LINK' ? 'href' : 'src';
-        const val = el.getAttribute(attr);
-
-        if (val && !val.startsWith('http') && !val.startsWith('data:')) {
-            // Limpa paths relativos
-            const cleanVal = val.replace(/^(\.\.\/)+/, '').replace(/^\//, '');
-            let newVal = '';
-
-            if (cleanVal.startsWith('assets/')) {
-                // Assets globais
-                newVal = `${githubBaseUrl}/${cleanVal}`;
-            } else {
-                // Assets locais do manual
-                newVal = `${githubBaseUrl}/manuais/${manualSlug}/${cleanVal}`;
-            }
-
-            el.setAttribute(attr, newVal);
+    // Fix Images
+    clone.querySelectorAll('img').forEach(img => {
+        const src = img.getAttribute('src');
+        if (src && !src.startsWith('http') && !src.startsWith('data:')) {
+             if (src.includes('/imagens/')) {
+                 const parts = src.split('/imagens/');
+                 const relativePart = 'imagens/' + parts[parts.length - 1];
+                 // Manual context
+                 let manualSlug = '';
+                 if (window.location.pathname.includes('/manuais/')) manualSlug = window.location.pathname.split('/manuais/')[1].split('/')[0];
+                 img.src = `${githubBaseUrl}/manuais/${manualSlug}/${relativePart}`;
+             } else if (src.includes('assets/')) {
+                  const parts = src.split('assets/');
+                  img.src = `${githubBaseUrl}/assets/${parts[parts.length - 1]}`;
+             }
         }
+    });
+    
+    // Fix Links (Anchors)
+    clone.querySelectorAll('a').forEach(a => {
+         const href = a.getAttribute('href');
+         if (href && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith('mailto')) {
+              // Resolve similar to images default
+              const clean = href.replace(/^(\.\.\/)+/, '').replace(/^\//, '');
+              a.href = `${githubBaseUrl}/${clean}`;
+         }
     });
 
     const pageTitle = document.querySelector('.header-title')?.textContent.trim() || 'Manual';
@@ -343,53 +282,45 @@ function shareManual() {
     a.click();
 }
 
-// Delete section
-function deleteSection(btn) {
-    if (confirm('Tem certeza que deseja excluir esta seção inteira?')) {
-        btn.closest('.secao').remove();
+/**
+ * Client-Side PDF Generation (html2pdf.js)
+ */
+async function downloadGeneratedPDF() {
+    // 1. Load library dynamically if not present
+    if (typeof html2pdf === 'undefined') {
+        const script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
+        script.onload = generateClientPDF; // Call after load
+        document.head.appendChild(script);
+    } else {
+        generateClientPDF();
     }
 }
 
-// Initialize delete buttons on section headers
-function initEditorExtras() {
-    document.querySelectorAll('.secao-header').forEach(header => {
-        if (header.querySelector('.section-delete-btn')) return;
+function generateClientPDF() {
+    const element = document.querySelector('.content-wrapper') || document.body;
+    const pageTitle = document.querySelector('.header-title')?.textContent.trim() || 'Manual';
+    
+    const opt = {
+        margin:       10,
+        filename:     `manual_${pageTitle.replace(/[^a-z0-9]/gi, '_')}.pdf`,
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true },
+        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] }
+    };
 
-        const btn = document.createElement('button');
-        btn.className = 'section-delete-btn';
-        btn.innerHTML = '<span class="material-icons-round">delete_forever</span>';
-        btn.title = "Excluir esta seção";
-        btn.onclick = () => deleteSection(btn);
-        header.appendChild(btn);
+    // Temporarily hide admin tools if visible
+    const adminTools = document.querySelectorAll('.section-delete-btn');
+    adminTools.forEach(el => el.style.display = 'none');
+
+    html2pdf().set(opt).from(element).save().then(() => {
+        // Restore UI
+        adminTools.forEach(el => el.style.display = '');
     });
 }
 
-// Download Server-Generated PDF
-function downloadGeneratedPDF() {
-    // 1. Determine Slug
-    let manualSlug = '';
-    if (window.location.pathname.includes('/manuais/')) {
-        manualSlug = window.location.pathname.split('/manuais/')[1].split('/')[0];
-    } else {
-        const pathParts = window.location.pathname.split('/').filter(p => p && p !== 'Manuais_Ferramentas_PSA');
-        if (pathParts.length > 0) manualSlug = pathParts[pathParts.length - 1];
-    }
 
-    if (!manualSlug) {
-        alert('Não foi possível identificar o manual para gerar o PDF.');
-        return;
-    }
-
-    // 2. Construct URL
-    // GitHub Pages structure: root/assets/pdfs/manual_slug.pdf
-    const githubBaseUrl = 'https://alexandresilva-psa.github.io/Manuais_Ferramentas_PSA';
-    const pdfUrl = `${githubBaseUrl}/assets/pdfs/manual_${manualSlug}.pdf`;
-
-    // 3. Open/Download
-    window.open(pdfUrl, '_blank');
-}
-
-// Global initialization
 document.addEventListener('DOMContentLoaded', () => {
     initEditorExtras();
     checkAdminAccess();

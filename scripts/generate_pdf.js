@@ -30,12 +30,13 @@ async function generatePDFs() {
             }
 
             // Create symlink: ./Manuais_Ferramentas_PSA -> ./_site
-            // Type 'dir' is for Windows, ignored on Linux
-            fs.symlinkSync(path.resolve(SITE_DIR), symlinkPath, 'junction');
-            console.log(`🔗 Created symlink for baseurl: ${symlinkPath} -> ${SITE_DIR}`);
+            // Use relative path for better compatibility
+            const relativeSiteDir = path.relative(process.cwd(), path.resolve(SITE_DIR));
+            // 'junction' is for Windows, 'dir'/default is fine for Linux. Using 'junction' is safer on Windows.
+            fs.symlinkSync(relativeSiteDir, symlinkPath, 'junction');
+            console.log(`🔗 Created symlink for baseurl: ${symlinkPath} -> ${relativeSiteDir}`);
         } catch (e) {
             console.warn(`⚠️ Could not create symlink (might exist or permission error): ${e.message}`);
-            // Fallback: Continue, but assets might fail if they rely strictly on root-relative paths
         }
     }
 
