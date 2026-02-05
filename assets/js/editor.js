@@ -285,8 +285,14 @@ async function shareManual() {
     clone.querySelectorAll('#header-admin-tools, .section-delete-btn, .marker-delete-btn').forEach(el => el.remove());
     clone.querySelectorAll('script').forEach(s => s.remove());
 
-    // 3. Remove external CSS links and add inline style
-    clone.querySelectorAll('link[rel="stylesheet"]').forEach(link => link.remove());
+    // 3. Remove project CSS links (keep Google Fonts) and add inline style
+    clone.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+        const href = link.getAttribute('href') || '';
+        // Keep Google Fonts and icon fonts
+        if (!href.includes('fonts.googleapis.com') && !href.includes('fonts.gstatic.com')) {
+            link.remove();
+        }
+    });
     if (inlineCSS) {
         const styleTag = document.createElement('style');
         styleTag.textContent = inlineCSS;
