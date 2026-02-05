@@ -113,17 +113,29 @@ function handleMDExport() {
 }
 
 /**
- * Converte HTML para Markdown
- * Lógica de Imagem: Split-based para evitar duplicidade
+ * Slugify text for anchor links (Obsidian/GitHub compatible)
+ */
+function slugify(text) {
+    return text.toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // Remove accents
+        .replace(/[^\w\s-]/g, '') // Remove special chars
+        .replace(/\s+/g, '-')     // Spaces to hyphens
+        .replace(/-+/g, '-')      // Multiple hyphens to single
+        .trim();
+}
+
+/**
+ * Converte HTML para Markdown com TOC linkado
  */
 function convertToMarkdown() {
     const pageTitle = document.querySelector('.header-title')?.textContent.trim() || 'Manual';
     const versao = document.querySelector('.badge-versao')?.textContent.trim() || '1.0';
     const githubUrl = window.PSA_GITHUB_URL || 'https://github.com';
     const githubBaseUrl = 'https://alexandresilva-psa.github.io/Manuais_Ferramentas_PSA';
-
-    let tocYaml = 'toc:\n';
     const secoes = document.querySelectorAll('.secao');
+
+    // Generate front-matter YAML TOC
+    let tocYaml = 'toc:\n';
     secoes.forEach(secao => {
         const id = secao.id;
         const h2 = secao.querySelector('.secao-header h2')?.textContent.trim() || 'Sem Título';
@@ -139,6 +151,23 @@ function convertToMarkdown() {
 
     let md = `---\nlayout: manual\ntitle: "${pageTitle}"\nversao: "${versao}"\ngithub_url: "${githubUrl}"\n${tocYaml}---\n\n`;
 
+    // Generate Markdown TOC with anchor links
+    md += `## Sumário\n\n`;
+    secoes.forEach(secao => {
+        const h2 = secao.querySelector('.secao-header h2')?.textContent.trim();
+        if (h2) {
+            const anchor = slugify(h2);
+            md += `- [${h2}](#${anchor})\n`;
+
+            secao.querySelectorAll('.secao-conteudo h3').forEach(h3 => {
+                const subTitle = h3.textContent.trim();
+                const subAnchor = slugify(subTitle);
+                md += `  - [${subTitle}](#${subAnchor})\n`;
+            });
+        }
+    });
+    md += `\n---\n\n`;
+
     let manualSlug = '';
     if (window.location.pathname.includes('/manuais/')) {
         manualSlug = window.location.pathname.split('/manuais/')[1].split('/')[0];
@@ -151,7 +180,11 @@ function convertToMarkdown() {
         const tag = node.tagName.toLowerCase();
         let output = '';
 
-        if (tag === 'h3') output = `\n### ${node.textContent.trim()}\n\n`;
+        if (tag === 'h3') {
+            const text = node.textContent.trim();
+            const anchor = slugify(text);
+            output = `\n### ${text} {#${anchor}}\n\n`;
+        }
         else if (tag === 'p') {
             if (node.classList.contains('img-caption')) {
                 output = `*${node.textContent.trim()}*\n\n`;
@@ -217,7 +250,10 @@ function convertToMarkdown() {
 
     secoes.forEach(secao => {
         const h2 = secao.querySelector('.secao-header h2')?.textContent.trim();
-        if (h2) md += `## ${h2}\n\n`;
+        if (h2) {
+            const anchor = slugify(h2);
+            md += `## ${h2} {#${anchor}}\n\n`;
+        }
         const conteudo = secao.querySelector('.secao-conteudo');
         if (conteudo) conteudo.childNodes.forEach(n => md += processNode(n));
         md += `\n`;
@@ -227,23 +263,37 @@ function convertToMarkdown() {
 }
 
 /**
- * Export HTML - Fix: Absolute CSS Paths
+ * Export HTML - Fetch CSS and Inline it
  */
-function shareManual() {
-    const clone = document.documentElement.cloneNode(true);
+async function shareManual() {
     const githubBaseUrl = 'https://alexandresilva-psa.github.io/Manuais_Ferramentas_PSA';
 
+    // 1. Fetch CSS to embed inline
+    let inlineCSS = '';
+    try {
+        const cssUrl = `${githubBaseUrl}/assets/css/style.css`;
+        const response = await fetch(cssUrl);
+        if (response.ok) {
+            inlineCSS = await response.text();
+        }
+    } catch (e) {
+        console.warn('CSS fetch failed, export may have broken styles');
+    }
+
+    // 2. Clone and clean
+    const clone = document.documentElement.cloneNode(true);
     clone.querySelectorAll('#header-admin-tools, .section-delete-btn, .marker-delete-btn').forEach(el => el.remove());
     clone.querySelectorAll('script').forEach(s => s.remove());
 
-    clone.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
-        const href = link.getAttribute('href');
-        if (href && !href.startsWith('http')) {
-            const clean = href.replace(/^(\.\.\/)+/, '').replace(/^\//, '');
-            link.href = `${githubBaseUrl}/${clean}`;
-        }
-    });
+    // 3. Remove external CSS links and add inline style
+    clone.querySelectorAll('link[rel="stylesheet"]').forEach(link => link.remove());
+    if (inlineCSS) {
+        const styleTag = document.createElement('style');
+        styleTag.textContent = inlineCSS;
+        clone.querySelector('head').appendChild(styleTag);
+    }
 
+    // 4. Fix image URLs (keep absolute GitHub Pages URLs)
     clone.querySelectorAll('img').forEach(img => {
         const src = img.getAttribute('src');
         if (src && !src.startsWith('http') && !src.startsWith('data:')) {
@@ -260,6 +310,7 @@ function shareManual() {
         }
     });
 
+    // 5. Fix anchor links
     clone.querySelectorAll('a').forEach(a => {
         const href = a.getAttribute('href');
         if (href && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith('mailto')) {
@@ -268,6 +319,7 @@ function shareManual() {
         }
     });
 
+    // 6. Download
     const pageTitle = document.querySelector('.header-title')?.textContent.trim() || 'Manual';
     const blob = new Blob(['<!DOCTYPE html>\n' + clone.outerHTML], { type: 'text/html' });
     const url = URL.createObjectURL(blob);
