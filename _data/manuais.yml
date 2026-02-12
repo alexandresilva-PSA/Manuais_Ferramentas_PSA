@@ -29,3 +29,11 @@ manuais:
     versao: "1.0"
     icone: "balance"
     cor: "#84CC16"
+
+  - id: controle-perdcomp
+    titulo: "Controle de PERDCOMP"
+    descricao: "Gestão de Pedidos de Restituição e Compensações (DCOMP)"
+    versao: "1.0"
+    icone: "price_check"
+    cor: "#10B981"
+
