@@ -1,15 +1,41 @@
 <!-- PSA Header Component -->
 <header class="header">
     <div class="header-left">
-        <svg class="logo" viewBox="0 0 180 48" fill="none">
-            <path d="M8 38L20 26L32 38" stroke="#84CC16" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M8 28L20 16L32 28" stroke="#14B8A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <text x="44" y="34" fill="#E5E7EB" font-family="Work Sans" font-weight="700" font-size="22">PSA</text>
-        </svg>
+        <a href="{{ '/' | relative_url }}" class="logo-link">
+            <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="PSA Logo" class="logo">
+        </a>
         <div class="header-divider"></div>
         <span class="header-title editable-text">{{ page.title | default: site.title }}</span>
     </div>
     <div class="header-right">
+        <!-- Theme Toggle -->
+        <button class="header-btn" id="theme-toggle" onclick="toggleDarkMode()" title="Alternar Tema">
+            <span class="material-icons-round" id="theme-icon">dark_mode</span>
+        </button>
+
+        <!-- Admin Tools (Hidden by default, controlled by editor.js) -->
+        <div id="header-admin-tools" class="header-tools" style="display: none;">
+            <button class="header-btn" id="btn-edit-header" onclick="toggleEditMode()" title="Ativar Edição">
+                <span class="material-icons-round" id="icon-edit-header">edit</span>
+            </button>
+            <button class="header-btn logout-btn" onclick="adminLogout()" title="Sair">
+                <span class="material-icons-round">logout</span>
+            </button>
+        </div>
+
+        <!-- Public User Tools (Always visible) -->
+        <div class="header-tools">
+            <button class="header-btn" onclick="handleMDExport()" title="Baixar Markdown">
+                <span class="material-icons-round">text_snippet</span>
+            </button>
+            <button class="header-btn" onclick="shareManual()" title="Baixar HTML">
+                <span class="material-icons-round">download</span>
+            </button>
+            <button class="header-btn" onclick="downloadGeneratedPDF()" title="Baixar PDF Oficial">
+                <span class="material-icons-round">picture_as_pdf</span>
+            </button>
+        </div>
+
         <span class="badge-versao editable-text">Versão {{ page.versao | default: "1.0" }}</span>
     </div>
 </header>
