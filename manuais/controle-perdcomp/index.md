@@ -10,35 +10,40 @@ toc:
       - id: secao-1-1
         title: "1.1. Login e Navegação"
       - id: secao-1-2
-        title: "1.2. Seleção da Ferramenta"
+        title: "1.2. Seleção de Ambiente"
   - id: secao-2
-    title: "2. Visão Geral e Filtros"
+    title: "2. Filtros e Pesquisa"
     items:
       - id: secao-2-1
-        title: "2.1. Painel de Controle"
+        title: "2.1. Configuração dos Filtros"
       - id: secao-2-2
-        title: "2.2. Utilizando os Filtros"
+        title: "2.2. Executando a Busca"
   - id: secao-3
-    title: "3. Gestão de PER (Créditos)"
+    title: "3. Gestão de PER (Pedidos)"
     items:
       - id: secao-3-1
-        title: "3.1. Cadastrando um Novo PER"
+        title: "3.1. Visualização e Edição"
       - id: secao-3-2
-        title: "3.2. Detalhes e Status"
+        title: "3.2. Novo Cadastro de PER"
   - id: secao-4
-    title: "4. Gestão de DCOMP (Compensações)"
+    title: "4. Detalhes e Situação"
     items:
       - id: secao-4-1
-        title: "4.1. Lançamento de DCOMP"
-      - id: secao-4-2
-        title: "4.2. Retificação de DCOMP"
+        title: "4.1. Atualizando Status"
   - id: secao-5
-    title: "5. Ressarcimentos"
+    title: "5. Gestão de DCOMP"
     items:
       - id: secao-5-1
-        title: "5.1. Registro de Pagamento em Espécie"
+        title: "5.1. Novo DCOMP"
+      - id: secao-5-2
+        title: "5.2. Ressarcimentos"
   - id: secao-6
-    title: "6. Busca Avançada"
+    title: "6. Retificações e Ajustes"
+    items:
+      - id: secao-6-1
+        title: "6.1. Retificar DCOMP"
+  - id: secao-7
+    title: "7. Busca Avançada"
 ---
 
 <div class="secao" id="secao-1">
@@ -49,86 +54,81 @@ toc:
   <div class="secao-conteudo editable-area">
     
     <h3 id="secao-1-1">1.1 Login e Navegação</h3>
-    <p>Acesse o portal PSA Elevate e localize o menu <strong>Equipe</strong> no canto superior direito.</p>
+    <p>Acesse a página inicial do portal PSA Elevate.</p>
     <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/01_01_Homepage.png" class="img-screenshot" alt="Homepage PSA Elevate">
-        </div>
-    </div>
-    
-    <p>No menu suspenso, selecione a área <strong>Digital</strong> e realize o login com suas credenciais de acesso.</p>
-    <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/01_03_Selecao_Area.png" class="img-screenshot" alt="Seleção de Área Digital">
-        </div>
-    </div>
-    <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/01_04_Tela_Login.png" class="img-screenshot" alt="Tela de Login">
-        </div>
+        <div class="img-wrapper"><img src="imagens/01_01_Homepage.png" class="img-screenshot" alt="Homepage"></div>
     </div>
 
-    <h3 id="secao-1-2">1.2 Seleção da Ferramenta</h3>
-    <p>No painel de seleção de ambientes, escolha <strong>Digital Dev</strong>.</p>
+    <p>No canto superior direito, clique no menu <strong>Equipe</strong>.</p>
     <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/01_05_Ambiente_Dev.png" class="img-screenshot" alt="Seleção de Ambiente Dev">
-        </div>
+        <div class="img-wrapper"><img src="imagens/01_02_Menu_Equipe.png" class="img-screenshot" alt="Menu Equipe"></div>
     </div>
-    <p>No menu lateral esquerdo, clique em <strong>Controle PERDCOMP</strong> para acessar a ferramenta.</p>
+
+    <p>Selecione a área <strong>Digital</strong> para acessar as ferramentas fiscais.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/01_03_Selecao_Area.png" class="img-screenshot" alt="Seleção de Área"></div>
+    </div>
+
+    <p>Realize o login com suas credenciais de acesso.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/01_04_Tela_Login.png" class="img-screenshot" alt="Login"></div>
+    </div>
+
+    <h3 id="secao-1-2">1.2 Seleção de Ambiente</h3>
+    <p>No painel de áreas, escolha o ambiente <strong>Digital Dev</strong>.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/01_05_Ambiente_Dev.png" class="img-screenshot" alt="Ambiente Digital Dev"></div>
+    </div>
   </div>
 </div>
 
 <div class="secao" id="secao-2">
   <div class="secao-header">
     <span class="secao-numero editable-text">2</span>
-    <h2 class="editable-text">Visão Geral e Filtros</h2>
+    <h2 class="editable-text">Filtros e Pesquisa</h2>
   </div>
   <div class="secao-conteudo editable-area">
     
-    <h3 id="secao-2-1">2.1 Painel de Controle</h3>
-    <p>Ao acessar a ferramenta, a grade de resultados estará vazia. Utilize os filtros no topo da tela para carregar os processos desejados.</p>
+    <h3 id="secao-2-1">2.1 Configuração dos Filtros</h3>
+    <p>Ao acessar o <strong>Controle PERDCOMP</strong> no menu lateral, a tela inicial estará vazia aguardando filtros.</p>
     <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/02_01_Tela_Inicial_Vazia.png" class="img-screenshot" alt="Tela Inicial Vazia">
-        </div>
+        <div class="img-wrapper"><img src="imagens/02_01_Tela_Inicial_Vazia.png" class="img-screenshot" alt="Tela Inicial"></div>
     </div>
 
-    <h3 id="secao-2-2">2.2 Utilizando os Filtros</h3>
-    <p>Para visualizar os processos (PERs), configure os filtros obrigatórios:</p>
-    <ol>
-        <li><strong>Cliente:</strong> Selecione a empresa principal (Ex: DK Transportes).</li>
-        <li><strong>Contribuinte:</strong> Selecione a filial ou CNPJ específico.</li>
-    </ol>
-
-    <p>Você pode refinar a busca utilizando os filtros opcionais:</p>
-    <ul>
-        <li><strong>Situação:</strong> Permite selecionar múltiplos status (ex: "Em análise", "Deferido").</li>
-        <li><strong>Exercício:</strong> Filtra pelo ano de origem do crédito.</li>
-    </ul>
-
-    <div class="dica">
-        <span class="material-icons-round">info</span>
-        <p><strong>Nota:</strong> Por padrão, o sistema oculta processos que já foram retificados, exibindo apenas a versão mais atual (ativa) do PER.</p>
-    </div>
-
+    <p>Selecione o <strong>Cliente</strong> desejado na lista.</p>
     <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/02_07_Filtros_Preenchidos.png" class="img-screenshot" alt="Filtros Preenchidos">
-        </div>
-        <p class="img-caption">Exemplo de configuração de filtros</p>
+        <div class="img-wrapper"><img src="imagens/02_02_Filtro_Cliente.png" class="img-screenshot" alt="Filtro Cliente"></div>
     </div>
 
-    <p>Clique em <strong>Buscar</strong> para carregar a grade.</p>
+    <p>Em seguida, selecione o <strong>Contribuinte</strong> (Filial/CNPJ).</p>
     <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/03_01_Grid_Resultados.png" class="img-screenshot" alt="Grade de Resultados">
-        </div>
+        <div class="img-wrapper"><img src="imagens/02_03_Filtro_Contribuinte.png" class="img-screenshot" alt="Filtro Contribuinte"></div>
     </div>
 
-    <div class="aviso">
-        <span class="material-icons-round">warning</span>
-        <p>A coluna <strong>Vlr. Selic</strong> exibe o valor corrigido apenas se o crédito já tiver superado o período de carência (360 dias da Data Solicitada). Caso contrário, exibirá "Em carência".</p>
+    <p>Opcionalmente, filtre pela <strong>Situação</strong> do processo (ex: Em análise, Deferido, etc).</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/02_04_Filtro_Situacao.png" class="img-screenshot" alt="Filtro Situação"></div>
+    </div>
+
+    <p>Ou pelo <strong>Exercício</strong> (Ano de referência).</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/02_05_Filtro_Exercicio.png" class="img-screenshot" alt="Filtro Exercício"></div>
+    </div>
+
+    <p>Também é possível buscar diretamente digitando o <strong>Nº do Processo</strong>.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/02_06_Input_Processo.png" class="img-screenshot" alt="Input Processo"></div>
+    </div>
+
+    <h3 id="secao-2-2">2.2 Executando a Busca</h3>
+    <p>Com os filtros configurados, a tela exibirá os parâmetros selecionados.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/02_07_Filtros_Preenchidos.png" class="img-screenshot" alt="Filtros Preenchidos"></div>
+    </div>
+
+    <p>Clique no botão <strong>Buscar</strong>.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/02_08_Acao_Buscar.png" class="img-screenshot" alt="Ação Buscar"></div>
     </div>
   </div>
 </div>
@@ -136,51 +136,45 @@ toc:
 <div class="secao" id="secao-3">
   <div class="secao-header">
     <span class="secao-numero editable-text">3</span>
-    <h2 class="editable-text">Gestão de PER (Pedidos de Restituição)</h2>
+    <h2 class="editable-text">Gestão de PER (Pedidos)</h2>
   </div>
   <div class="secao-conteudo editable-area">
     
-    <h3 id="secao-3-1">3.1 Cadastrando um Novo PER</h3>
-    <p>Para registrar um novo crédito, clique no botão <strong>+ Novo</strong> localizado acima da tabela.</p>
+    <h3 id="secao-3-1">3.1 Visualização e Edição</h3>
+    <p>O sistema carregará a grade de resultados com os processos encontrados.</p>
     <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/04_01_Modal_Novo_PER.png" class="img-screenshot" alt="Botão Novo PER">
-        </div>
-    </div>
-    
-    <p>Preencha os dados do Pedido Eletrônico de Restituição:</p>
-    <ul>
-        <li><strong>Tipo de Declaração:</strong> "Original" ou "Retificadora".</li>
-        <li><strong>Número do Processo:</strong> O sistema aplicará a máscara automática (00000.00000.000000.0.0.00-0000).</li>
-        <li><strong>Exercício/Trimestre:</strong> Período de apuração.</li>
-        <li><strong>Valor do Crédito:</strong> Valor original do pedido.</li>
-    </ul>
-
-    <div class="dica">
-        <span class="material-icons-round">lightbulb</span>
-        <p>Se selecionar <strong>Retificadora</strong>, será obrigatório vincular o processo original no campo "PER a ser Retificado".</p>
-    </div>
-    
-    <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/04_02_Formulario_Novo_PER.png" class="img-screenshot" alt="Formulário de Cadastro">
-        </div>
+        <div class="img-wrapper"><img src="imagens/03_01_Grid_Resultados.png" class="img-screenshot" alt="Grid Resultados"></div>
     </div>
 
-    <h3 id="secao-3-2">3.2 Detalhes e Status</h3>
-    <p>Clique sobre qualquer linha da tabela para abrir a visão detalhada do PER. Nesta tela, você pode visualizar o <strong>Saldo Disponível</strong> atualizado, que deduz automaticamente as compensações e ressarcimentos.</p>
-    
+    <p>Utilize a barra de rolagem para ver mais colunas, como Saldo Disponível e Valor Selic.</p>
     <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/05_02_Detalhes_Expandido.png" class="img-screenshot" alt="Detalhes do PER">
-        </div>
+        <div class="img-wrapper"><img src="imagens/03_02_Scroll_Grid.png" class="img-screenshot" alt="Scroll Grid"></div>
     </div>
 
-    <p>Para alterar o status, utilize o painel lateral esquerdo. Selecione a nova situação (ex: "Em análise") e clique em <strong>Salvar Situação</strong>. O histórico de alterações ficará registrado logo abaixo.</p>
+    <p>Para editar dados básicos de um PER, clique no ícone de <strong>Lápis</strong>.</p>
     <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/05_04_Btn_Salvar_Situacao.png" class="img-screenshot" alt="Atualização de Status">
-        </div>
+        <div class="img-wrapper"><img src="imagens/03_03_Btn_Editar_PER.png" class="img-screenshot" alt="Botão Editar"></div>
+    </div>
+
+    <p>No modal de edição, altere os dados necessários e clique em Salvar.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/03_04_Modal_Editar.png" class="img-screenshot" alt="Modal Editar"></div>
+    </div>
+
+    <h3 id="secao-3-2">3.2 Novo Cadastro de PER</h3>
+    <p>Para criar um novo pedido, clique no botão <strong>+ Novo</strong>.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/04_01_Modal_Novo_PER.png" class="img-screenshot" alt="Botão Novo"></div>
+    </div>
+
+    <p>Preencha os dados do formulário (Tipo Declaração, Processo, Exercício, Trimestre, Tipo Crédito e Valor).</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/04_02_Formulario_Novo_PER.png" class="img-screenshot" alt="Formulário Novo PER"></div>
+    </div>
+
+    <p>Após salvar, um aviso de confirmação será exibido.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/04_03_Toast_Sucesso_PER.png" class="img-screenshot" alt="Sucesso PER"></div>
     </div>
   </div>
 </div>
@@ -188,48 +182,29 @@ toc:
 <div class="secao" id="secao-4">
   <div class="secao-header">
     <span class="secao-numero editable-text">4</span>
-    <h2 class="editable-text">Gestão de DCOMP (Compensações)</h2>
+    <h2 class="editable-text">Detalhes e Situação</h2>
   </div>
   <div class="secao-conteudo editable-area">
-    <p>As DCOMPs representam o uso do crédito do PER para abater débitos fiscais.</p>
-
-    <h3 id="secao-4-1">4.1 Lançamento de DCOMP</h3>
-    <p>Dentro da tela de detalhes do PER, clique em <strong>+ Novo DCOMP</strong>.</p>
-    <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/06_01_Modal_Novo_DCOMP.png" class="img-screenshot" alt="Botão Nova DCOMP">
-        </div>
-    </div>
     
-    <p>Informe os dados da compensação:</p>
-    <ul>
-        <li><strong>Número do Documento:</strong> Identificador da DCOMP.</li>
-        <li><strong>Mês/Ano Exercício:</strong> Competência do débito.</li>
-        <li><strong>Imposto:</strong> Selecione o tributo (PIS, COFINS, IPI, IRPJ, CSLL ou INSS).</li>
-        <li><strong>Valor Compensado:</strong> Montante a ser abatido do PER.</li>
-    </ul>
-
+    <h3 id="secao-4-1">4.1 Atualizando Status</h3>
+    <p>Clique em uma linha da tabela para ver os detalhes do PER.</p>
     <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/06_02_Formulario_DCOMP.png" class="img-screenshot" alt="Formulário DCOMP">
-        </div>
+        <div class="img-wrapper"><img src="imagens/05_01_Lista_PERs.png" class="img-screenshot" alt="Seleção na Lista"></div>
     </div>
 
-    <h3 id="secao-4-2">4.2 Retificação de DCOMP</h3>
-    <p>Caso precise corrigir uma compensação, crie uma nova DCOMP e utilize o campo <strong>DCOMP a Retificar (Opcional)</strong>. O sistema listará apenas as DCOMPs vigentes vinculadas a este PER.</p>
-    
+    <p>A tela de detalhes exibe o saldo atualizado e o histórico de lançamentos.</p>
     <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/08_05_DCOMP_Retificador.png" class="img-screenshot" alt="Campo de Retificação">
-        </div>
-        <p class="img-caption">Selecione o documento original para vincular a retificação.</p>
+        <div class="img-wrapper"><img src="imagens/05_02_Detalhes_Expandido.png" class="img-screenshot" alt="Detalhes Expandido"></div>
     </div>
 
-    <p>Na lista de lançamentos, a retificação aparecerá com o número do documento original destacado em laranja.</p>
+    <p>No menu lateral esquerdo, selecione a nova <strong>Situação</strong> do processo.</p>
     <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/08_07_Lista_Retificada.png" class="img-screenshot" alt="Lista com Retificação">
-        </div>
+        <div class="img-wrapper"><img src="imagens/05_03_Select_Situacao.png" class="img-screenshot" alt="Select Situação"></div>
+    </div>
+
+    <p>Clique em <strong>Salvar Situação</strong> para atualizar o histórico.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/05_04_Btn_Salvar_Situacao.png" class="img-screenshot" alt="Salvar Situação"></div>
     </div>
   </div>
 </div>
@@ -237,28 +212,40 @@ toc:
 <div class="secao" id="secao-5">
   <div class="secao-header">
     <span class="secao-numero editable-text">5</span>
-    <h2 class="editable-text">Ressarcimentos</h2>
+    <h2 class="editable-text">Gestão de DCOMP</h2>
   </div>
   <div class="secao-conteudo editable-area">
-    <h3 id="secao-5-1">5.1 Registro de Pagamento em Espécie</h3>
-    <p>Quando a Receita Federal realiza o pagamento do crédito em dinheiro, utilize a opção <strong>$ Novo Ressarcimento</strong> na tela de detalhes.</p>
-    <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/07_01_Btn_Ressarcimento.png" class="img-screenshot" alt="Botão Ressarcimento">
-        </div>
-    </div>
     
-    <p>Informe o <strong>Valor Ressarcido</strong> e a <strong>Data do Pagamento</strong>. Ao salvar:</p>
-    <ul>
-        <li>O valor será deduzido do saldo do PER.</li>
-        <li>A situação do PER será atualizada automaticamente para <strong>PER deferido</strong>.</li>
-        <li>A data de pagamento será registrada no histórico.</li>
-    </ul>
-
+    <h3 id="secao-5-1">5.1 Novo DCOMP</h3>
+    <p>Para registrar uma compensação, clique em <strong>+ Novo DCOMP</strong>.</p>
     <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/07_02_Formulario_Ressarcimento.png" class="img-screenshot" alt="Dados do Ressarcimento">
-        </div>
+        <div class="img-wrapper"><img src="imagens/06_01_Modal_Novo_DCOMP.png" class="img-screenshot" alt="Novo DCOMP"></div>
+    </div>
+
+    <p>Preencha os dados da compensação (Nº Documento, Mês/Ano, Envio, Imposto e Valor Compensado).</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/06_02_Formulario_DCOMP.png" class="img-screenshot" alt="Formulário DCOMP"></div>
+    </div>
+
+    <p>Confirme a criação e aguarde o aviso de sucesso.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/06_03_Sucesso_DCOMP.png" class="img-screenshot" alt="Sucesso DCOMP"></div>
+    </div>
+
+    <h3 id="secao-5-2">5.2 Ressarcimentos</h3>
+    <p>Para pagamentos em espécie, clique em <strong>$ Novo Ressarcimento</strong>.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/07_01_Btn_Ressarcimento.png" class="img-screenshot" alt="Botão Ressarcimento"></div>
+    </div>
+
+    <p>Informe o valor recebido e a data do pagamento.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/07_02_Formulario_Ressarcimento.png" class="img-screenshot" alt="Formulário Ressarcimento"></div>
+    </div>
+
+    <p>O sistema atualizará o saldo e o status do PER automaticamente.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/07_03_Sucesso_Ressarcimento.png" class="img-screenshot" alt="Sucesso Ressarcimento"></div>
     </div>
   </div>
 </div>
@@ -266,20 +253,87 @@ toc:
 <div class="secao" id="secao-6">
   <div class="secao-header">
     <span class="secao-numero editable-text">6</span>
+    <h2 class="editable-text">Retificações e Ajustes</h2>
+  </div>
+  <div class="secao-conteudo editable-area">
+    
+    <h3 id="secao-6-1">6.1 Retificar DCOMP</h3>
+    <p>Na lista de lançamentos, você pode editar um registro existente.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/08_01_Editar_DCOMP.png" class="img-screenshot" alt="Editar DCOMP"></div>
+    </div>
+
+    <p>Visualize os lançamentos já efetuados no PER.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/08_02_Lista_Com_DCOMP.png" class="img-screenshot" alt="Lista DCOMP"></div>
+    </div>
+
+    <p>O saldo na grade principal será recalculado.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/08_03_Grid_Atualizado.png" class="img-screenshot" alt="Grid Atualizado"></div>
+    </div>
+
+    <p>Selecione outro PER para ver seus detalhes.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/08_04_Expandido_Outro_PER.png" class="img-screenshot" alt="Outro PER"></div>
+    </div>
+
+    <p>Para retificar, ao criar um Novo DCOMP, utilize o campo <strong>DCOMP a Retificar</strong>.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/08_05_DCOMP_Retificador.png" class="img-screenshot" alt="DCOMP Retificador"></div>
+    </div>
+
+    <p>Preencha os novos dados da retificação.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/08_06_Formulario_Retificacao.png" class="img-screenshot" alt="Formulário Retificação"></div>
+    </div>
+
+    <p>O sistema vinculará o novo registro ao antigo (em destaque laranja).</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/08_07_Lista_Retificada.png" class="img-screenshot" alt="Lista Retificada"></div>
+    </div>
+  </div>
+</div>
+
+<div class="secao" id="secao-7">
+  <div class="secao-header">
+    <span class="secao-numero editable-text">7</span>
     <h2 class="editable-text">Busca Avançada</h2>
   </div>
   <div class="secao-conteudo editable-area">
-    <p>Para localizar rapidamente um processo específico, utilize o campo de busca global <strong>Nº do Processo</strong> no painel de filtros.</p>
+    <p>Para localizar um item específico, limpe os filtros anteriores.</p>
     <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/09_02_Filtro_Numero_Proc.png" class="img-screenshot" alt="Campo de Busca Global">
-        </div>
+        <div class="img-wrapper"><img src="imagens/09_01_Busca_Geral.png" class="img-screenshot" alt="Busca Geral"></div>
     </div>
-    <p>Você pode digitar o número completo ou parcial. O sistema buscará tanto pelo número do PER quanto pelo número de qualquer DCOMP vinculada.</p>
+
+    <p>Digite o número exato no campo <strong>Nº do Processo</strong>.</p>
     <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/09_03_Resultado_Filtrado_PER.png" class="img-screenshot" alt="Resultado da Busca">
-        </div>
+        <div class="img-wrapper"><img src="imagens/09_02_Filtro_Numero_Proc.png" class="img-screenshot" alt="Filtro Número"></div>
+    </div>
+
+    <p>O PER correspondente será exibido.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/09_03_Resultado_Filtrado_PER.png" class="img-screenshot" alt="Resultado PER"></div>
+    </div>
+
+    <p>Você pode acessar os detalhes diretamente.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/09_04_Detalhe_Filtrado.png" class="img-screenshot" alt="Detalhe Filtrado"></div>
+    </div>
+
+    <p>A busca também funciona para números de DCOMP.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/09_05_Busca_DCOMP_ID.png" class="img-screenshot" alt="Busca DCOMP ID"></div>
+    </div>
+
+    <p>O sistema trará o PER de origem desse DCOMP.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/09_06_Resultado_Filtrado_DCOMP.png" class="img-screenshot" alt="Resultado DCOMP"></div>
+    </div>
+
+    <p>Visualizando o vínculo exato.</p>
+    <div class="img-container">
+        <div class="img-wrapper"><img src="imagens/09_07_Detalhe_Final.png" class="img-screenshot" alt="Detalhe Final"></div>
     </div>
   </div>
 </div>
