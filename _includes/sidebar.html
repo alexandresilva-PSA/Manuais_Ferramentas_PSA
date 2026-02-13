@@ -1,35 +1,41 @@
-<!-- PSA Sidebar Component -->
+<!-- PSA Sidebar Component (Variant 2 - Accordion) -->
 <aside class="sidebar" id="sidebar">
-    <div class="sidebar-header">
-        <h2>Sumário</h2>
+    <div class="sidebar-search-area">
+        <h2 class="sidebar-section-title">Sumário</h2>
+        <div class="sidebar-search-box">
+            <span class="material-icons-round">search</span>
+            <input type="text" id="sidebar-search-input" placeholder="Buscar no manual..."
+                onkeyup="filterSidebarItems()">
+        </div>
     </div>
+
     <nav class="sidebar-nav" id="sidebar-nav">
         {% if page.toc %}
         {% for section in page.toc %}
-        <div class="nav-group" id="nav-group-{{ section.id }}">
+        <div class="nav-group collapsed" id="nav-group-{{ forloop.index }}">
             <div class="nav-group-header" onclick="toggleNavGroup(this)">
-                <span>{{ section.title }}</span>
-                <span class="material-icons-round">expand_more</span>
+                <span class="nav-group-title">{{ section.title }}</span>
+                <span class="material-icons-round expand-icon">chevron_right</span>
             </div>
             <div class="nav-group-content">
                 {% for item in section.items %}
-                <a href="#{{ item.id }}">
-                    <span class="material-icons-round">{{ item.icon | default: 'article' }}</span>
-                    {{ item.title }}
+                <a href="#{{ item.id }}" class="nav-item" id="nav-item-{{ item.id }}">
+                    <span class="material-icons-round">{{ item.icon | default: 'description' }}</span>
+                    <span class="nav-item-text">{{ item.title }}</span>
                 </a>
                 {% endfor %}
             </div>
         </div>
         {% endfor %}
         {% else %}
-        <!-- Fallback: Auto-generated from headings -->
-        <div class="nav-group">
+        <!-- Fallback: Auto-Generated from Headings -->
+        <div class="nav-group" id="auto-toc-group">
             <div class="nav-group-header" onclick="toggleNavGroup(this)">
-                <span>Conteúdo</span>
-                <span class="material-icons-round">expand_more</span>
+                <span class="nav-group-title">Conteúdo</span>
+                <span class="material-icons-round expand-icon">chevron_right</span>
             </div>
-            <div class="nav-group-content" id="auto-toc">
-                <!-- Will be populated by JavaScript -->
+            <div class="nav-group-content" id="auto-toc-content">
+                <!-- Populated by browser JS if needed -->
             </div>
         </div>
         {% endif %}
@@ -37,19 +43,33 @@
 </aside>
 
 <script>
-    // Auto-generate TOC if not provided in frontmatter
+    // Local fix for the toggle function parameter if needed
+    function toggleNavGroup(el) {
+        const group = el.closest('.nav-group');
+        if (group) group.classList.toggle('collapsed');
+    }
+
+    // Auto-populate sidebar if no TOC is provided in frontmatter
     document.addEventListener('DOMContentLoaded', function () {
-        const autoToc = document.getElementById('auto-toc');
-        if (autoToc && autoToc.children.length === 0) {
+        const container = document.getElementById('auto-toc-content');
+        if (container && container.children.length === 0) {
             document.querySelectorAll('.secao').forEach(function (secao) {
-                const h2 = secao.querySelector('h2');
-                if (h2 && secao.id) {
+                const titleEl = secao.querySelector('h2');
+                if (titleEl && secao.id) {
                     const link = document.createElement('a');
                     link.href = '#' + secao.id;
-                    link.innerHTML = '<span class="material-icons-round">article</span>' + h2.textContent;
-                    autoToc.appendChild(link);
+                    link.className = 'nav-item';
+                    link.innerHTML = `
+                        <span class="material-icons-round">article</span>
+                        <span class="nav-item-text">${titleEl.textContent}</span>
+                    `;
+                    container.appendChild(link);
                 }
             });
+
+            // Expand auto-toc by default if it's the only one
+            const group = document.getElementById('auto-toc-group');
+            if (group) group.classList.remove('collapsed');
         }
     });
 </script>

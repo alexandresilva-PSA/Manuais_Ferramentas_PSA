@@ -1,0 +1,224 @@
+/* CSS Específico para o Hub PSA - Central de Manuais */
+
+/* Ocultar elementos do layout manual padrão no Hub */
+.sidebar,
+.btn-toggle-sidebar,
+#admin-toolbar,
+.header-title,
+.header-divider {
+    display: none !important;
+}
+
+.main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding: 2rem !important;
+    background-color: var(--content-bg) !important;
+    transition: background-color 0.3s;
+    /* Fix: Use flex-grow and min-height for reliable scrolling */
+    flex: 1 1 auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow-y: auto !important;
+}
+
+.content-wrapper {
+    max-width: 1200px !important;
+    margin: 0 auto;
+    padding-bottom: 4rem;
+}
+
+/* Hero Section */
+.hub-header-hero {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 3.5rem 1.5rem;
+    background: linear-gradient(135deg, var(--teal-700) 0%, var(--teal-500) 100%);
+    border-radius: 24px;
+    color: white;
+    box-shadow: 0 10px 25px -5px rgba(13, 148, 136, 0.3);
+}
+
+.hub-header-hero h1 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: white !important;
+    letter-spacing: -0.025em;
+}
+
+.hub-header-hero p {
+    font-size: 1.125rem;
+    opacity: 0.9;
+    max-width: 650px;
+    margin: 0 auto;
+    color: white !important;
+    line-height: 1.6;
+}
+
+/* Search Bar Container */
+.hub-search-container {
+    max-width: 600px;
+    margin: -30px auto 3rem auto;
+    position: relative;
+    z-index: 10;
+}
+
+.hub-search-container .material-icons-round {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray-400);
+    font-size: 24px;
+}
+
+.hub-search-input {
+    width: 100%;
+    padding: 16px 20px 16px 56px;
+    border-radius: 50px;
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    color: var(--text-main);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.hub-search-input:focus {
+    border-color: var(--teal-500);
+    box-shadow: 0 10px 15px -3px rgba(20, 184, 166, 0.2);
+}
+
+/* Grid System */
+.hub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+/* Card Component */
+.hub-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    text-decoration: none !important;
+    color: var(--text-main);
+    height: 100%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.hub-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: var(--teal-500);
+}
+
+/* Card Header & Icon */
+.hub-card-header {
+    background: var(--gray-50);
+    padding: 1.75rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.hub-icon {
+    width: 52px;
+    height: 52px;
+    background: rgba(20, 184, 166, 0.1);
+    color: var(--teal-700);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+[data-theme="dark"] .hub-icon {
+    color: var(--teal-500);
+}
+
+.hub-icon .material-icons-round {
+    font-size: 30px;
+}
+
+.hub-card-title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hub-card-title {
+    font-size: 1.125rem !important;
+    font-weight: 700 !important;
+    color: var(--text-main);
+    margin: 0 !important;
+    line-height: 1.2;
+}
+
+.hub-badge-version {
+    display: inline-block;
+    font-size: 0.7rem;
+    background: rgba(20, 184, 166, 0.15);
+    color: var(--teal-600);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 700;
+    align-self: flex-start;
+}
+
+/* Card Body */
+.hub-card-body {
+    padding: 1.5rem;
+    color: var(--gray-600);
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+[data-theme="dark"] .hub-card-body {
+    color: var(--gray-400);
+}
+
+.hub-card-body p {
+    margin: 0;
+    font-size: 0.9375rem;
+}
+
+/* Card Footer */
+.hub-card-footer {
+    padding: 1.25rem 1.5rem;
+    background: var(--gray-50);
+    border-top: 1px solid var(--border-color);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--teal-600);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s;
+}
+
+.hub-update-date {
+    font-size: 0.75rem;
+    color: var(--gray-400);
+    font-weight: 400;
+}
+
+.hub-cta-text {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.hub-card:hover .hub-card-footer {
+    color: var(--teal-700);
+    background: rgba(20, 184, 166, 0.05);
+}

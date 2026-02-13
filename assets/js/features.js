@@ -34,10 +34,6 @@ function upgradeImagesToZoom() {
             <button class="btn-float" onclick="controlZoom(this, -0.2)" title="Menos Zoom">
                 <span class="material-icons-round">remove</span>
             </button>
-            <div style="width:1px; height:16px; background:#ddd; margin:0 4px;"></div>
-            <button class="btn-float" onclick="addMarker(this)" title="Adicionar Marcação">
-                <span class="material-icons-round" style="color:#EF4444">radio_button_unchecked</span>
-            </button>
         `;
         wrapper.appendChild(toolbar);
 
@@ -48,26 +44,47 @@ function upgradeImagesToZoom() {
 
 // Zoom control
 function controlZoom(btn, delta) {
+    // Stop event from triggering drag
+    if (event) {
+        event.stopPropagation();
+        event.preventDefault();
+    }
+
     const wrapper = btn.closest('.img-wrapper');
     const viewport = wrapper.querySelector('.img-viewport');
+    const img = viewport.querySelector('img');
 
     let scale = parseFloat(viewport.dataset.scale || 1);
-    let newScale = Math.max(1, Math.min(5, scale + delta)); // Limit between 1x and 5x
+    let newScale = Math.max(1, Math.min(3, scale + delta)); // Limit between 1x and 3x
 
     // Reset position if back to 1x
     if (newScale === 1) {
-        viewport.style.transform = `translate(0px, 0px) scale(1)`;
+        viewport.style.transform = `scale(1)`;
         viewport.dataset.x = 0;
         viewport.dataset.y = 0;
+        viewport.dataset.scale = 1;
     } else {
-        updateTransform(
-            viewport,
-            parseFloat(viewport.dataset.x || 0),
-            parseFloat(viewport.dataset.y || 0),
-            newScale
-        );
+        // Apply new scale while keeping current position
+        const currentX = parseFloat(viewport.dataset.x || 0);
+        const currentY = parseFloat(viewport.dataset.y || 0);
+
+        // Recalculate bounds with new scale
+        const wrapperRect = wrapper.getBoundingClientRect();
+        const w = wrapperRect.width;
+        const h = wrapperRect.height;
+
+        const minX = w * (1 - newScale);
+        const maxX = 0;
+        const minY = h * (1 - newScale);
+        const maxY = 0;
+
+        // Clamp position to new bounds
+        let clampedX = Math.max(minX, Math.min(maxX, currentX));
+        let clampedY = Math.max(minY, Math.min(maxY, currentY));
+
+        updateTransform(viewport, clampedX, clampedY, newScale);
+        viewport.dataset.scale = newScale;
     }
-    viewport.dataset.scale = newScale;
 
     // Change cursor
     viewport.style.cursor = newScale > 1 ? 'grab' : 'default';

@@ -1,6 +1,6 @@
 ---
 layout: manual
-title: "Manuais PSA Elevate"
+title: "DIFAL Inteligente"
 versao: "1.0"
 github_url: "https://github.com/psa-elevate/difal-inteligente"
 toc:
@@ -98,7 +98,8 @@ toc:
   </div>
   <div class="secao-conteudo editable-area">
 
-### 1.1. Página Inicial do Portal
+<h3 id="secao-1-1">1.1. Página Inicial do Portal</h3>
+
 O acesso à ferramenta inicia-se pelo portal corporativo da PSA Consultores. A interface principal apresenta as informações institucionais e o ponto de entrada para os sistemas internos.
 
 <div class="img-container">
@@ -108,7 +109,8 @@ O acesso à ferramenta inicia-se pelo portal corporativo da PSA Consultores. A i
   <p class="img-caption">Visão geral do portal corporativo</p>
 </div>
 
-### 1.2 Menu de Acesso à Equipe
+<h3 id="secao-1-2">1.2. Menu de Acesso à Equipe</h3>
+
 No canto superior direito da tela, encontra-se o menu de usuário. Para acessar as ferramentas restritas, deve-se utilizar a opção destinada aos colaboradores ("Equipe").
 
 <div class="img-container">
@@ -118,7 +120,8 @@ No canto superior direito da tela, encontra-se o menu de usuário. Para acessar 
   <p class="img-caption">Localização do menu de acesso restrito</p>
 </div>
 
-### 1.3 Seleção de Departamento
+<h3 id="secao-1-3">1.3. Seleção de Departamento</h3>
+
 Antes do login, o sistema solicita a identificação da área de atuação. Esta etapa direciona o usuário para o conjunto de ferramentas adequado ao seu perfil.
 
 <div class="img-container">
@@ -128,7 +131,8 @@ Antes do login, o sistema solicita a identificação da área de atuação. Esta
   <p class="img-caption">Tela de pré-seleção de departamento</p>
 </div>
 
-### 1.4 Identificação da Área Digital
+<h3 id="secao-1-4">1.4. Identificação da Área Digital</h3>
+
 Na lista de opções disponíveis, a área "Digital" deve ser selecionada para garantir acesso aos módulos de desenvolvimento e auditoria fiscal.
 
 <div class="img-container">
@@ -138,7 +142,8 @@ Na lista de opções disponíveis, a área "Digital" deve ser selecionada para g
   <p class="img-caption">Seleção da área de competência</p>
 </div>
 
-### 1.5 Tela de Autenticação
+<h3 id="secao-1-5">1.5. Tela de Autenticação</h3>
+
 O formulário de login é exibido de acordo com a área selecionada, garantindo a segurança e o controle de acesso aos dados sensíveis da empresa.
 
 <div class="img-container">
@@ -148,7 +153,8 @@ O formulário de login é exibido de acordo com a área selecionada, garantindo 
   <p class="img-caption">Interface de autenticação de usuário</p>
 </div>
 
-### 1.6 Credenciais de Acesso
+<h3 id="secao-1-6">1.6. Credenciais de Acesso</h3>
+
 O usuário deve fornecer seu e-mail corporativo e senha pessoal. O sistema valida as credenciais para liberar o acesso ao ambiente de trabalho.
 
 <div class="img-container">
@@ -158,7 +164,8 @@ O usuário deve fornecer seu e-mail corporativo e senha pessoal. O sistema valid
   <p class="img-caption">Preenchimento dos dados de acesso</p>
 </div>
 
-### 1.7 Seleção de Ambiente de Trabalho
+<h3 id="secao-1-7">1.7. Seleção de Ambiente de Trabalho</h3>
+
 Após a autenticação, são apresentados os ambientes disponíveis. O ambiente "Digital Dev" concentra as ferramentas de criação, auditoria e manutenção de dados fiscais.
 
 <div class="img-container">
@@ -168,7 +175,8 @@ Após a autenticação, são apresentados os ambientes disponíveis. O ambiente 
   <p class="img-caption">Escolha do ambiente operacional</p>
 </div>
 
-### 1.8 Dashboard Principal
+<h3 id="secao-1-8">1.8. Dashboard Principal</h3>
+
 O painel inicial (Dashboard) oferece uma visão panorâmica das ferramentas ativas e permite a navegação rápida para os diferentes módulos do sistema.
 
 <div class="img-container">
@@ -189,7 +197,8 @@ O painel inicial (Dashboard) oferece uma visão panorâmica das ferramentas ativ
   </div>
   <div class="secao-conteudo editable-area">
 
-### 2.1. Acesso ao Módulo DIFAL
+<h3 id="secao-2-1">2.1. Acesso ao Módulo DIFAL</h3>
+
 No menu lateral esquerdo, o módulo "DIFAL Inteligente" está disponível para acesso direto, centralizando todas as operações de auditoria de diferencial de alíquota.
 
 <div class="img-container">
@@ -199,7 +208,8 @@ No menu lateral esquerdo, o módulo "DIFAL Inteligente" está disponível para a
   <p class="img-caption">Navegação para o módulo de auditoria</p>
 </div>
 
-### 2.2. Filtro de Cliente
+<h3 id="secao-2-2">2.2. Filtro de Cliente</h3>
+
 O primeiro passo da configuração é definir a empresa auditada. O seletor de clientes lista todas as organizações vinculadas ao perfil do usuário logado.
 
 <div class="img-container">
@@ -209,7 +219,8 @@ O primeiro passo da configuração é definir a empresa auditada. O seletor de c
   <p class="img-caption">Definição da empresa cliente</p>
 </div>
 
-### 2.3. Listagem de Contribuintes
+<h3 id="secao-2-3">2.3. Listagem de Contribuintes</h3>
+
 Ao selecionar um cliente, o sistema carrega automaticamente a lista de contribuintes (filiais ou unidades de negócio) associadas, facilitando a localização da unidade correta.
 
 <div class="img-container">
@@ -219,7 +230,8 @@ Ao selecionar um cliente, o sistema carrega automaticamente a lista de contribui
   <p class="img-caption">Visualização das unidades disponíveis</p>
 </div>
 
-### 2.4. Seleção da Unidade Fiscal
+<h3 id="secao-2-4">2.4. Seleção da Unidade Fiscal</h3>
+
 A escolha precisa da unidade (Contribuinte) é fundamental para carregar as notas fiscais e regras tributárias específicas daquele CNPJ e UF.
 
 <div class="img-container">
@@ -229,7 +241,8 @@ A escolha precisa da unidade (Contribuinte) é fundamental para carregar as nota
   <p class="img-caption">Definição do escopo da auditoria</p>
 </div>
 
-### 2.5. Definição de Início do Período
+<h3 id="secao-2-5">2.5. Definição de Início do Período</h3>
+
 O campo de data inicial delimita o começo da competência a ser auditada, permitindo recortes precisos de tempo para análise.
 
 <div class="img-container">
@@ -239,7 +252,8 @@ O campo de data inicial delimita o começo da competência a ser auditada, permi
   <p class="img-caption">Configuração da data inicial</p>
 </div>
 
-### 2.6. Definição de Fim do Período
+<h3 id="secao-2-6">2.6. Definição de Fim do Período</h3>
+
 O campo de data final encerra o intervalo de busca. O sistema buscará todas as notas fiscais emitidas ou recebidas dentro deste intervalo fechado.
 
 <div class="img-container">
@@ -249,7 +263,8 @@ O campo de data final encerra o intervalo de busca. O sistema buscará todas as 
   <p class="img-caption">Configuração da data final</p>
 </div>
 
-### 2.7. Execução da Busca
+<h3 id="secao-2-7">2.7. Execução da Busca</h3>
+
 Com todos os parâmetros definidos, o botão "Buscar Itens" aciona o processamento e carregamento dos dados fiscais para a tela de trabalho.
 
 <div class="img-container">
@@ -270,7 +285,8 @@ Com todos os parâmetros definidos, o botão "Buscar Itens" aciona o processamen
   </div>
   <div class="secao-conteudo editable-area">
 
-### 3.1. Painel de Métricas
+<h3 id="secao-3-1">3.1. Painel de Métricas</h3>
+
 Logo após a busca, cards informativos no topo da tela apresentam um resumo quantitativo: total de itens pendentes versus itens já validados.
 
 <div class="img-container">
@@ -280,7 +296,8 @@ Logo após a busca, cards informativos no topo da tela apresentam um resumo quan
   <p class="img-caption">Indicadores de progresso da auditoria</p>
 </div>
 
-### 3.2. Grade de Itens
+<h3 id="secao-3-2">3.2. Grade de Itens</h3>
+
 A lista principal exibe os produtos retornados pela busca. Cada linha representa um item de nota fiscal, exibindo informações essenciais como Código, Descrição e Status atual.
 
 <div class="img-container">
@@ -290,7 +307,8 @@ A lista principal exibe os produtos retornados pela busca. Cada linha representa
   <p class="img-caption">Visualização geral dos itens listados</p>
 </div>
 
-### 3.3. Identificação de Pendências
+<h3 id="secao-3-3">3.3. Identificação de Pendências</h3>
+
 Itens que ainda não foram auditados ou que requerem revisão são marcados com a etiqueta "Pendente" (cor amarela), destacando-os visualmente para ação do usuário.
 
 <div class="img-container">
@@ -300,7 +318,8 @@ Itens que ainda não foram auditados ou que requerem revisão são marcados com 
   <p class="img-caption">Destaque para itens aguardando análise</p>
 </div>
 
-### 3.4. Modal de Detalhes do Produto
+<h3 id="secao-3-4">3.4. Modal de Detalhes do Produto</h3>
+
 Ao clicar em um item, abre-se uma janela modal com informações detalhadas, incluindo NCM, CFOP, Valor Total e a descrição completa do produto conforme a nota fiscal.
 
 <div class="img-container">
@@ -310,7 +329,8 @@ Ao clicar em um item, abre-se uma janela modal com informações detalhadas, inc
   <p class="img-caption">Interface de análise detalhada</p>
 </div>
 
-### 3.5. Seleção de Regra Tributária
+<h3 id="secao-3-5">3.5. Seleção de Regra Tributária</h3>
+
 No painel direito do modal, o sistema sugere as regras fiscais aplicáveis. O usuário deve selecionar o card correspondente à tributação correta (ex: Alíquota, Isenção, Redução de Base).
 
 <div class="img-container">
@@ -320,7 +340,8 @@ No painel direito do modal, o sistema sugere as regras fiscais aplicáveis. O us
   <p class="img-caption">Aplicação da regra fiscal ao item</p>
 </div>
 
-### 3.6. Confirmação da Decisão
+<h3 id="secao-3-6">3.6. Confirmação da Decisão</h3>
+
 Após escolher a regra, o botão "Salvar Decisão" confirma a classificação e aplica a tributação selecionada ao item, fechando o modal automaticamente.
 
 <div class="img-container">
@@ -341,7 +362,8 @@ Após escolher a regra, o botão "Salvar Decisão" confirma a classificação e 
   </div>
   <div class="secao-conteudo editable-area">
 
-### 4.1. Atualização de Status
+<h3 id="secao-4-1">4.1. Atualização de Status</h3>
+
 Imediatamente após a classificação, o status do item na lista é atualizado para "Validado" (cor verde), indicando que a análise para aquele produto foi concluída localmente.
 
 <div class="img-container">
@@ -351,7 +373,8 @@ Imediatamente após a classificação, o status do item na lista é atualizado p
   <p class="img-caption">Feedback visual de conclusão</p>
 </div>
 
-### 4.2. Acompanhamento na Lista Geral
+<h3 id="secao-4-2">4.2. Acompanhamento na Lista Geral</h3>
+
 A grade de itens reflete o progresso do trabalho em tempo real, permitindo ao auditor visualizar rapidamente quais itens já foram tratados e quais restam.
 
 <div class="img-container">
@@ -361,7 +384,8 @@ A grade de itens reflete o progresso do trabalho em tempo real, permitindo ao au
   <p class="img-caption">Monitoramento do fluxo de trabalho</p>
 </div>
 
-### 4.3. Exemplo: Item Pendente
+<h3 id="secao-4-3">4.3. Exemplo: Item Pendente</h3>
+
 Visualização detalhada de um item específico (ex: Cana de Açúcar) no estado inicial, aguardando a intervenção do auditor.
 
 <div class="img-container">
@@ -371,7 +395,8 @@ Visualização detalhada de um item específico (ex: Cana de Açúcar) no estado
   <p class="img-caption">Estado inicial do registro</p>
 </div>
 
-### 4.4. Exemplo: Item Validado
+<h3 id="secao-4-4">4.4. Exemplo: Item Validado</h3>
+
 O mesmo item após a aplicação das regras, demonstrando a alteração visual e de dados (CST, Alíquota) na linha correspondente.
 
 <div class="img-container">
@@ -381,7 +406,8 @@ O mesmo item após a aplicação das regras, demonstrando a alteração visual e
   <p class="img-caption">Estado final do registro auditado</p>
 </div>
 
-### 4.5. Consolidação da Lista
+<h3 id="secao-4-5">4.5. Consolidação da Lista</h3>
+
 Conforme o trabalho avança, a lista se transforma, exibindo majoritariamente itens validados, facilitando a identificação visual do que falta ser feito.
 
 <div class="img-container">
@@ -402,7 +428,8 @@ Conforme o trabalho avança, a lista se transforma, exibindo majoritariamente it
   </div>
   <div class="secao-conteudo editable-area">
 
-### 5.1. Alerta de Sincronização Pendente
+<h3 id="secao-5-1">5.1. Alerta de Sincronização Pendente</h3>
+
 O sistema trabalha com um cache local para agilidade. Quando existem alterações não enviadas ao servidor, um alerta vermelho é exibido no rodapé ou topo da lista.
 
 <div class="img-container">
@@ -417,7 +444,8 @@ O sistema trabalha com um cache local para agilidade. Quando existem alteraçõe
   <p>As alterações não salvas serão perdidas se a página for fechada. Sincronize frequentemente.</p>
 </div>
 
-### 5.2. Confirmação de Salvamento
+<h3 id="secao-5-2">5.2. Confirmação de Salvamento</h3>
+
 Ao clicar em "Salvar Alterações", os dados são transmitidos ao banco de dados. Uma notificação (Toast) confirma o sucesso da operação, garantindo a integridade da auditoria.
 
 <div class="img-container">
@@ -438,7 +466,8 @@ Ao clicar em "Salvar Alterações", os dados são transmitidos ao banco de dados
   </div>
   <div class="secao-conteudo editable-area">
 
-### 6.1. Solicitação de Exportação
+<h3 id="secao-6-1">6.1. Solicitação de Exportação</h3>
+
 Para gerar relatórios externos ou backups da auditoria, o botão "Exportar Excel" inicia o processo de compilação dos dados visíveis na tela.
 
 <div class="img-container">
@@ -448,7 +477,8 @@ Para gerar relatórios externos ou backups da auditoria, o botão "Exportar Exce
   <p class="img-caption">Início da geração de relatório</p>
 </div>
 
-### 6.2. Processamento do Arquivo
+<h3 id="secao-6-2">6.2. Processamento do Arquivo</h3>
+
 Durante a geração da planilha, o sistema exibe um indicador de carregamento, informando ao usuário que os dados estão sendo processados no servidor.
 
 <div class="img-container">
@@ -458,7 +488,8 @@ Durante a geração da planilha, o sistema exibe um indicador de carregamento, i
   <p class="img-caption">Aguardando compilação dos dados</p>
 </div>
 
-### 6.3. Conclusão do Download
+<h3 id="secao-6-3">6.3. Conclusão do Download</h3>
+
 Assim que o arquivo é gerado, o download inicia automaticamente pelo navegador e uma notificação de sucesso é exibida na tela.
 
 <div class="img-container">
@@ -468,7 +499,8 @@ Assim que o arquivo é gerado, o download inicia automaticamente pelo navegador 
   <p class="img-caption">Confirmação de download realizado</p>
 </div>
 
-### 6.4. Conferência Final
+<h3 id="secao-6-4">6.4. Conferência Final</h3>
+
 Antes de encerrar a sessão, é recomendável verificar se a lista final reflete exatamente o trabalho realizado, garantindo que todos os itens críticos foram tratados.
 
 <div class="img-container">
@@ -478,7 +510,8 @@ Antes de encerrar a sessão, é recomendável verificar se a lista final reflete
   <p class="img-caption">Revisão final da auditoria</p>
 </div>
 
-### 6.5. Tela Limpa e Encerramento
+<h3 id="secao-6-5">6.5. Tela Limpa e Encerramento</h3>
+
 O estado ideal para encerramento é uma tela sem alertas de erro, sem pendências de sincronização e com todos os itens devidamente validados.
 
 <div class="img-container">

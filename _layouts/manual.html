@@ -14,16 +14,24 @@
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ '/assets/img/favicon.png' | relative_url }}">
+
     <!-- PSA Styles -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+    <!-- Dark Mode Init (Prevent flicker) -->
+    <script>
+        if (localStorage.getItem('psa_theme') === 'dark' ||
+            (!localStorage.getItem('psa_theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
 
     {% seo %}
 </head>
 
 <body>
-    <!-- Admin Toolbar -->
-    {% include admin-toolbar.html %}
-
     <!-- Header -->
     {% include header.html %}
 
@@ -35,7 +43,18 @@
         <!-- Main Content -->
         <main class="main-content">
             <div class="content-wrapper">
+                {% capture manual_content %}
                 {{ content }}
+                {% endcapture %}
+
+                {% comment %}
+                Resolve relative image paths to absolute URLs automatically.
+                This handles 'src="imagens/' by prepending the absolute site and page path.
+                {% endcomment %}
+
+                {% assign base_img_path = page.url | append: 'imagens/' | absolute_url %}
+                {% capture src_with_base %}src="{{ base_img_path }}{% endcapture %}
+                {{ manual_content | replace: 'src="imagens/', src_with_base }}
             </div>
         </main>
     </div>
@@ -48,6 +67,7 @@
     <!-- GitHub URL Configuration (customize per manual) -->
     <script>
         window.PSA_GITHUB_URL = '{{ page.github_url | default: site.github.repository_url | default: "https://github.com" }}';
+        window.PSA_ADMIN_HASH = '{{ site.data.env.admin_hash }}'; // Injected during build
     </script>
 </body>
 
