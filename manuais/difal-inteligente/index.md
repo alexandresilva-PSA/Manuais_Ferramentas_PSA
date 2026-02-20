@@ -27,7 +27,7 @@ toc:
       - id: secao-2-3
         title: "2.3. Listagem de Contribuintes"
       - id: secao-2-4
-        title: "2.4. Seleção do CNPJ (Contribuinte)"
+        title: "2.4. Seleção do Contribuinte (Razão Social)"
       - id: secao-2-5
         title: "2.5. Definição de Início do Período"
       - id: secao-2-6
@@ -57,11 +57,9 @@ toc:
       - id: secao-4-2
         title: "4.2. Acompanhamento na Lista Geral"
       - id: secao-4-3
-        title: "4.3. Exemplo: Item Pendente"
+        title: "4.3. Exemplos de Status: Pendente e Validado"
       - id: secao-4-4
-        title: "4.4. Exemplo: Item Validado"
-      - id: secao-4-5
-        title: "4.5. Consolidação da Lista"
+        title: "4.4. Consolidação da Lista"
   - id: secao-5
     title: "Sincronização de Dados"
     items:
@@ -81,74 +79,8 @@ toc:
       - id: secao-6-4
         title: "6.4. Conferência Final"
       - id: secao-6-5
-        title: "6.5. Tela Limpa e Encerramento"
+        title: "6.5. Nova Busca e Encerramento"
 ---
-
-<!-- SEÇÃO 1 -->
-<div class="secao" id="secao-1">
-  <div class="secao-header">
-    <span class="secao-numero editable-text">1</span>
-    <h2 class="editable-text">Acesso e Ambiente</h2>
-  </div>
-  <div class="secao-conteudo editable-area">
-
-    <h3 id="secao-1-1">1.1 Página Inicial e Acesso à Equipe</h3>
-
-    <p>O acesso à ferramenta começa pelo portal corporativo da PSA Consultores. Clique em "Equipe" no canto superior direito para entrar na área restrita aos colaboradores.</p>
-
-    <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/01-02_Menu_Equipe.png" class="img-screenshot" alt="Página Inicial e Menu de Acesso à Equipe">
-        </div>
-        <p class="img-caption">Portal corporativo com destaque para o menu de acesso restrito</p>
-    </div>
-
-    <h3 id="secao-1-2">1.2 Identificação da Área Digital</h3>
-
-    <p>Na lista de departamentos, selecione "Digital" para acessar as ferramentas internas da equipe fiscal e de automação.</p>
-
-    <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/01-04_Selecao_Digital.png" class="img-screenshot" alt="Seleção Opção Digital">
-        </div>
-        <p class="img-caption">Seleção da área de competência</p>
-    </div>
-
-    <h3 id="secao-1-3">1.3 Credenciais de Acesso</h3>
-
-    <p>Informe seu e-mail corporativo e senha para acessar o sistema. As credenciais são individuais e garantem que cada consultor visualize apenas os clientes do seu respectivo perfil.</p>
-
-    <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/01-06_Login_Preenchido.png" class="img-screenshot" alt="Login Preenchido">
-        </div>
-        <p class="img-caption">Preenchimento dos dados de acesso</p>
-    </div>
-
-    <h3 id="secao-1-4">1.4 Seleção de Ambiente de Trabalho</h3>
-
-    <p>Após o login, selecione o ambiente <strong>"Digital Dev"</strong> para acessar as ferramentas fiscais disponíveis para a equipe.</p>
-
-    <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/01-07_Ambiente_Dev.png" class="img-screenshot" alt="Seleção Ambiente Digital">
-        </div>
-        <p class="img-caption">Escolha do ambiente da área Digital</p>
-    </div>
-
-    <h3 id="secao-1-5">1.5 Dashboard Principal</h3>
-
-    <p>O painel inicial exibe todas as ferramentas disponíveis para o seu perfil. Clique em "DIFAL Inteligente" para iniciar a classificação tributária.</p>
-
-    <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/01-08_Dashboard_Inicial.png" class="img-screenshot" alt="Dashboard Inicial">
-        </div>
-        <p class="img-caption">Visão geral das ferramentas disponíveis</p>
-    </div>
-
-  </div>
-</div>
 
 <!-- SEÇÃO 2 -->
 <div class="secao" id="secao-2">
@@ -191,15 +123,15 @@ toc:
         <p class="img-caption">Visualização dos contribuintes disponíveis</p>
     </div>
 
-    <h3 id="secao-2-4">2.4 Seleção do CNPJ (Contribuinte)</h3>
+    <h3 id="secao-2-4">2.4 Seleção do Contribuinte (Razão Social)</h3>
 
-    <p>Selecione o CNPJ correto do cliente. A escolha define quais notas fiscais e regras tributárias estaduais serão carregadas para a análise do DIFAL.</p>
+    <p>Selecione o Contribuinte (Razão Social) correto do cliente. A escolha define quais notas fiscais e regras tributárias estaduais serão carregadas para a análise do DIFAL.</p>
 
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/02-04_Contribuinte_Select.png" class="img-screenshot" alt="Contribuinte Selecionado">
         </div>
-        <p class="img-caption">Confirmação do CNPJ da operação</p>
+        <p class="img-caption">Confirmação da Razão Social da operação</p>
     </div>
 
     <h3 id="secao-2-5">2.5 Definição de Início do Período</h3>
@@ -338,22 +270,23 @@ toc:
         <p class="img-caption">Monitoramento do progresso da classificação</p>
     </div>
 
-    <h3 id="secao-4-3">4.3 Exemplo: Item Pendente</h3>
+    <h3 id="secao-4-3">4.3 Exemplos de Status: Pendente e Validado</h3>
 
-    <p>Exemplo de um item (ex: Cana de Açúcar) ainda sem regra tributária definida. O NCM aparece na linha com status "Pendente" em amarelo, indicando que a classificação precisa ser feita.</p>
-
-    <h3 id="secao-4-4">4.4 Exemplo: Item Validado</h3>
-
-    <p>O mesmo item após a classificação, com CST e alíquota preenchidos e status atualizado para "Validado". Use como referência para conferir se os dados foram aplicados corretamente.</p>
+    <ul>
+        <li><strong>Item Pendente:</strong> O NCM aparece na linha com status "Pendente" em amarelo, indicando que a classificação ainda precisa ser feita.</li>
+    </ul>
+    <ul>
+        <li><strong>Item Validado:</strong> O mesmo item após a classificação (ex: Cana de Açúcar), com status atualizado para "Validado" em verde. Use como referência para conferir se os dados foram aplicados corretamente.</li>
+    </ul>
 
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/04-04_Exemplo_Cana.png" class="img-screenshot" alt="Exemplo Item Cana Validado">
         </div>
-        <p class="img-caption">Estado do registro após aplicação da regra</p>
+        <p class="img-caption">Estado dos registros mostrando a aplicação da regra</p>
     </div>
 
-    <h3 id="secao-4-5">4.5 Consolidação da Lista</h3>
+    <h3 id="secao-4-4">4.4 Consolidação da Lista</h3>
 
     <p>Durante a sessão, você pode clicar no card "Pendentes" para atualizar a lista principal e focar naquilo que ainda aguarda análise. A presença de itens em amarelo indica que o trabalho de classificação tributária ainda está em andamento para a operação.</p>
 
@@ -438,13 +371,13 @@ toc:
 
     <h3 id="secao-6-3">6.3 Conclusão do Download</h3>
 
-    <p>Quando o arquivo estiver pronto, o download inicia automaticamente e uma notificação de sucesso é exibida. O arquivo gerado contém todos os itens classificados no período.</p>
+    <p>Quando o arquivo estiver pronto, o download inicia automaticamente e um aviso de download do navegador será exibido na parte superior da tela. O arquivo gerado contém todos os itens classificados no período.</p>
 
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/06-03_Toast_Download.png" class="img-screenshot" alt="Download Concluído">
         </div>
-        <p class="img-caption">Confirmação de download realizado</p>
+        <p class="img-caption">Aviso de download iniciado pelo navegador</p>
     </div>
 
     <h3 id="secao-6-4">6.4 Conferência Final</h3>
@@ -455,10 +388,10 @@ toc:
         <div class="img-wrapper">
             <img src="imagens/06-04_Lista_Final.png" class="img-screenshot" alt="Lista Final">
         </div>
-        <p class="img-caption">Revisão final da classificação</p>
+        <p class="img-caption">Revisão parcial ou final da classificação</p>
     </div>
 
-    <h3 id="secao-6-5">6.5 Tela Limpa e Encerramento</h3>
+    <h3 id="secao-6-5">6.5 Nova Busca e Encerramento</h3>
 
     <p>A sua análise — seja ela parcial ou completa — é considerada encerrada quando os dados analisados estiverem devidamente salvos e exportados para o Excel sem alertas pendentes. Para iniciar uma nova busca de período ou redefinir a tela para classificar o restante, clique em "Limpar filtros".</p>
 
@@ -466,7 +399,7 @@ toc:
         <div class="img-wrapper">
             <img src="imagens/06-05_Tela_Limpa.png" class="img-screenshot" alt="Tela Final">
         </div>
-        <p class="img-caption">Classificação finalizada com sucesso</p>
+        <p class="img-caption">Limpeza dos filtros para nova análise</p>
     </div>
   </div>
 </div>
