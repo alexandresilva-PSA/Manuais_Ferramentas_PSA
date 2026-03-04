@@ -100,20 +100,20 @@ toc:
     <p>No navegador, acesse o link do site institucional da PSA Consultores: https://psaconsultores.com.br/.</p>
     <p>Após acessar a página, localize o ícone de "Equipe" no canto superior direito da tela, ao lado do botão "Área do Cliente".</p>
     <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 1 - Pagina inicial do site PSA Consultores.jpg" class="img-screenshot" alt="Página inicial do site PSA Consultores"></div>
+        <div class="img-wrapper"><img src="imagens/Figura 1 - Pagina inicial do site PSA Consultores.png" class="img-screenshot" alt="Página inicial do site PSA Consultores"></div>
         <p class="img-caption">Figura 1 - Página inicial do site PSA Consultores</p>
     </div>
 
     <p>Posicione o cursor sobre o ícone de Equipe para visualizar o tooltip. Clique no ícone para prosseguir.</p>
     <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 2 - Icone de Equipe com tooltip exibido.jpg" class="img-screenshot" alt="Ícone de Equipe com tooltip"></div>
+        <div class="img-wrapper"><img src="imagens/Figura 2 - Icone de Equipe com tooltip exibido.png" class="img-screenshot" alt="Ícone de Equipe com tooltip"></div>
         <p class="img-caption">Figura 2 - Ícone de Equipe com tooltip exibido</p>
     </div>
 
     <h3 id="secao-1-2">1.2 Selecionar a área de equipe</h3>
     <p>Na tela de seleção de área, escolha a opção "Digital" para acessar as ferramentas da área Digital.</p>
     <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 3 - Tela de selecao da area de atuacao.jpg" class="img-screenshot" alt="Seleção da área de atuação"></div>
+        <div class="img-wrapper"><img src="imagens/Figura 3 - Tela de selecao da area de atuacao.png" class="img-screenshot" alt="Seleção da área de atuação"></div>
         <p class="img-caption">Figura 3 - Tela de seleção da área de atuação</p>
     </div>
 
@@ -121,7 +121,7 @@ toc:
     <p>Na tela de login do Sistema de Gestão de Demandas, insira suas credenciais de membro da equipe (email e senha) nos campos correspondentes e clique para entrar.</p>
     <p>Caso tenha esquecido a senha, utilize a opção "Esqueci minha senha".</p>
     <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 4 - Tela de login da Area da Equipe.jpg" class="img-screenshot" alt="Tela de login"></div>
+        <div class="img-wrapper"><img src="imagens/Figura 4 - Tela de login da Area da Equipe.png" class="img-screenshot" alt="Tela de login"></div>
         <p class="img-caption">Figura 4 - Tela de login da Área da Equipe</p>
     </div>
 
@@ -129,11 +129,12 @@ toc:
     <p>Após o login, será exibida a tela de seleção do ambiente de trabalho.</p>
     <p>Para acessar a ferramenta de Controle de PERDCOMP, selecione a opção "Digital Dev", que é o ambiente de criação e desenvolvimento de ferramentas automatizadas.</p>
     <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 5 - Selecao do ambiente Digital Dev.jpg" class="img-screenshot" alt="Seleção do ambiente Digital Dev"></div>
+        <div class="img-wrapper"><img src="imagens/Figura 5 - Selecao do ambiente Digital Dev.png" class="img-screenshot" alt="Seleção do ambiente Digital Dev"></div>
         <p class="img-caption">Figura 5 - Seleção do ambiente Digital Dev</p>
     </div>
   </div>
 </div>
+
 
 <div class="secao" id="secao-2">
   <div class="secao-header">
