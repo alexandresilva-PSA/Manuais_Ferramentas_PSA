@@ -6,7 +6,7 @@ Documentação unificada das ferramentas do sistema PSA Elevate, hospedada no Gi
 
 | Manual | Descrição | Versão |
 |--------|-----------|--------|
-| [Consulta de XMLs](manuais/consulta-xmls/) | Pesquisa e exportação de documentos fiscais | 3.0 |
+| [Consulta de XMLs](manuais/consulta-xmls/) | Pesquisa, relatórios e exportação de NFe/CTe | 2.0 |
 | [EFD ICMS/IPI](manuais/efd-icms/) | Consulta e análise de arquivos SPED Fiscal | 1.0 |
 | [EFD Contribuições](manuais/efd-contribuicoes/) | Consulta e exportação PIS/COFINS | 2.0 |
 | [DIFAL Inteligente](manuais/difal-inteligente/) | Auditoria de diferencial de alíquotas | 1.0 |
