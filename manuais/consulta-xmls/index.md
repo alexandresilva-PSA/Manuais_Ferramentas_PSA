@@ -323,6 +323,12 @@ toc:
 
     <h3 id="secao-5-2">5.2. Seleção de colunas</h3>
     <p>Na opção "Colunas", você pode escolher exatamente quais informações deseja exportar. Os dados estão divididos em categorias (como documento, emitente, destinatário, etc.). Clique sobre uma categoria para expandi-la e marque as caixas das colunas desejadas. Utilize os botões "Marcar todos" ou "Desmarcar todos" para agilizar o processo.</p>
+ <div class="img-container">
+        <div class="img-wrapper">
+            <img src="imagens/5.2. Seleção de colunas.png" class="img-screenshot" alt="Seleção de colunas">
+        </div>
+        <p class="img-caption">Seleção das colunas necessárias para exportação</p>
+    </div>
 
     <h3 id="secao-5-3">5.3. Salvar novo perfil de exportação</h3>
     <p>Para não precisar selecionar as mesmas colunas toda vez, você pode salvar a sua seleção. Após escolher as colunas, clique no botão "Salvar" na parte superior. Um pequeno modal se abrirá para que você digite o nome do seu novo perfil. Em seguida, clique em "Salvar" neste novo modal.</p>
