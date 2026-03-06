@@ -60,7 +60,7 @@ toc:
     title: "8. Exportação para Excel"
     items:
       - id: secao-8-1
-        title: "8.1. Abrindo o Modal"
+        title: "8.1. Abrindo a janela de exportação"
       - id: secao-8-2
         title: "8.2. Selecionando Registros"
   - id: secao-9
@@ -92,8 +92,8 @@ toc:
     <h2 class="editable-text">Introdução</h2>
   </div>
   <div class="secao-conteudo editable-area">
-    <p>Este manual apresenta as funcionalidades da ferramenta de <strong>Consulta de EFD ICMS/IPI</strong>, parte do Sistema de Auditoria Digital da PSA Consultores.</p>
-    <p>A ferramenta permite consultar, baixar e exportar arquivos SPED Fiscal (EFD ICMS/IPI) de forma ágil e organizada, facilitando processos de auditoria e análise tributária.</p>
+    <p>Este manual apresenta as funcionalidades da ferramenta de <strong>Consulta de EFD ICMS/IPI</strong>, parte do sistema de ferramentas digitais da PSA Consultores.</p>
+    <p>A ferramenta permite consultar, baixar e exportar arquivos SPED Fiscal (EFD ICMS/IPI) de forma ágil e organizada, facilitando processos de consulta e análise tributária.</p>
     <h3>Principais Funcionalidades</h3>
     <ul>
         <li><strong>Consulta por filtros:</strong> Cliente, contribuinte e período</li>
@@ -148,7 +148,7 @@ toc:
     </div>
 
     <h3 id="secao-2-5">2.5 Credenciais</h3>
-    <p>A tela de login será exibida. Insira suas credenciais (E-mail e Senha) e clique em <strong>Entrar</strong>.</p>
+    <p>A tela de login será exibida. Insira suas credenciais (e-mail e senha) e clique em <strong>Entrar</strong>.</p>
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/05_Login_Vazio.png" class="img-screenshot" alt="Tela de Login">
@@ -172,7 +172,7 @@ toc:
   </div>
   <div class="secao-conteudo editable-area">
     <h3 id="secao-3-1">3.1 Ambiente de Trabalho</h3>
-    <p>Após o login, selecione o card <strong>Digital Dev</strong> (ambiente de criação e desenvolvimento).</p>
+    <p>Após o login, selecione a opção <strong>Digital Dev</strong> (ambiente de criação e desenvolvimento).</p>
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/07_Select_Ambiente_Dev.png" class="img-screenshot" alt="Seleção de Ambiente">
@@ -181,7 +181,7 @@ toc:
     </div>
 
     <h3 id="secao-3-2">3.2 Dashboard Inicial</h3>
-    <p>O Dashboard inicial será carregado, exibindo o resumo das ferramentas disponíveis.</p>
+    <p>A página inicial será carregada, exibindo o resumo das ferramentas disponíveis.</p>
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/08_Dashboard_Inicial.png" class="img-screenshot" alt="Dashboard">
@@ -199,7 +199,7 @@ toc:
   </div>
   <div class="secao-conteudo editable-area">
     <h3 id="secao-4-1">4.1 Menu Lateral</h3>
-    <p>Localize o módulo específico para tratamento de arquivos SPED ICMS.</p>
+    <p>No menu lateral, clique na opção de consulta de arquivos EFD ICMS.</p>
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/09_Menu_EFD_ICMS.png" class="img-screenshot" alt="Menu EFD ICMS">
@@ -217,7 +217,7 @@ toc:
   </div>
   <div class="secao-conteudo editable-area">
     <h3 id="secao-5-1">5.1 Seleção de Cliente</h3>
-    <p>Utilize o dropdown para selecionar o cliente desejado.</p>
+    <p>Clique na lista suspensa para selecionar o cliente desejado.</p>
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/10_Dropdown_Cliente.png" class="img-screenshot" alt="Dropdown Cliente">
@@ -246,7 +246,7 @@ toc:
         <p class="img-caption">Contribuinte selecionado</p>
     </div>
 
-    <h3 id="secao-5-3">5.3 Período de Análise</h3>
+    <h3 id="secao-5-3">5.3. Período de consulta</h3>
     <p>Defina o intervalo de datas para a busca dos arquivos.</p>
     <div class="img-container">
         <div class="img-wrapper">
@@ -303,7 +303,7 @@ toc:
         <div class="img-wrapper">
             <img src="imagens/20_Lista_Resultados.png" class="img-screenshot" alt="Lista de Resultados">
         </div>
-        <p class="img-caption">Grid de resultados</p>
+        <p class="img-caption">Tabela de resultados</p>
     </div>
 
     <h3 id="secao-6-2">6.2 Seleção Individual</h3>
@@ -399,7 +399,7 @@ toc:
     <h2 class="editable-text">Exportação para Excel</h2>
   </div>
   <div class="secao-conteudo editable-area">
-    <h3 id="secao-8-1">8.1 Abrindo o Modal</h3>
+    <h3 id="secao-8-1">8.1. Abrindo a janela de exportação</h3>
     <p>Selecione um arquivo único e clique em "Exportar Excel".</p>
     <div class="img-container">
         <div class="img-wrapper">
@@ -411,7 +411,7 @@ toc:
         <div class="img-wrapper">
             <img src="imagens/32_Modal_Exportacao_Aberto.png" class="img-screenshot" alt="Modal Exportação Aberto">
         </div>
-        <p class="img-caption">Modal de configuração aberto</p>
+        <p class="img-caption">Janela de configuração aberta</p>
     </div>
 
     <h3 id="secao-8-2">8.2 Selecionando Registros</h3>
@@ -507,7 +507,7 @@ toc:
         <div class="img-wrapper">
             <img src="imagens/45_Perfil_No_Dropdown.png" class="img-screenshot" alt="Perfil no Dropdown">
         </div>
-        <p class="img-caption">Perfil disponível no dropdown</p>
+        <p class="img-caption">Perfil disponível na lista de seleção</p>
     </div>
     <div class="img-container">
         <div class="img-wrapper">
@@ -558,7 +558,7 @@ toc:
         <div class="img-wrapper">
             <img src="imagens/53_Load_Perfil_2.png" class="img-screenshot" alt="Carregar Perfil 2">
         </div>
-        <p class="img-caption">Carregando perfil alternativos</p>
+        <p class="img-caption">Carregando perfis alternativos</p>
     </div>
     <div class="img-container">
         <div class="img-wrapper">
@@ -594,7 +594,7 @@ toc:
         <div class="img-wrapper">
             <img src="imagens/57_Reabrir_Modal.png" class="img-screenshot" alt="Reabrir Modal">
         </div>
-        <p class="img-caption">Reabrindo modal de exportação</p>
+        <p class="img-caption">Reabrindo a janela de exportação</p>
     </div>
     <div class="img-container">
         <div class="img-wrapper">
@@ -642,18 +642,18 @@ toc:
     <h2 class="editable-text">Dicas e Boas Práticas</h2>
   </div>
   <div class="secao-conteudo editable-area">
-    <p>Recomendações para otimizar seu uso da ferramenta de Consulta EFD ICMS:</p>
+    <p>Recomendações para otimizar seu uso da ferramenta de consulta EFD ICMS:</p>
     <div class="dica">
         <span class="material-icons-round">lightbulb</span>
-        <p><strong>Perfis de Exportação:</strong> Crie perfis para diferentes tipos de auditoria. Isso agiliza consultas recorrentes e padroniza as análises.</p>
+        <p><strong>Perfis de exportação:</strong> Crie perfis para diferentes tipos de consulta. Isso agiliza consultas recorrentes e padroniza as análises.</p>
     </div>
     <div class="dica">
         <span class="material-icons-round">lightbulb</span>
-        <p><strong>Filtros Específicos:</strong> Utilize filtros precisos (cliente, contribuinte, período) para obter resultados mais relevantes e reduzir o tempo de busca.</p>
+        <p><strong>Filtros específicos:</strong> Utilize filtros precisos (cliente, contribuinte, período) para obter resultados mais relevantes e reduzir o tempo de busca.</p>
     </div>
     <div class="dica">
         <span class="material-icons-round">lightbulb</span>
-        <p><strong>Download em Lote:</strong> Para múltiplos arquivos TXT, prefira o download em lote (ZIP) para economizar tempo.</p>
+        <p><strong>Download em lote:</strong> Para múltiplos arquivos TXT, prefira o download em lote (ZIP) para economizar tempo.</p>
     </div>
     <div class="aviso">
         <span class="material-icons-round">info</span>
