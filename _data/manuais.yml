@@ -32,3 +32,10 @@
   version: "v1.0"
   updated: "03/2026"
   description: "Gestão de Pedidos Eletrônicos de Restituição (PER) e Declarações de Compensação (DCOMP)."
+
+- title: "Página do Cliente e Área de Chamados"
+  url: "/manuais/Site-area-de-chamados/"
+  icon: "support_agent"
+  version: "v1.0"
+  updated: "03/2026"
+  description: "Portal de atendimento ao cliente: primeiro acesso, abertura e acompanhamento de chamados, acompanhamento de projetos e central de documentos."

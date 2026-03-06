@@ -6,10 +6,12 @@ Documentação unificada das ferramentas do sistema PSA Elevate, hospedada no Gi
 
 | Manual | Descrição | Versão |
 |--------|-----------|--------|
-| [Consulta de XMLs](manuais/consulta-xmls/) | Pesquisa, relatórios e exportação de NFe/CTe | 2.0 |
+| [Consulta de XMLs](manuais/consulta-xmls/) | Pesquisa, relatórios e exportação de NFe/CTe | 3.0 |
 | [EFD ICMS/IPI](manuais/efd-icms/) | Consulta e análise de arquivos SPED Fiscal | 1.0 |
-| [EFD Contribuições](manuais/efd-contribuicoes/) | Consulta e exportação PIS/COFINS | 2.0 |
+| [EFD Contribuições](manuais/efd-contribuicoes/) | Consulta e exportação PIS/COFINS | 1.0 |
 | [DIFAL Inteligente](manuais/difal-inteligente/) | Auditoria de diferencial de alíquotas | 1.0 |
+| [Controle de PERDCOMP](manuais/controle-perdcomp/) | Gestão de PERs e Declarações de Compensação (DCOMP) | 1.0 |
+| [Página do Cliente e Área de Chamados](manuais/Site-area-de-chamados/) | Portal de atendimento e acompanhamento de chamados | 1.0 |
 
 ## 🚀 Como Adicionar um Novo Manual
 
