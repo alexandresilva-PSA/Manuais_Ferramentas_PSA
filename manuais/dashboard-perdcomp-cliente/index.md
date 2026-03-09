@@ -2,7 +2,7 @@
 
 layout: manual
 
-title: "Acompanhamento do dashboard PERDCOMP"
+title: "Dashboard PERDCOMP (Cliente)"
 
 versao: "1.0"
 
