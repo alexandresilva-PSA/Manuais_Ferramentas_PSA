@@ -39,3 +39,10 @@
   version: "v1.0"
   updated: "03/2026"
   description: "Portal de atendimento ao cliente: primeiro acesso, abertura e acompanhamento de chamados, acompanhamento de projetos e central de documentos."
+
+- title: "Dashboard de Faturamento PERDCOMP"
+  url: "/manuais/dashboard-perdcomp-faturamento/"
+  icon: "dashboard"
+  version: "v1.0"
+  updated: "03/2026"
+  description: "Acompanhamento detalhado do faturamento, pedidos de ressarcimento (PER) e compensação (DCOMP), com visões interna e do cliente."
