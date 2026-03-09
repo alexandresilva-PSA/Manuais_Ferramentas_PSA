@@ -46,3 +46,10 @@
   version: "v1.0"
   updated: "03/2026"
   description: "Acompanhamento detalhado do faturamento, pedidos de ressarcimento (PER) e compensação (DCOMP), com visões interna e do cliente."
+
+- title: "Acompanhamento do Dashboard PERDCOMP (Cliente)"
+  url: "/manuais/dashboard-perdcomp-cliente/"
+  icon: "leaderboard"
+  version: "v1.0"
+  updated: "03/2026"
+  description: "Visão exclusiva do cliente para o acompanhamento dos processos de ressarcimento (PER) e compensação (DCOMP)."
