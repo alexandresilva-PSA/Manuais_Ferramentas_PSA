@@ -53,3 +53,17 @@
   version: "v1.0"
   updated: "03/2026"
   description: "Visão exclusiva do cliente para o acompanhamento dos processos de ressarcimento (PER) e compensação (DCOMP)."
+
+- title: "Dashboard de Controle de Uso (Externo)"
+  url: "/manuais/dashboard-controle-de-uso-gestao/"
+  icon: "stacked_bar_chart"
+  version: "v1.0"
+  updated: "03/2026"
+  description: "Acompanhamento do volume de consultas realizadas e do fluxo de arquivos para o Drive da PSA, com foco na equipe e volumetria de dados acessados."
+
+- title: "Dashboard de Controle de Uso (Interno)"
+  url: "/manuais/dashboard-controle-de-uso-interno/"
+  icon: "admin_panel_settings"
+  version: "v1.0"
+  updated: "03/2026"
+  description: "Monitoramento técnico interno e consolidação dos indicadores de uso da API e do sistema."
