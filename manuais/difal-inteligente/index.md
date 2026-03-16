@@ -145,7 +145,8 @@ toc:
     </div>
 
     <h3 id="secao-1-5">1.5 Dashboard Principal</h3>
-    <p>O painel inicial exibe todas as ferramentas disponíveis para o seu perfil. Clique em "DIFAL Inteligente" para iniciar a classificação tributária.</p>
+    <p>Ao entrar no ambiente Digital Dev, o sistema carregará o Hub de Ferramentas. Utilize a seção Sessões em Andamento para retomar trabalhos recentes ou localize a ferramenta desejada no painel central.</p>
+    <p>Para iniciar a operação, utilize o menu lateral ou identifique o card correspondente e clique no botão Acessar Ferramenta.</p>
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/01-08_Dashboard_Inicial.png" class="img-screenshot" alt="Dashboard Inicial">

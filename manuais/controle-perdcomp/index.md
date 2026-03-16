@@ -166,9 +166,8 @@ toc:
   <div class="secao-conteudo editable-area">
     
     <h3 id="secao-2-1">2.1 Visualização do Dashboard</h3>
-    <p>O ambiente Digital Dev carregará inicialmente na aba Dashboard de Ferramentas.</p>
-    <p>A interface exibe o menu lateral à esquerda com as opções: Dashboard, Consulta de XMLs, Consulta SPED, DIFAL inteligente, Calculadora IBS/CBS, Controle PERDCOMP, Controle Balancetes, Gestão de clientes e Gerenciar dados.</p>
-    <p>Na área principal, são exibidos dados gerais como total de ferramentas disponíveis, ativas e em desenvolvimento.</p>
+    <p>Ao entrar no ambiente Digital Dev, o sistema carregará o Hub de Ferramentas. Utilize a seção Sessões em Andamento para retomar trabalhos recentes ou localize a ferramenta desejada no painel central.</p>
+    <p>Para iniciar a operação, utilize o menu lateral ou identifique o card correspondente e clique no botão Acessar Ferramenta.</p>
     <div class="img-container">
         <div class="img-wrapper"><img src="imagens/Figura 6 - Dashboard de ferramentas do ambiente Digital Dev.png" class="img-screenshot" alt="Dashboard de ferramentas"></div>
         <p class="img-caption">Figura 6 - Dashboard de ferramentas do ambiente Digital Dev</p>

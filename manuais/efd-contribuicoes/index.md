@@ -154,7 +154,8 @@ toc:
         <div class="img-wrapper"> <img src="imagens/01-07-area-digital-escolha.png" class="img-screenshot" alt="Seleção de Ambiente Digital Dev"> </div>
         <p class="img-caption">Escolha entre Digital Rotina e Digital Dev</p>
     </div>
-    <p>A página inicial será carregada, exibindo o resumo das ferramentas disponíveis.</p>
+    <p>Ao entrar no ambiente Digital Dev, o sistema carregará o Hub de Ferramentas. Utilize a seção Sessões em Andamento para retomar trabalhos recentes ou localize a ferramenta desejada no painel central.</p>
+    <p>Para iniciar a operação, utilize o menu lateral ou identifique o card correspondente e clique no botão Acessar Ferramenta.</p>
     <div class="img-container">
         <div class="img-wrapper"> <img src="imagens/01-08-dashboard-dev.png" class="img-screenshot" alt="Dashboard Digital Dev"> </div>
         <p class="img-caption">Visão geral do sistema</p>

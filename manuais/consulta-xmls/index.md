@@ -169,7 +169,8 @@ toc:
     </div>
 
     <h3 id="secao-2-2">2.2. Visão geral do dashboard</h3>
-    <p>Dentro do ambiente da Digital Dev, o sistema carregará inicialmente na página de dashboard. Esta página mostra um resumo do total de ferramentas, ferramentas ativas e em desenvolvimento. Ela contém um menu lateral esquerdo com a lista das principais ferramentas disponíveis.</p>
+    <p>Ao entrar no ambiente Digital Dev, o sistema carregará o Hub de Ferramentas. Utilize a seção Sessões em Andamento para retomar trabalhos recentes ou localize a ferramenta desejada no painel central.</p>
+    <p>Para iniciar a operação, utilize o menu lateral ou identifique o card correspondente e clique no botão Acessar Ferramenta.</p>
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/2.2. Visão geral do dashboard.png" class="img-screenshot" alt="Visão geral do dashboard">
