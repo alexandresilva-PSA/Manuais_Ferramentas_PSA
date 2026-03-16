@@ -114,7 +114,6 @@ toc:
     <h2 class="editable-text">Acesso e Autenticação</h2>
   </div>
   <div class="secao-conteudo editable-area">
-
     <h3 id="secao-acesso-1">2.1. Acesso ao portal e área da equipe</h3>
     <p>O acesso às ferramentas começa pelo portal corporativo da PSA Consultores. Acesse o link <a href="https://psaconsultores.com.br" target="_blank">https://psaconsultores.com.br</a> e clique no ícone de <strong>"Equipe"</strong>, localizado no canto superior direito da tela, para entrar na área restrita.</p>
     <div class="img-container">
