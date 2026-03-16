@@ -4,8 +4,10 @@ title: "Controle de PERDCOMP"
 versao: "1.0"
 github_url: "https://github.com/psa-elevate/controle-perdcomp"
 toc:
+  - id: secao-intro
+    title: "1. Introdução"
   - id: secao-1
-    title: "1. Acesso à Ferramenta"
+    title: "2. Acesso à Ferramenta"
     items:
       - id: secao-1-1
         title: "1.1. Acesso ao site institucional"
@@ -88,9 +90,29 @@ toc:
         title: "8.3. Situações do PER"
 ---
 
-<div class="secao" id="secao-1">
+<!-- SEÇÃO INTRO -->
+<div class="secao" id="secao-intro">
   <div class="secao-header">
     <span class="secao-numero editable-text">1</span>
+    <h2 class="editable-text">Introdução</h2>
+  </div>
+  <div class="secao-conteudo editable-area">
+    <p>Este manual apresenta as funcionalidades da ferramenta <strong>Controle de PERDCOMP</strong>, parte integrante do sistema PSA Elevate. A ferramenta permite consultar, detalhar e gerenciar os processos de ressarcimento (PER) e compensação (DCOMP) de forma centralizada, facilitando o acompanhamento tributário por cliente e contribuinte.</p>
+    <p>O objetivo deste documento é orientar os analistas fiscais na utilização completa dos recursos disponíveis, desde a consulta e visualização dos PERs até o cadastro de DCOMPs e o registro de ressarcimentos.</p>
+    <h3>Principais Funcionalidades</h3>
+    <ul>
+        <li><strong>Consulta de PERs:</strong> Busca por cliente, contribuinte, situação, exercício e número de processo.</li>
+        <li><strong>Visualização e atualização de situação:</strong> Acesso aos detalhes de cada PER com possibilidade de atualizar o status.</li>
+        <li><strong>Gerenciamento de DCOMPs:</strong> Cadastro, edição e exclusão de declarações de compensação.</li>
+        <li><strong>Registro de ressarcimentos:</strong> Lançamento de valores efetivamente ressarcidos.</li>
+        <li><strong>Cadastro de novos PERs:</strong> Criação de pedidos de restituição ou ressarcimento.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="secao" id="secao-1">
+  <div class="secao-header">
+    <span class="secao-numero editable-text">2</span>
     <h2 class="editable-text">Acesso à Ferramenta</h2>
   </div>
   <div class="secao-conteudo editable-area">

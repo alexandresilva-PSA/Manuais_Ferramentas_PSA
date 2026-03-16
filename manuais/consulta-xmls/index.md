@@ -4,8 +4,10 @@ title: "Consulta de XMLs"
 versao: "3.0"
 github_url: "https://github.com/psa-elevate/consulta-xmls"
 toc:
+  - id: secao-intro
+    title: "1. Introdução"
   - id: secao-1
-    title: "1. Acesso inicial e autenticação"
+    title: "2. Acesso inicial e autenticação"
     items:
       - id: secao-1-1
         title: "1.1. Objetivo da ferramenta"
@@ -88,9 +90,25 @@ toc:
         title: "6.2. Limpeza de filtros"
 ---
 
-<div class="secao" id="secao-1">
+<!-- SEÇÃO INTRO -->
+<div class="secao" id="secao-intro">
   <div class="secao-header">
     <span class="secao-numero editable-text">1</span>
+    <h2 class="editable-text">Introdução</h2>
+  </div>
+  <div class="secao-conteudo editable-area">
+    <p>Este manual apresenta as funcionalidades da ferramenta <strong>Consulta de XMLs</strong>, parte integrante do sistema PSA Elevate. A ferramenta permite buscar, filtrar, visualizar, exportar e baixar arquivos no formato XML (NFe e CTe) de forma centralizada e eficiente.</p>
+    <p>O objetivo deste documento é orientar os analistas fiscais na utilização completa dos recursos disponíveis, desde a aplicação dos filtros de consulta até a exportação personalizada dos dados para Excel e o download dos arquivos originais.</p>
+    <div class="dica">
+        <span class="material-icons-round">info</span>
+        <p>Para uma consulta eficiente, certifique-se de preencher os filtros obrigatórios: cliente, contribuinte, tipo de documento (DOC), data início e data fim antes de acionar a busca.</p>
+    </div>
+  </div>
+</div>
+
+<div class="secao" id="secao-1">
+  <div class="secao-header">
+    <span class="secao-numero editable-text">2</span>
     <h2 class="editable-text">Acesso inicial e autenticação</h2>
   </div>
   <div class="secao-conteudo editable-area">

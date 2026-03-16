@@ -4,8 +4,10 @@ title: "DIFAL Inteligente"
 versao: "Versão 1.1"
 github_url: "https://github.com/psa-elevate/difal-inteligente"
 toc:
+  - id: secao-intro
+    title: "1. Introdução"
   - id: secao-1
-    title: "Acesso e Ambiente"
+    title: "2. Acesso e Ambiente"
     items:
       - id: secao-1-1
         title: "1.1. Página Inicial e Acesso à Equipe"
@@ -82,10 +84,26 @@ toc:
         title: "6.5. Nova Busca e Encerramento"
 ---
 
+<!-- SEÇÃO INTRO -->
+<div class="secao" id="secao-intro">
+  <div class="secao-header">
+    <span class="secao-numero editable-text">1</span>
+    <h2 class="editable-text">Introdução</h2>
+  </div>
+  <div class="secao-conteudo editable-area">
+    <p>Este manual apresenta as funcionalidades da ferramenta <strong>DIFAL Inteligente</strong>, parte integrante do sistema PSA Elevate. A ferramenta permite classificar tributariamente os itens de notas fiscais por NCM, definindo as regras de DIFAL (Diferencial de Alíquota) aplicáveis a cada operação interestadual de forma ágil e centralizada.</p>
+    <p>O objetivo deste documento é orientar os analistas fiscais na utilização completa dos recursos disponíveis, desde a configuração dos filtros de busca e a classificação individual de NCMs até a sincronização dos dados e a exportação da planilha com as regras tributárias definidas.</p>
+    <div class="dica">
+        <span class="material-icons-round">info</span>
+        <p>Certifique-se de salvar as classificações realizadas antes de fechar a página para não perder o trabalho realizado na sessão.</p>
+    </div>
+  </div>
+</div>
+
 <!-- SEÇÃO 1 -->
 <div class="secao" id="secao-1">
   <div class="secao-header">
-    <span class="secao-numero editable-text">1</span>
+    <span class="secao-numero editable-text">2</span>
     <h2 class="editable-text">Acesso e Ambiente</h2>
   </div>
   <div class="secao-conteudo editable-area">
