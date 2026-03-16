@@ -6,19 +6,19 @@ github_url: "https://github.com/psa-elevate/difal-inteligente"
 toc:
   - id: secao-intro
     title: "1. Introdução"
-  - id: secao-1
-    title: "2. Acesso e Ambiente"
+  - id: secao-acesso
+    title: "2. Acesso e Autenticação"
     items:
-      - id: secao-1-1
-        title: "1.1. Página Inicial e Acesso à Equipe"
-      - id: secao-1-2
-        title: "1.2. Identificação da Área Digital"
-      - id: secao-1-3
-        title: "1.3. Credenciais de Acesso"
-      - id: secao-1-4
-        title: "1.4. Seleção de Ambiente de Trabalho"
-      - id: secao-1-5
-        title: "1.5. Dashboard Principal"
+      - id: secao-acesso-1
+        title: "2.1. Acesso ao portal e área da equipe"
+      - id: secao-acesso-2
+        title: "2.2. Seleção da área de atuação"
+      - id: secao-acesso-3
+        title: "2.3. Login no sistema"
+      - id: secao-acesso-4
+        title: "2.4. Seleção do ambiente de trabalho"
+      - id: secao-acesso-5
+        title: "2.5. Hub de Ferramentas"
   - id: secao-2
     title: "Configuração da Classificação"
     items:
@@ -100,58 +100,58 @@ toc:
   </div>
 </div>
 
-<!-- SEÇÃO 1 -->
-<div class="secao" id="secao-1">
+<!-- SEÇÃO ACESSO -->
+<div class="secao" id="secao-acesso">
   <div class="secao-header">
     <span class="secao-numero editable-text">2</span>
-    <h2 class="editable-text">Acesso e Ambiente</h2>
+    <h2 class="editable-text">Acesso e Autenticação</h2>
   </div>
   <div class="secao-conteudo editable-area">
 
-    <h3 id="secao-1-1">1.1 Página Inicial e Acesso à Equipe</h3>
-    <p>O acesso à ferramenta começa pelo portal corporativo da PSA Consultores. Clique em "Equipe" no canto superior direito para entrar na área restrita aos colaboradores.</p>
+    <h3 id="secao-acesso-1">2.1. Acesso ao portal e área da equipe</h3>
+    <p>O acesso às ferramentas começa pelo portal corporativo da PSA Consultores. Acesse o link <a href="https://psaconsultores.com.br" target="_blank">https://psaconsultores.com.br</a> e clique no ícone de <strong>"Equipe"</strong>, localizado no canto superior direito da tela, para entrar na área restrita.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/01-02_Menu_Equipe.png" class="img-screenshot" alt="Página Inicial e Menu de Acesso à Equipe">
+            <img src="imagens/padrao-01-acesso-portal.png" class="img-screenshot" alt="Acesso à área da equipe no portal">
         </div>
-        <p class="img-caption">Portal corporativo com destaque para o menu de acesso restrito</p>
+        <p class="img-caption">Portal corporativo com destaque para o menu de acesso à Equipe</p>
     </div>
 
-    <h3 id="secao-1-2">1.2 Identificação da Área Digital</h3>
-    <p>Na lista de departamentos, selecione "Digital" para acessar as ferramentas internas da equipe fiscal e de automação.</p>
+    <h3 id="secao-acesso-2">2.2. Seleção da área de atuação</h3>
+    <p>Na tela de departamentos, abra a lista suspensa e selecione a opção <strong>"Digital"</strong> para acessar o sistema de gestão de demandas e as ferramentas internas.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/01-04_Selecao_Digital.png" class="img-screenshot" alt="Seleção Opção Digital">
+            <img src="imagens/padrao-02-selecao-area.png" class="img-screenshot" alt="Seleção da área Digital">
         </div>
-        <p class="img-caption">Seleção da área de competência</p>
+        <p class="img-caption">Seleção da área de competência Digital</p>
     </div>
 
-    <h3 id="secao-1-3">1.3 Credenciais de Acesso</h3>
-    <p>Informe seu e-mail corporativo e senha para acessar o sistema. As credenciais são individuais e garantem que cada consultor visualize apenas os clientes do seu respectivo perfil.</p>
+    <h3 id="secao-acesso-3">2.3. Login no sistema</h3>
+    <p>A tela de autenticação será exibida. Insira suas credenciais corporativas (e-mail e senha) nos campos correspondentes e clique em <strong>"Entrar"</strong>. As credenciais garantem que você visualize apenas as permissões do seu respectivo perfil.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/01-06_Login_Preenchido.png" class="img-screenshot" alt="Login Preenchido">
+            <img src="imagens/padrao-03-login.png" class="img-screenshot" alt="Tela de login preenchida">
         </div>
         <p class="img-caption">Preenchimento dos dados de acesso</p>
     </div>
 
-    <h3 id="secao-1-4">1.4 Seleção de Ambiente de Trabalho</h3>
-    <p>Após o login, selecione o ambiente <strong>"Digital Dev"</strong> para acessar as ferramentas fiscais disponíveis para a equipe.</p>
+    <h3 id="secao-acesso-4">2.4. Seleção do ambiente de trabalho</h3>
+    <p>Após o login, selecione o ambiente <strong>"Digital Dev"</strong>. Este é o ambiente de criação, desenvolvimento e utilização das ferramentas fiscais automatizadas.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/01-07_Ambiente_Dev.png" class="img-screenshot" alt="Seleção Ambiente Digital">
+            <img src="imagens/padrao-04-ambiente-dev.png" class="img-screenshot" alt="Seleção do ambiente Digital Dev">
         </div>
         <p class="img-caption">Escolha do ambiente da área Digital</p>
     </div>
 
-    <h3 id="secao-1-5">1.5 Dashboard Principal</h3>
-    <p>Ao entrar no ambiente Digital Dev, o sistema carregará o Hub de Ferramentas. Utilize a seção Sessões em Andamento para retomar trabalhos recentes ou localize a ferramenta desejada no painel central.</p>
-    <p>Para iniciar a operação, utilize o menu lateral ou identifique o card correspondente e clique no botão Acessar Ferramenta.</p>
+    <h3 id="secao-acesso-5">2.5. Hub de Ferramentas</h3>
+    <p>Ao entrar no ambiente Digital Dev, o sistema carregará o <strong>Hub de Ferramentas</strong>. Utilize a seção "Sessões em Andamento" para retomar trabalhos recentes ou localize a ferramenta desejada no painel central.</p>
+    <p>Para iniciar a operação, utilize o menu lateral ou identifique o card correspondente e clique no botão <strong>"Acessar Ferramenta"</strong>.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/01-08_Dashboard_Inicial.png" class="img-screenshot" alt="Dashboard Inicial">
+            <img src="imagens/padrao-05-hub-ferramentas.png" class="img-screenshot" alt="Hub de Ferramentas">
         </div>
-        <p class="img-caption">Visão geral das ferramentas disponíveis</p>
+        <p class="img-caption">Visão geral do Hub de Ferramentas e sessões ativas</p>
     </div>
 
   </div>

@@ -6,17 +6,19 @@ github_url: "https://github.com/psa-elevate/efd-contribuicoes"
 toc:
   - id: secao-1
     title: "1. Introdução"
-  - id: secao-2
-    title: "2. Acessando o Sistema"
+  - id: secao-acesso
+    title: "2. Acesso e Autenticação"
     items:
-      - id: secao-2-1
-        title: "2.1. Acesso ao PSA Elevate"
-      - id: secao-2-2
-        title: "2.2. Seleção de área"
-      - id: secao-2-3
-        title: "2.3. Login"
-      - id: secao-2-4
-        title: "2.4. Seleção de ambiente"
+      - id: secao-acesso-1
+        title: "2.1. Acesso ao portal e área da equipe"
+      - id: secao-acesso-2
+        title: "2.2. Seleção da área de atuação"
+      - id: secao-acesso-3
+        title: "2.3. Login no sistema"
+      - id: secao-acesso-4
+        title: "2.4. Seleção do ambiente de trabalho"
+      - id: secao-acesso-5
+        title: "2.5. Hub de Ferramentas"
   - id: secao-3
     title: "3. Navegação até EFD Contribuições"
     items:
@@ -105,61 +107,60 @@ toc:
   </div>
 </div>
 
-<!-- SEÇÃO 2 -->
-<div class="secao" id="secao-2">
+<!-- SEÇÃO ACESSO -->
+<div class="secao" id="secao-acesso">
   <div class="secao-header">
     <span class="secao-numero editable-text">2</span>
-    <h2 class="editable-text">Acessando o Sistema</h2>
+    <h2 class="editable-text">Acesso e Autenticação</h2>
   </div>
   <div class="secao-conteudo editable-area">
-    <h3 id="secao-2-1">2.1. Acesso ao PSA Elevate</h3>
-    <p>Acesse o site do PSA Elevate através do navegador. Na página inicial, localize o ícone de equipe no canto superior direito da tela.</p>
+
+    <h3 id="secao-acesso-1">2.1. Acesso ao portal e área da equipe</h3>
+    <p>O acesso às ferramentas começa pelo portal corporativo da PSA Consultores. Acesse o link <a href="https://psaconsultores.com.br" target="_blank">https://psaconsultores.com.br</a> e clique no ícone de <strong>"Equipe"</strong>, localizado no canto superior direito da tela, para entrar na área restrita.</p>
     <div class="img-container">
-        <div class="img-wrapper"> <img src="imagens/01-01-homepage-psa.png" class="img-screenshot" alt="Homepage PSA Consultores"> </div>
-        <p class="img-caption">Página inicial do PSA Elevate</p>
-    </div>
-    <p>Caso visualize a versão alternativa da home, localize o menu no canto superior.</p>
-    <div class="img-container">
-        <div class="img-wrapper"> <img src="imagens/01-02-homepage-psa-alt.png" class="img-screenshot" alt="Homepage alternativa PSA Consultores"> </div>
-        <p class="img-caption">Visualização alternativa da página inicial</p>
+        <div class="img-wrapper">
+            <img src="imagens/padrao-01-acesso-portal.png" class="img-screenshot" alt="Acesso à área da equipe no portal">
+        </div>
+        <p class="img-caption">Portal corporativo com destaque para o menu de acesso à Equipe</p>
     </div>
 
-    <h3 id="secao-2-2">2.2. Seleção de área</h3>
-    <p>Na tela de seleção de área, prossiga para a tela de autenticação.</p>
+    <h3 id="secao-acesso-2">2.2. Seleção da área de atuação</h3>
+    <p>Na tela de departamentos, abra a lista suspensa e selecione a opção <strong>"Digital"</strong> para acessar o sistema de gestão de demandas e as ferramentas internas.</p>
     <div class="img-container">
-        <div class="img-wrapper"> <img src="imagens/01-03-area-equipe-fechado.png" class="img-screenshot" alt="Tela de Seleção de Área"> </div>
-        <p class="img-caption">Tela inicial de seleção antes do login</p>
-    </div>
-    <p>No menu suspenso, selecione a opção <strong>Digital</strong>.</p>
-    <div class="img-container">
-        <div class="img-wrapper"> <img src="imagens/01-04-area-equipe-dropdown.png" class="img-screenshot" alt="Dropdown Área da Equipe"> </div>
-        <p class="img-caption">Seleção da área Digital no menu</p>
+        <div class="img-wrapper">
+            <img src="imagens/padrao-02-selecao-area.png" class="img-screenshot" alt="Seleção da área Digital">
+        </div>
+        <p class="img-caption">Seleção da área de competência Digital</p>
     </div>
 
-    <h3 id="secao-2-3">2.3. Login</h3>
-    <p>A tela de login será exibida. Insira suas credenciais de acesso nos campos correspondentes.</p>
+    <h3 id="secao-acesso-3">2.3. Login no sistema</h3>
+    <p>A tela de autenticação será exibida. Insira suas credenciais corporativas (e-mail e senha) nos campos correspondentes e clique em <strong>"Entrar"</strong>. As credenciais garantem que você visualize apenas as permissões do seu respectivo perfil.</p>
     <div class="img-container">
-        <div class="img-wrapper"> <img src="imagens/01-05-tela-login.png" class="img-screenshot" alt="Tela de login vazia"> </div>
-        <p class="img-caption">Formulário de acesso restrito</p>
-    </div>
-    <p>No campo <strong>Email</strong>, digite seu endereço de e-mail corporativo. No campo <strong>Senha</strong>, insira sua senha. Em seguida, clique em <strong>Entrar</strong>.</p>
-    <div class="img-container">
-        <div class="img-wrapper"> <img src="imagens/01-06-login-preenchido.png" class="img-screenshot" alt="Login preenchido"> </div>
-        <p class="img-caption">Exemplo de preenchimento de credenciais</p>
+        <div class="img-wrapper">
+            <img src="imagens/padrao-03-login.png" class="img-screenshot" alt="Tela de login preenchida">
+        </div>
+        <p class="img-caption">Preenchimento dos dados de acesso</p>
     </div>
 
-    <h3 id="secao-2-4">2.4. Seleção de ambiente</h3>
-    <p>Após o login, selecione o ambiente de trabalho apropriado. Para acessar as ferramentas de consulta e desenvolvimento, clique em <strong>Digital Dev</strong>.</p>
+    <h3 id="secao-acesso-4">2.4. Seleção do ambiente de trabalho</h3>
+    <p>Após o login, selecione o ambiente <strong>"Digital Dev"</strong>. Este é o ambiente de criação, desenvolvimento e utilização das ferramentas fiscais automatizadas.</p>
     <div class="img-container">
-        <div class="img-wrapper"> <img src="imagens/01-07-area-digital-escolha.png" class="img-screenshot" alt="Seleção de Ambiente Digital Dev"> </div>
-        <p class="img-caption">Escolha entre Digital Rotina e Digital Dev</p>
+        <div class="img-wrapper">
+            <img src="imagens/padrao-04-ambiente-dev.png" class="img-screenshot" alt="Seleção do ambiente Digital Dev">
+        </div>
+        <p class="img-caption">Escolha do ambiente da área Digital</p>
     </div>
-    <p>Ao entrar no ambiente Digital Dev, o sistema carregará o Hub de Ferramentas. Utilize a seção Sessões em Andamento para retomar trabalhos recentes ou localize a ferramenta desejada no painel central.</p>
-    <p>Para iniciar a operação, utilize o menu lateral ou identifique o card correspondente e clique no botão Acessar Ferramenta.</p>
+
+    <h3 id="secao-acesso-5">2.5. Hub de Ferramentas</h3>
+    <p>Ao entrar no ambiente Digital Dev, o sistema carregará o <strong>Hub de Ferramentas</strong>. Utilize a seção "Sessões em Andamento" para retomar trabalhos recentes ou localize a ferramenta desejada no painel central.</p>
+    <p>Para iniciar a operação, utilize o menu lateral ou identifique o card correspondente e clique no botão <strong>"Acessar Ferramenta"</strong>.</p>
     <div class="img-container">
-        <div class="img-wrapper"> <img src="imagens/01-08-dashboard-dev.png" class="img-screenshot" alt="Dashboard Digital Dev"> </div>
-        <p class="img-caption">Visão geral do sistema</p>
+        <div class="img-wrapper">
+            <img src="imagens/padrao-05-hub-ferramentas.png" class="img-screenshot" alt="Hub de Ferramentas">
+        </div>
+        <p class="img-caption">Visão geral do Hub de Ferramentas e sessões ativas</p>
     </div>
+
   </div>
 </div>
 
