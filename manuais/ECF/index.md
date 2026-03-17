@@ -1,4 +1,4 @@
-\---
+---
 
 layout: manual
 
@@ -144,7 +144,7 @@ toc:
 
 &#x20;       title: "8.3 Retorno à Tela Inicial"
 
-\---
+---
 
 
 
