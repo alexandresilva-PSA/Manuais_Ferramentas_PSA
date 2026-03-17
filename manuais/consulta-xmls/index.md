@@ -1,4 +1,4 @@
----
+﻿---
 layout: manual
 title: "Consulta de XMLs"
 versao: "3.0"
@@ -103,69 +103,69 @@ toc:
 </div>
 
 <!-- SEÇÃO ACESSO -->
-<div class=”secao” id=”secao-acesso”>
-  <div class=”secao-header”>
-    <span class=”secao-numero editable-text”>2</span>
-    <h2 class=”editable-text”>Acesso e Autenticação</h2>
+<div class="secao" id="secao-acesso">
+  <div class="secao-header">
+    <span class="secao-numero editable-text">2</span>
+    <h2 class="editable-text">Acesso e Autenticação</h2>
   </div>
-  <div class=”secao-conteudo editable-area”>
-    <h3 id=”secao-acesso-1”>2.1. Acesso ao portal e área da equipe</h3>
-    <p>O acesso às ferramentas começa pelo portal corporativo da PSA Consultores. Acesse o link <a href=”https://psaconsultores.com.br” target=”_blank”>https://psaconsultores.com.br</a> e clique no ícone de <strong>”Equipe”</strong>, localizado no canto superior direito da tela, para entrar na área restrita.</p>
-    <div class=”img-container”>
-        <div class=”img-wrapper”>
-            <img src=”imagens/padrao-01-acesso-portal.png” class=”img-screenshot” alt=”Acesso à área da equipe no portal”>
+  <div class="secao-conteudo editable-area">
+    <h3 id="secao-acesso-1">2.1. Acesso ao portal e área da equipe</h3>
+    <p>O acesso às ferramentas começa pelo portal corporativo da PSA Consultores. Acesse o link <a href="https://psaconsultores.com.br" target="_blank">https://psaconsultores.com.br</a> e clique no ícone de <strong>"Equipe"</strong>, localizado no canto superior direito da tela, para entrar na área restrita.</p>
+    <div class="img-container">
+        <div class="img-wrapper">
+            <img src="imagens/padrao-01-acesso-portal.png" class="img-screenshot" alt="Acesso à área da equipe no portal">
         </div>
-        <p class=”img-caption”>Portal corporativo com destaque para o menu de acesso à Equipe</p>
+        <p class="img-caption">Portal corporativo com destaque para o menu de acesso à Equipe</p>
     </div>
 
-    <h3 id=”secao-acesso-2”>2.2. Seleção da área de atuação</h3>
-    <p>Na tela de departamentos, abra a lista suspensa e selecione a opção <strong>”Digital”</strong> para acessar o sistema de gestão de demandas e as ferramentas internas.</p>
-    <div class=”img-container”>
-        <div class=”img-wrapper”>
-            <img src=”imagens/padrao-02-selecao-area.png” class=”img-screenshot” alt=”Seleção da área Digital”>
+    <h3 id="secao-acesso-2">2.2. Seleção da área de atuação</h3>
+    <p>Na tela de departamentos, abra a lista suspensa e selecione a opção <strong>"Digital"</strong> para acessar o sistema de gestão de demandas e as ferramentas internas.</p>
+    <div class="img-container">
+        <div class="img-wrapper">
+            <img src="imagens/padrao-02-selecao-area.png" class="img-screenshot" alt="Seleção da área Digital">
         </div>
-        <p class=”img-caption”>Seleção da área de competência Digital</p>
+        <p class="img-caption">Seleção da área de competência Digital</p>
     </div>
 
-    <h3 id=”secao-acesso-3”>2.3. Login no sistema</h3>
-    <p>A tela de autenticação será exibida. Insira suas credenciais corporativas (e-mail e senha) nos campos correspondentes e clique em <strong>”Entrar”</strong>. As credenciais garantem que você visualize apenas as permissões do seu respectivo perfil.</p>
-    <div class=”img-container”>
-        <div class=”img-wrapper”>
-            <img src=”imagens/padrao-03-login.png” class=”img-screenshot” alt=”Tela de login preenchida”>
+    <h3 id="secao-acesso-3">2.3. Login no sistema</h3>
+    <p>A tela de autenticação será exibida. Insira suas credenciais corporativas (e-mail e senha) nos campos correspondentes e clique em <strong>"Entrar"</strong>. As credenciais garantem que você visualize apenas as permissões do seu respectivo perfil.</p>
+    <div class="img-container">
+        <div class="img-wrapper">
+            <img src="imagens/padrao-03-login.png" class="img-screenshot" alt="Tela de login preenchida">
         </div>
-        <p class=”img-caption”>Preenchimento dos dados de acesso</p>
+        <p class="img-caption">Preenchimento dos dados de acesso</p>
     </div>
 
-    <h3 id=”secao-acesso-4”>2.4. Seleção do ambiente de trabalho</h3>
-    <p>Após o login, selecione o ambiente <strong>”Digital Dev”</strong>. Este é o ambiente de criação, desenvolvimento e utilização das ferramentas fiscais automatizadas.</p>
-    <div class=”img-container”>
-        <div class=”img-wrapper”>
-            <img src=”imagens/padrao-04-ambiente-dev.png” class=”img-screenshot” alt=”Seleção do ambiente Digital Dev”>
+    <h3 id="secao-acesso-4">2.4. Seleção do ambiente de trabalho</h3>
+    <p>Após o login, selecione o ambiente <strong>"Digital Dev"</strong>. Este é o ambiente de criação, desenvolvimento e utilização das ferramentas fiscais automatizadas.</p>
+    <div class="img-container">
+        <div class="img-wrapper">
+            <img src="imagens/padrao-04-ambiente-dev.png" class="img-screenshot" alt="Seleção do ambiente Digital Dev">
         </div>
-        <p class=”img-caption”>Escolha do ambiente da área Digital</p>
+        <p class="img-caption">Escolha do ambiente da área Digital</p>
     </div>
 
-    <h3 id=”secao-acesso-5”>2.5. Hub de Ferramentas</h3>
-    <p>Ao entrar no ambiente Digital Dev, o sistema carregará o <strong>Hub de Ferramentas</strong>. Utilize a seção “Sessões em Andamento” para retomar trabalhos recentes ou localize a ferramenta desejada no painel central.</p>
-    <p>Para iniciar a operação, utilize o menu lateral ou identifique o card correspondente e clique no botão <strong>”Acessar Ferramenta”</strong>.</p>
-    <div class=”img-container”>
-        <div class=”img-wrapper”>
-            <img src=”imagens/padrao-05-hub-ferramentas.png” class=”img-screenshot” alt=”Hub de Ferramentas”>
+    <h3 id="secao-acesso-5">2.5. Hub de Ferramentas</h3>
+    <p>Ao entrar no ambiente Digital Dev, o sistema carregará o <strong>Hub de Ferramentas</strong>. Utilize a seção "Sessões em Andamento" para retomar trabalhos recentes ou localize a ferramenta desejada no painel central.</p>
+    <p>Para iniciar a operação, utilize o menu lateral ou identifique o card correspondente e clique no botão <strong>"Acessar Ferramenta"</strong>.</p>
+    <div class="img-container">
+        <div class="img-wrapper">
+            <img src="imagens/padrao-05-hub-ferramentas.png" class="img-screenshot" alt="Hub de Ferramentas">
         </div>
-        <p class=”img-caption”>Visão geral do Hub de Ferramentas e sessões ativas</p>
+        <p class="img-caption">Visão geral do Hub de Ferramentas e sessões ativas</p>
     </div>
 
   </div>
 </div>
 
-<div class=”secao” id=”secao-2”>
-  <div class=”secao-header”>
-    <span class=”secao-numero editable-text”>3</span>
-    <h2 class=”editable-text”>Navegação no ambiente Digital Dev</h2>
+<div class="secao" id="secao-2">
+  <div class="secao-header">
+    <span class="secao-numero editable-text">3</span>
+    <h2 class="editable-text">Navegação no ambiente Digital Dev</h2>
   </div>
-  <div class=”secao-conteudo editable-area”>
-    <h3 id=”secao-2-3”>3.1. Abertura da ferramenta de consulta</h3>
-    <p>Para acessar a ferramenta de consulta de XML, clique em “Consulta de XMLs” no menu lateral. O sistema irá abrir a página da ferramenta. Inicialmente, nenhum dado será carregado.</p>
+  <div class="secao-conteudo editable-area">
+    <h3 id="secao-2-3">3.1. Abertura da ferramenta de consulta</h3>
+    <p>Para acessar a ferramenta de consulta de XML, clique em "Consulta de XMLs" no menu lateral. O sistema irá abrir a página da ferramenta. Inicialmente, nenhum dado será carregado.</p>
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/2.3. Abertura da ferramenta de consulta.png" class="img-screenshot" alt="Abertura da ferramenta de consulta">
@@ -274,7 +274,7 @@ toc:
   </div>
   <div class="secao-conteudo editable-area">
     <h3 id="secao-4-1">4.1. Acionamento da consulta</h3>
-    <p>Após preencher os filtros necessários, clique no botão “Buscar” para realizar a consulta.</p>
+    <p>Após preencher os filtros necessários, clique no botão "Buscar" para realizar a consulta.</p>
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/4.1. Acionamento da consulta.png" class="img-screenshot" alt="Acionamento da consulta">
@@ -301,7 +301,7 @@ toc:
     </div>
 
     <h3 id="secao-4-4">4.4. Paginação dos resultados</h3>
-    <p>A tabela exibe um limite de 10 arquivos por página. Vá até o rodapé da tabela e clique no botão “Próximo” para avançar e visualizar as demais páginas, ou clique em “Anterior” para retroceder.</p>
+    <p>A tabela exibe um limite de 10 arquivos por página. Vá até o rodapé da tabela e clique no botão "Próximo" para avançar e visualizar as demais páginas, ou clique em "Anterior" para retroceder.</p>
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/4.4. Paginação dos resultados.png" class="img-screenshot" alt="Paginação dos resultados">
@@ -318,7 +318,7 @@ toc:
   </div>
   <div class="secao-conteudo editable-area">
     <h3 id="secao-5-1">5.1. Abertura do modal de exportação</h3>
-    <p>Para consolidar os dados em uma planilha, clique no botão “Exportar Excel” na barra superior. Uma janela será aberta. Atenção: a exportação engloba todos os arquivos carregados no filtro atual, e não apenas os que estão visíveis na página atual da tabela.</p>
+    <p>Para consolidar os dados em uma planilha, clique no botão "Exportar Excel" na barra superior. Uma janela será aberta. Atenção: a exportação engloba todos os arquivos carregados no filtro atual, e não apenas os que estão visíveis na página atual da tabela.</p>
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/5.1. Abertura do modal de exportação.png" class="img-screenshot" alt="Abertura do modal de exportação">
@@ -381,7 +381,7 @@ toc:
     </div>
 
     <h3 id="secao-5-8">5.8. Conclusão da exportação</h3>
-    <p>Após configurar as colunas desejadas, clique no botão verde “Exportar Excel” localizado no canto inferior direito da janela. O sistema processará os dados e fará o download da planilha consolidada.</p>
+    <p>Após configurar as colunas desejadas, clique no botão verde "Exportar Excel" localizado no canto inferior direito da janela. O sistema processará os dados e fará o download da planilha consolidada.</p>
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/5.8. Conclusão da exportação.png" class="img-screenshot" alt="Conclusão da exportação">
@@ -407,7 +407,7 @@ toc:
     </div>
 
     <h3 id="secao-6-2">6.2. Limpeza de filtros</h3>
-    <p>Para iniciar uma nova consulta, clique no botão “Limpar filtros”. Após esse processo, os filtros aplicados serão redefinidos e você poderá realizar uma nova busca.</p>
+    <p>Para iniciar uma nova consulta, clique no botão "Limpar filtros". Após esse processo, os filtros aplicados serão redefinidos e você poderá realizar uma nova busca.</p>
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/6.2. Limpeza de filtros.png" class="img-screenshot" alt="Limpeza de filtros">
