@@ -26,6 +26,13 @@
   updated: "02/2026"
   description: "Consulta e estruturação do SPED Contribuições. Realiza a quebra do arquivo para visualização detalhada dos registros de PIS/COFINS, permitindo a exportação e conferência dos dados."
 
+- title: "Consulta ECF"
+  url: "/manuais/ECF/"
+  icon: "receipt_long"
+  version: "v1.0"
+  updated: "03/2026"
+  description: "Consulta, download e exportação de arquivos da Escrituração Contábil Fiscal (ECF). Permite a análise de registros e extração de dados estruturados em Excel."
+
 - title: "Controle de PERDCOMP"
   url: "/manuais/controle-perdcomp/"
   icon: "price_check"
