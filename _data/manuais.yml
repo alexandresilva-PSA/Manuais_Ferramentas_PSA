@@ -33,6 +33,13 @@
   updated: "03/2026"
   description: "Consulta, download e exportação de arquivos da Escrituração Contábil Fiscal (ECF). Permite a análise de registros e extração de dados estruturados em Excel."
 
+- title: "Consulta ECD"
+  url: "/manuais/ECD/"
+  icon: "menu_book"
+  version: "v1.0"
+  updated: "03/2026"
+  description: "Consulta, download e exportação de arquivos da Escrituração Contábil Digital (ECD). Permite análise de registros e extração de dados estruturados em Excel, facilitando processos de consulta e análise contábil."
+
 - title: "Controle de PERDCOMP"
   url: "/manuais/controle-perdcomp/"
   icon: "price_check"
