@@ -40,6 +40,13 @@
   updated: "03/2026"
   description: "Consulta, download e exportação de arquivos da Escrituração Contábil Digital (ECD). Permite análise de registros e extração de dados estruturados em Excel, facilitando processos de consulta e análise contábil."
 
+- title: "Controle de Balancetes"
+  url: "/manuais/balancete/"
+  icon: "account_balance"
+  version: "v1.0"
+  updated: "03/2026"
+  description: "Gestão centralizada de balancetes contábeis: envio, consulta e exportação de arquivos. Permite upload seguro de planilhas, configuração de detalhamento por contribuinte e extração padronizada dos movimentos contábeis."
+
 - title: "Controle de PERDCOMP"
   url: "/manuais/controle-perdcomp/"
   icon: "price_check"
