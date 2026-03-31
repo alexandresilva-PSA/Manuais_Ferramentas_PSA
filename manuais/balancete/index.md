@@ -280,7 +280,7 @@ toc:
         </div>
         <p class="img-caption">Ação para gerar planilha de movimentos formatada</p>
     </div>
-    <p>O sistema processará o balancete de acordo com as parametrizações e gerará uma nova planilha Excel com as colunas padronizadas, pronta para ser utilizada em cruzamentos e auditorias.</p>
+    <p>O sistema processará o balancete de acordo com os filtros selcionados e gerará uma nova planilha Excel com as colunas padronizadas.</p>
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/Balancete tratado.png" class="img-screenshot" alt="Planilha de balancete tratado">
@@ -301,7 +301,7 @@ toc:
     <ol>
         <li>Utilize as <strong>caixas de seleção (checkboxes)</strong> localizadas na primeira coluna da tabela para marcar os balancetes desejados (ou utilize a caixa no cabeçalho para selecionar todos os listados).</li>
         <li>Observe que os botões superiores <strong>Baixar original</strong> e <strong>Exportar movimentos</strong> serão ativados, exibindo uma <em>badge</em> numérica com a quantidade de itens selecionados.</li>
-        <li>Clique na ação desejada. O sistema processará as requisições em background e efetuará o download de um único arquivo compactado (<strong>.zip</strong>) contendo todas as planilhas selecionadas.</li>
+        <li>Clique na ação desejada. O sistema processará as requisições em segundo plano e efetuará o download de um único arquivo compactado (<strong>.zip</strong>) contendo todas as planilhas selecionadas.</li>
     </ol>
     <div class="dica">
         <span class="material-icons-round">bolt</span>
