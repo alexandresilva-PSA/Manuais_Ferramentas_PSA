@@ -153,7 +153,7 @@ toc:
   </div>
   <div class="secao-conteudo editable-area">
     <h3 id="secao-4-1">4.1. Seleção de Cliente</h3>
-    <p>No painel de filtros, clique no menu suspenso e selecione a empresa matriz. Este campo é obrigatório (marcado com um asterisco vermelho).</p>
+    <p>No painel de filtros, clique no menu suspenso e selecione o cliente. Este campo é obrigatório (marcado com um asterisco vermelho).</p>
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/Filtro de clientes.png" class="img-screenshot" alt="Filtro de clientes">
@@ -162,7 +162,7 @@ toc:
     </div>
 
     <h3 id="secao-4-2">4.2. Seleção de Contribuinte</h3>
-    <p>Após selecionar o cliente, este campo será habilitado. Escolha a razão social específica (CNPJ/Filial) para a qual deseja listar os balancetes.</p>
+    <p>Após selecionar o cliente, este campo será habilitado. Escolha a empresa (CNPJ) ou pessoa (CPF) para a qual deseja listar os balancetes.</p>
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/Filtro de contribuintes.png" class="img-screenshot" alt="Filtro de contribuintes">
@@ -223,7 +223,7 @@ toc:
     </div>
 
     <h3 id="secao-5-3">5.3. Preenchimento de dados e detalhamento</h3>
-    <p>Na lateral direita, preencha Cliente, Contribuinte e Período referentes à planilha. Verifique a chave de <strong>Detalhamento</strong> e ative-a (Sim/Não) conforme a estrutura contábil da empresa.</p>
+    <p>Na lateral direita, preencha Cliente, Contribuinte e Período referentes à planilha. Verifique a chave de <strong>Detalhamento</strong> e ative-a (Sim/Não) conforme a estrutura do balancete da empresa.</p>
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/formulario preenchido.png" class="img-screenshot" alt="Formulário preenchido">
@@ -308,4 +308,4 @@ toc:
         <p>A exportação em lote é ideal para contribuintes que possuem o envio do balancete fragmentado (ex: arquivos mensais) e necessitam da análise de um exercício inteiro consolidado.</p>
     </div>
   </div>
-</div>
+</div>f
