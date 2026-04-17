@@ -88,3 +88,10 @@
   version: "v1.0"
   updated: "03/2026"
   description: "Monitoramento técnico interno e consolidação dos indicadores de uso da API e do sistema."
+
+- title: "Dashboard de Clientes e OS"
+  url: "/manuais/dashboard-clientes-os/"
+  icon: "point_of_sale"
+  version: "1.0"
+  updated: "04/2026"
+  description: "Acompanhamento estratégico de faturamento, ticket médio e status operacional das Ordens de Serviço (OS)."
