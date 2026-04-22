@@ -1,4 +1,4 @@
----
+\---
 
 layout: manual
 
@@ -6,109 +6,109 @@ title: "Dashboard de Clientes e OS"
 
 versao: "1.0"
 
-github_url: "https://github.com/psa-elevate/dashboard-clientes-os"
+github\_url: "https://github.com/psa-elevate/dashboard-clientes-os"
 
 toc:
 
-  - id: secao-intro
+&#x20; - id: secao-intro
 
-    title: "1. IntroduÃ§Ã£o"
+&#x20;   title: "1. Introdução"
 
-  - id: secao-2
+&#x20; - id: secao-2
 
-    title: "2. VisÃ£o geral do dashboard"
+&#x20;   title: "2. Visão geral do dashboard"
 
-  - id: secao-3
+&#x20; - id: secao-3
 
-    title: "3. Painel Executivo - Faturamento e Clientes"
+&#x20;   title: "3. Painel Executivo - Faturamento e Clientes"
 
-    items:
+&#x20;   items:
 
-      - id: secao-3-1
+&#x20;     - id: secao-3-1
 
-        title: "3.1. VisÃ£o geral da pÃ¡gina"
+&#x20;       title: "3.1. Visão geral da página"
 
-      - id: secao-3-2
+&#x20;     - id: secao-3-2
 
-        title: "3.2. Filtros disponÃ­veis"
+&#x20;       title: "3.2. Filtros disponíveis"
 
-      - id: secao-3-3
+&#x20;     - id: secao-3-3
 
-        title: "3.3. Indicadores (KPIs)"
+&#x20;       title: "3.3. Indicadores (KPIs)"
 
-      - id: secao-3-4
+&#x20;     - id: secao-3-4
 
-        title: "3.4. GrÃ¡ficos de anÃ¡lise"
+&#x20;       title: "3.4. Gráficos de análise"
 
-      - id: secao-3-5
+&#x20;     - id: secao-3-5
 
-        title: "3.5. Tabela de visÃ£o consolidada"
+&#x20;       title: "3.5. Tabela de visão consolidada"
 
-  - id: secao-4
+&#x20; - id: secao-4
 
-    title: "4. Painel Executivo - Ordens de ServiÃ§o (OS)"
+&#x20;   title: "4. Painel Executivo - Ordens de Serviço (OS)"
 
-    items:
+&#x20;   items:
 
-      - id: secao-4-1
+&#x20;     - id: secao-4-1
 
-        title: "4.1. VisÃ£o geral da pÃ¡gina"
+&#x20;       title: "4.1. Visão geral da página"
 
-      - id: secao-4-2
+&#x20;     - id: secao-4-2
 
-        title: "4.2. Filtros de OS"
+&#x20;       title: "4.2. Filtros de OS"
 
-      - id: secao-4-3
+&#x20;     - id: secao-4-3
 
-        title: "4.3. Indicadores de OS"
+&#x20;       title: "4.3. Indicadores de OS"
 
-      - id: secao-4-4
+&#x20;     - id: secao-4-4
 
-        title: "4.4. GrÃ¡ficos de acompanhamento"
+&#x20;       title: "4.4. Gráficos de acompanhamento"
 
-      - id: secao-4-5
+&#x20;     - id: secao-4-5
 
-        title: "4.5. Tabela analÃ­tica de OS"
+&#x20;       title: "4.5. Tabela analítica de OS"
 
-  - id: secao-5
+&#x20; - id: secao-5
 
-    title: "5. Painel Operacional"
+&#x20;   title: "5. Painel Operacional"
 
-    items:
+&#x20;   items:
 
-      - id: secao-5-1
+&#x20;     - id: secao-5-1
 
-        title: "5.1. VisÃ£o geral da pÃ¡gina"
+&#x20;       title: "5.1. Visão geral da página"
 
-      - id: secao-5-2
+&#x20;     - id: secao-5-2
 
-        title: "5.2. Filtros e Indicadores"
+&#x20;       title: "5.2. Filtros e Indicadores"
 
-      - id: secao-5-3
+&#x20;     - id: secao-5-3
 
-        title: "5.3. Tabela de detalhamento operacional"
+&#x20;       title: "5.3. Tabela de detalhamento operacional"
 
----
+\---
 
 
 
 <div class="secao" id="secao-intro">
 
-  <div class="secao-header">
+&#x20; <div class="secao-header">
 
-    <span class="secao-numero editable-text">1</span>
+&#x20;   <span class="secao-numero editable-text">1</span>
 
-    <h2 class="editable-text">IntroduÃ§Ã£o</h2>
+&#x20;   <h2 class="editable-text">Introdução</h2>
 
-  </div>
+&#x20; </div>
 
-  <div class="secao-conteudo editable-area">
+&#x20; <div class="secao-conteudo editable-area">
 
-    <p>Este manual apresenta as funcionalidades do <strong>Dashboard de Clientes e OS</strong>, uma ferramenta estratÃ©gica desenvolvida no Looker Studio para o ecossistema PSA Elevate. O painel centraliza indicadores crÃ­ticos de performance, permitindo o acompanhamento em tempo real do faturamento, do perfil da carteira de clientes e do status operacional das Ordens de ServiÃ§o (OS).</p>
+&#x20;   <p>Este manual apresenta as funcionalidades do <strong>Dashboard de Clientes e OS</strong>, uma ferramenta estratégica desenvolvida no Looker Studio para o ecossistema PSA Elevate. O painel centraliza indicadores críticos de performance, permitindo o acompanhamento em tempo real do faturamento, do perfil da carteira de clientes e do status operacional das Ordens de Serviço (OS).</p>
 
-    <p>O objetivo deste documento Ã© orientar gestores e analistas na exploraÃ§Ã£o das trÃªs visÃµes principais do relatÃ³rio, facilitando a tomada de decisÃ£o baseada em dados consolidados e mÃ©tricas de ticket mÃ©dio e produtividade.</p>
+&#x20;   <p>O objetivo deste documento é orientar gestores e analistas na exploração das três visões principais do relatório, facilitando a tomada de decisão baseada em dados consolidados e métricas de ticket médio e produtividade.</p>
 
-  </div>
+&#x20; </div>
 
 </div>
 
@@ -116,27 +116,27 @@ toc:
 
 <div class="secao" id="secao-2">
 
-  <div class="secao-header">
+&#x20; <div class="secao-header">
 
-    <span class="secao-numero editable-text">2</span>
+&#x20;   <span class="secao-numero editable-text">2</span>
 
-    <h2 class="editable-text">VisÃ£o geral do dashboard</h2>
+&#x20;   <h2 class="editable-text">Visão geral do dashboard</h2>
 
-  </div>
+&#x20; </div>
 
-  <div class="secao-conteudo editable-area">
+&#x20; <div class="secao-conteudo editable-area">
 
-    <p>O dashboard Ã© dividido em pÃ¡ginas temÃ¡ticas que separam a visÃ£o executiva financeira da visÃ£o operacional detalhada. A navegaÃ§Ã£o entre as abas permite transitar entre dados macro (faturamento total) e micro (detalhes de uma OS especÃ­fica).</p>
+&#x20;   <p>O dashboard é dividido em páginas temáticas que separam a visão executiva financeira da visão operacional detalhada. A navegação entre as abas permite transitar entre dados macro (faturamento total) e micro (detalhes de uma OS específica).</p>
 
-    <div class="img-container">
+&#x20;   <div class="img-container">
 
-        <div class="img-wrapper"><img src="imagens/visao_geral_dashboard.png" class="img-screenshot" alt="VisÃ£o geral do dashboard"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/visao\_geral\_dashboard.png" class="img-screenshot" alt="Visão geral do dashboard"></div>
 
-        <p class="img-caption">Figura 1 - VisÃ£o geral da estrutura de navegaÃ§Ã£o do dashboard</p>
+&#x20;       <p class="img-caption">Figura 1 - Visão geral da estrutura de navegação do dashboard</p>
 
-    </div>
+&#x20;   </div>
 
-  </div>
+&#x20; </div>
 
 </div>
 
@@ -144,137 +144,137 @@ toc:
 
 <div class="secao" id="secao-3">
 
-  <div class="secao-header">
+&#x20; <div class="secao-header">
 
-    <span class="secao-numero editable-text">3</span>
+&#x20;   <span class="secao-numero editable-text">3</span>
 
-    <h2 class="editable-text">Painel Executivo - Faturamento e Clientes</h2>
+&#x20;   <h2 class="editable-text">Painel Executivo - Faturamento e Clientes</h2>
 
-  </div>
+&#x20; </div>
 
-  <div class="secao-conteudo editable-area">
+&#x20; <div class="secao-conteudo editable-area">
 
-    <p>Esta aba foca na saÃºde financeira da operaÃ§Ã£o e na segmentaÃ§Ã£o da carteira de clientes ativos.</p>
+&#x20;   <p>Esta aba foca na saúde financeira da operação e na segmentação da carteira de clientes ativos.</p>
 
 
 
-    <h3 id="secao-3-1">3.1. VisÃ£o geral da pÃ¡gina</h3>
+&#x20;   <h3 id="secao-3-1">3.1. Visão geral da página</h3>
 
-    <p>Apresenta o faturamento consolidado e a distribuiÃ§Ã£o de receita por categoria de cliente.</p>
+&#x20;   <p>Apresenta o faturamento consolidado e a distribuição de receita por categoria de cliente.</p>
 
-    <div class="img-container">
+&#x20;   <div class="img-container">
 
-        <div class="img-wrapper"><img src="imagens/painel_executivo.png" class="img-screenshot" alt="Painel executivo faturamento"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/painel\_executivo.png" class="img-screenshot" alt="Painel executivo faturamento"></div>
 
-        <p class="img-caption">Figura 2 - VisÃ£o geral do Painel Executivo de Faturamento</p>
+&#x20;       <p class="img-caption">Figura 2 - Visão geral do Painel Executivo de Faturamento</p>
 
-    </div>
+&#x20;   </div>
 
 
 
-    <h3 id="secao-3-2">3.2. Filtros disponÃ­veis</h3>
+&#x20;   <h3 id="secao-3-2">3.2. Filtros disponíveis</h3>
 
-    <p>No topo da pÃ¡gina, Ã© possÃ­vel refinar a anÃ¡lise atravÃ©s dos seguintes controles:</p>
+&#x20;   <p>No topo da página, é possível refinar a análise através dos seguintes controles:</p>
 
-    <ul>
+&#x20;   <ul>
 
-        <li><strong>Escolha o perÃ­odo:</strong> Define o intervalo de tempo da anÃ¡lise.</li>
+&#x20;       <li><strong>Escolha o período:</strong> Define o intervalo de tempo da análise.</li>
 
-        <li><strong>Escolha o cliente:</strong> Filtra os dados por grupos especÃ­ficos.</li>
+&#x20;       <li><strong>Escolha o cliente:</strong> Filtra os dados por grupos específicos.</li>
 
-        <li><strong>Escolha o tipo:</strong> Segmenta entre clientes fixos ou pontuais.</li>
+&#x20;       <li><strong>Escolha o tipo:</strong> Segmenta entre clientes fixos ou pontuais.</li>
 
-        <li><strong>Escolha a categoria:</strong> Filtra pelo nÃ­vel de segmentaÃ§Ã£o (ex: Prata, Ouro).</li>
+&#x20;       <li><strong>Escolha a categoria:</strong> Filtra pelo nível de segmentação (ex: Prata, Ouro).</li>
 
-    </ul>
+&#x20;   </ul>
 
-    <div class="img-container">
+&#x20;   <div class="img-container">
 
-        <div class="img-wrapper"><img src="imagens/filtros_painel_executivo.png" class="img-screenshot" alt="Filtros painel executivo"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/filtros\_painel\_executivo.png" class="img-screenshot" alt="Filtros painel executivo"></div>
 
-        <p class="img-caption">Figura 3 - Barra de filtros do Painel Executivo</p>
+&#x20;       <p class="img-caption">Figura 3 - Barra de filtros do Painel Executivo</p>
 
-    </div>
+&#x20;   </div>
 
 
 
-    <h3 id="secao-3-3">3.3. Indicadores (KPIs)</h3>
+&#x20;   <h3 id="secao-3-3">3.3. Indicadores (KPIs)</h3>
 
-    <p>Os cartÃµes de performance destacam mÃ©tricas vitais para a gestÃ£o:</p>
+&#x20;   <p>Os cartões de performance destacam métricas vitais para a gestão:</p>
 
-    <ul>
+&#x20;   <ul>
 
-        <li><strong>Faturamento total:</strong> Soma absoluta da receita no perÃ­odo, com comparativo percentual.</li>
+&#x20;       <li><strong>Faturamento total:</strong> Soma absoluta da receita no período, com comparativo percentual.</li>
 
-        <li><strong>Clientes ativos:</strong> Quantidade total, detalhando o volume de <strong>Fixos</strong> e <strong>Pontuais</strong>.</li>
+&#x20;       <li><strong>Clientes ativos:</strong> Quantidade total, detalhando o volume de <strong>Fixos</strong> e <strong>Pontuais</strong>.</li>
 
-        <li><strong>Ticket mÃ©dio:</strong> Valor mÃ©dio faturado por cliente.</li>
+&#x20;       <li><strong>Ticket médio:</strong> Valor médio faturado por cliente.</li>
 
-    </ul>
+&#x20;   </ul>
 
-    <div class="img-container">
+&#x20;   <div class="img-container">
 
-        <div class="img-wrapper"><img src="imagens/kpis_painel_executivo.png" class="img-screenshot" alt="KPIs painel executivo"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/kpis\_painel\_executivo.png" class="img-screenshot" alt="KPIs painel executivo"></div>
 
-        <p class="img-caption">Figura 4 - Indicadores principais de faturamento e clientes</p>
+&#x20;       <p class="img-caption">Figura 4 - Indicadores principais de faturamento e clientes</p>
 
-    </div>
+&#x20;   </div>
 
 
 
-    <h3 id="secao-3-4">3.4. GrÃ¡ficos de anÃ¡lise</h3>
+&#x20;   <h3 id="secao-3-4">3.4. Gráficos de análise</h3>
 
-    <p>O painel utiliza visualizaÃ§Ãµes grÃ¡ficas para identificar tendÃªncias de mercado:</p>
+&#x20;   <p>O painel utiliza visualizações gráficas para identificar tendências de mercado:</p>
 
-    <ul>
+&#x20;   <ul>
 
-        <li><strong>Faturamento mensal:</strong> HistÃ³rico de evoluÃ§Ã£o da receita ao longo do tempo.</li>
+&#x20;       <li><strong>Faturamento mensal:</strong> Histórico de evolução da receita ao longo do tempo.</li>
 
-        <li><strong>Faturamento por categoria:</strong> DistribuiÃ§Ã£o percentual da receita por nÃ­vel de cliente.</li>
+&#x20;       <li><strong>Faturamento por categoria:</strong> Distribuição percentual da receita por nível de cliente.</li>
 
-        <li><strong>Faturamento por tipo:</strong> Comparativo entre o peso de clientes recorrentes (fixos) e esporÃ¡dicos (pontuais).</li>
+&#x20;       <li><strong>Faturamento por tipo:</strong> Comparativo entre o peso de clientes recorrentes (fixos) e esporádicos (pontuais).</li>
 
-    </ul>
+&#x20;   </ul>
 
-    <div class="img-container">
+&#x20;   <div class="img-container">
 
-        <div class="img-wrapper"><img src="imagens/GrÃ¡fico de barras_painel_executivo.png" class="img-screenshot" alt="GrÃ¡fico faturamento mensal"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/Gráfico de barras\_painel\_executivo.png" class="img-screenshot" alt="Gráfico faturamento mensal"></div>
 
-        <p class="img-caption">Figura 5 - GrÃ¡fico de barras de faturamento mensal</p>
+&#x20;       <p class="img-caption">Figura 5 - Gráfico de barras de faturamento mensal</p>
 
-    </div>
+&#x20;   </div>
 
-    <div class="img-container">
+&#x20;   <div class="img-container">
 
-        <div class="img-wrapper"><img src="imagens/GrÃ¡fico de pizza_painel_executivo.png" class="img-screenshot" alt="GrÃ¡fico categoria"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/Gráfico de pizza\_painel\_executivo.png" class="img-screenshot" alt="Gráfico categoria"></div>
 
-        <p class="img-caption">Figura 6 - DistribuiÃ§Ã£o de faturamento por categoria</p>
+&#x20;       <p class="img-caption">Figura 6 - Distribuição de faturamento por categoria</p>
 
-    </div>
+&#x20;   </div>
 
-    <div class="img-container">
+&#x20;   <div class="img-container">
 
-        <div class="img-wrapper"><img src="imagens/painel_executivo_GrÃ¡fico de barras.png" class="img-screenshot" alt="GrÃ¡fico tipo cliente"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/painel\_executivo\_Gráfico de barras.png" class="img-screenshot" alt="Gráfico tipo cliente"></div>
 
-        <p class="img-caption">Figura 7 - ProporÃ§Ã£o de faturamento por tipo de cliente</p>
+&#x20;       <p class="img-caption">Figura 7 - Proporção de faturamento por tipo de cliente</p>
 
-    </div>
+&#x20;   </div>
 
 
 
-    <h3 id="secao-3-5">3.5. Tabela de visÃ£o consolidada</h3>
+&#x20;   <h3 id="secao-3-5">3.5. Tabela de visão consolidada</h3>
 
-    <p>Exibe o ranking de faturamento por cliente, permitindo identificar os maiores contribuintes para a receita total.</p>
+&#x20;   <p>Exibe o ranking de faturamento por cliente, permitindo identificar os maiores contribuintes para a receita total.</p>
 
-    <div class="img-container">
+&#x20;   <div class="img-container">
 
-        <div class="img-wrapper"><img src="imagens/painel_executivo_VisÃ£o Consolidada_Tabela.png" class="img-screenshot" alt="Tabela visÃ£o consolidada"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/painel\_executivo\_Visão Consolidada\_Tabela.png" class="img-screenshot" alt="Tabela visão consolidada"></div>
 
-        <p class="img-caption">Figura 8 - Tabela consolidada de faturamento por cliente</p>
+&#x20;       <p class="img-caption">Figura 8 - Tabela consolidada de faturamento por cliente</p>
 
-    </div>
+&#x20;   </div>
 
-  </div>
+&#x20; </div>
 
 </div>
 
@@ -282,97 +282,97 @@ toc:
 
 <div class="secao" id="secao-4">
 
-  <div class="secao-header">
+&#x20; <div class="secao-header">
 
-    <span class="secao-numero editable-text">4</span>
+&#x20;   <span class="secao-numero editable-text">4</span>
 
-    <h2 class="editable-text">Painel Executivo - Ordens de ServiÃ§o (OS)</h2>
+&#x20;   <h2 class="editable-text">Painel Executivo - Ordens de Serviço (OS)</h2>
 
-  </div>
+&#x20; </div>
 
-  <div class="secao-conteudo editable-area">
+&#x20; <div class="secao-conteudo editable-area">
 
-    <p>Esta seÃ§Ã£o Ã© dedicada ao monitoramento do fluxo de trabalho e entrega das demandas contratuais.</p>
-
-
-
-    <h3 id="secao-4-1">4.1. VisÃ£o geral da pÃ¡gina</h3>
-
-    <p>Apresenta o volume de OS abertas e a situaÃ§Ã£o de cada projeto.</p>
-
-    <div class="img-container">
-
-        <div class="img-wrapper"><img src="imagens/painel_executivo_os.png" class="img-screenshot" alt="Painel executivo OS"></div>
-
-        <p class="img-caption">Figura 9 - VisÃ£o geral do Painel de Ordens de ServiÃ§o</p>
-
-    </div>
+&#x20;   <p>Esta seção é dedicada ao monitoramento do fluxo de trabalho e entrega das demandas contratuais.</p>
 
 
 
-    <h3 id="secao-4-2">4.2. Filtros de OS</h3>
+&#x20;   <h3 id="secao-4-1">4.1. Visão geral da página</h3>
 
-    <p>AlÃ©m dos filtros padrÃ£o de cliente e perÃ­odo, permite segmentar pela situaÃ§Ã£o atual das ordens.</p>
+&#x20;   <p>Apresenta o volume de OS abertas e a situação de cada projeto.</p>
 
-    <div class="img-container">
+&#x20;   <div class="img-container">
 
-        <div class="img-wrapper"><img src="imagens/filtros_painel_executivo_os.png" class="img-screenshot" alt="Filtros OS"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/painel\_executivo\_os.png" class="img-screenshot" alt="Painel executivo OS"></div>
 
-        <p class="img-caption">Figura 10 - Filtros especÃ­ficos para gestÃ£o de OS</p>
+&#x20;       <p class="img-caption">Figura 9 - Visão geral do Painel de Ordens de Serviço</p>
 
-    </div>
-
-
-
-    <h3 id="secao-4-3">4.3. Indicadores de OS</h3>
-
-    <p>Destaca o volume de <strong>OS ativas</strong> e a variaÃ§Ã£o percentual de projetos em andamento.</p>
-
-    <div class="img-container">
-
-        <div class="img-wrapper"><img src="imagens/Kpis_painel_executivo_os.png" class="img-screenshot" alt="KPIs OS"></div>
-
-        <p class="img-caption">Figura 11 - Indicadores de volume de ordens ativas</p>
-
-    </div>
+&#x20;   </div>
 
 
 
-    <h3 id="secao-4-4">4.4. GrÃ¡ficos de acompanhamento</h3>
+&#x20;   <h3 id="secao-4-2">4.2. Filtros de OS</h3>
 
-    <p>Analisa a distribuiÃ§Ã£o das OS por status operacional e categoria de serviÃ§o.</p>
+&#x20;   <p>Além dos filtros padrão de cliente e período, permite segmentar pela situação atual das ordens.</p>
 
-    <div class="img-container">
+&#x20;   <div class="img-container">
 
-        <div class="img-wrapper"><img src="imagens/painel_executivo_os_GrÃ¡fico de barras.png" class="img-screenshot" alt="GrÃ¡fico barras OS"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/filtros\_painel\_executivo\_os.png" class="img-screenshot" alt="Filtros OS"></div>
 
-        <p class="img-caption">Figura 12 - Ordens de serviÃ§o por status</p>
+&#x20;       <p class="img-caption">Figura 10 - Filtros específicos para gestão de OS</p>
 
-    </div>
-
-    <div class="img-container">
-
-        <div class="img-wrapper"><img src="imagens/painel_executivo_os_GrÃ¡fico de pizza.png" class="img-screenshot" alt="GrÃ¡fico pizza OS"></div>
-
-        <p class="img-caption">Figura 13 - DistribuiÃ§Ã£o de OS por categoria</p>
-
-    </div>
+&#x20;   </div>
 
 
 
-    <h3 id="secao-4-5">4.5. Tabela analÃ­tica de OS</h3>
+&#x20;   <h3 id="secao-4-3">4.3. Indicadores de OS</h3>
 
-    <p>Lista detalhadamente os contratos vigentes, datas de inÃ­cio e fim, situaÃ§Ã£o e valores envolvidos.</p>
+&#x20;   <p>Destaca o volume de <strong>OS ativas</strong> e a variação percentual de projetos em andamento.</p>
 
-    <div class="img-container">
+&#x20;   <div class="img-container">
 
-        <div class="img-wrapper"><img src="imagens/painel_executivo_os_Tabela.png" class="img-screenshot" alt="Tabela analÃ­tica OS"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/Kpis\_painel\_executivo\_os.png" class="img-screenshot" alt="KPIs OS"></div>
 
-        <p class="img-caption">Figura 14 - Listagem analÃ­tica de Ordens de ServiÃ§o</p>
+&#x20;       <p class="img-caption">Figura 11 - Indicadores de volume de ordens ativas</p>
 
-    </div>
+&#x20;   </div>
 
-  </div>
+
+
+&#x20;   <h3 id="secao-4-4">4.4. Gráficos de acompanhamento</h3>
+
+&#x20;   <p>Analisa a distribuição das OS por status operacional e categoria de serviço.</p>
+
+&#x20;   <div class="img-container">
+
+&#x20;       <div class="img-wrapper"><img src="imagens/painel\_executivo\_os\_Gráfico de barras.png" class="img-screenshot" alt="Gráfico barras OS"></div>
+
+&#x20;       <p class="img-caption">Figura 12 - Ordens de serviço por status</p>
+
+&#x20;   </div>
+
+&#x20;   <div class="img-container">
+
+&#x20;       <div class="img-wrapper"><img src="imagens/painel\_executivo\_os\_Gráfico de pizza.png" class="img-screenshot" alt="Gráfico pizza OS"></div>
+
+&#x20;       <p class="img-caption">Figura 13 - Distribuição de OS por categoria</p>
+
+&#x20;   </div>
+
+
+
+&#x20;   <h3 id="secao-4-5">4.5. Tabela analítica de OS</h3>
+
+&#x20;   <p>Lista detalhadamente os contratos vigentes, datas de início e fim, situação e valores envolvidos.</p>
+
+&#x20;   <div class="img-container">
+
+&#x20;       <div class="img-wrapper"><img src="imagens/painel\_executivo\_os\_Tabela.png" class="img-screenshot" alt="Tabela analítica OS"></div>
+
+&#x20;       <p class="img-caption">Figura 14 - Listagem analítica de Ordens de Serviço</p>
+
+&#x20;   </div>
+
+&#x20; </div>
 
 </div>
 
@@ -380,70 +380,69 @@ toc:
 
 <div class="secao" id="secao-5">
 
-  <div class="secao-header">
+&#x20; <div class="secao-header">
 
-    <span class="secao-numero editable-text">5</span>
+&#x20;   <span class="secao-numero editable-text">5</span>
 
-    <h2 class="editable-text">Painel Operacional</h2>
+&#x20;   <h2 class="editable-text">Painel Operacional</h2>
 
-  </div>
+&#x20; </div>
 
-  <div class="secao-conteudo editable-area">
+&#x20; <div class="secao-conteudo editable-area">
 
-    <p>A visÃ£o operacional Ã© voltada para a conferÃªncia minuciosa dos dados e auditoria de faturamento individual por item.</p>
-
-
-
-    <h3 id="secao-5-1">5.1. VisÃ£o geral da pÃ¡gina</h3>
-
-    <p>Exibe a grade completa de registros operacionais com filtros estendidos.</p>
-
-    <div class="img-container">
-
-        <div class="img-wrapper"><img src="imagens/painel_operacional.png" class="img-screenshot" alt="Painel operacional"></div>
-
-        <p class="img-caption">Figura 15 - VisÃ£o geral do Painel Operacional</p>
-
-    </div>
+&#x20;   <p>A visão operacional é voltada para a conferência minuciosa dos dados e auditoria de faturamento individual por item.</p>
 
 
 
-    <h3 id="secao-5-2">5.2. Filtros e Indicadores</h3>
+&#x20;   <h3 id="secao-5-1">5.1. Visão geral da página</h3>
 
-    <p>Permite buscas especÃ­ficas por cliente, contribuinte e status, mantendo os KPIs de faturamento visÃ­veis para conferÃªncia imediata.</p>
+&#x20;   <p>Exibe a grade completa de registros operacionais com filtros estendidos.</p>
 
-    <div class="img-container">
+&#x20;   <div class="img-container">
 
-        <div class="img-wrapper"><img src="imagens/filtros_painel_operacional.png" class="img-screenshot" alt="Filtros operacionais"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/painel\_operacional.png" class="img-screenshot" alt="Painel operacional"></div>
 
-        <p class="img-caption">Figura 16 - Filtros da visÃ£o operacional</p>
+&#x20;       <p class="img-caption">Figura 15 - Visão geral do Painel Operacional</p>
 
-    </div>
-
-    <div class="img-container">
-
-        <div class="img-wrapper"><img src="imagens/Kpis_filtros_painel_operacional.png" class="img-screenshot" alt="KPIs operacionais"></div>
-
-        <p class="img-caption">Figura 17 - Indicadores aplicados Ã  visÃ£o operacional</p>
-
-    </div>
+&#x20;   </div>
 
 
 
-    <h3 id="secao-5-3">5.3. Tabela de detalhamento operacional</h3>
+&#x20;   <h3 id="secao-5-2">5.2. Filtros e Indicadores</h3>
 
-    <p>Tabela rica em dados que serve como extrato detalhado para conciliaÃ§Ã£o financeira e acompanhamento de datas crÃ­ticas de vigÃªncia.</p>
+&#x20;   <p>Permite buscas específicas por cliente, contribuinte e status, mantendo os KPIs de faturamento visíveis para conferência imediata.</p>
 
-    <div class="img-container">
+&#x20;   <div class="img-container">
 
-        <div class="img-wrapper"><img src="imagens/painel_operacional_Tabela.png" class="img-screenshot" alt="Tabela detalhamento"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/filtros\_painel\_operacional.png" class="img-screenshot" alt="Filtros operacionais"></div>
 
-        <p class="img-caption">Figura 18 - Extrato operacional detalhado para auditoria</p>
+&#x20;       <p class="img-caption">Figura 16 - Filtros da visão operacional</p>
 
-    </div>
+&#x20;   </div>
 
-  </div>
+&#x20;   <div class="img-container">
+
+&#x20;       <div class="img-wrapper"><img src="imagens/Kpis\_filtros\_painel\_operacional.png" class="img-screenshot" alt="KPIs operacionais"></div>
+
+&#x20;       <p class="img-caption">Figura 17 - Indicadores aplicados à visão operacional</p>
+
+&#x20;   </div>
+
+
+
+&#x20;   <h3 id="secao-5-3">5.3. Tabela de detalhamento operacional</h3>
+
+&#x20;   <p>Tabela rica em dados que serve como extrato detalhado para conciliação financeira e acompanhamento de datas críticas de vigência.</p>
+
+&#x20;   <div class="img-container">
+
+&#x20;       <div class="img-wrapper"><img src="imagens/painel\_operacional\_Tabela.png" class="img-screenshot" alt="Tabela detalhamento"></div>
+
+&#x20;       <p class="img-caption">Figura 18 - Extrato operacional detalhado para auditoria</p>
+
+&#x20;   </div>
+
+&#x20; </div>
 
 </div>
-
 
