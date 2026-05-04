@@ -95,3 +95,19 @@
   version: "1.0"
   updated: "04/2026"
   description: "Acompanhamento estratégico de faturamento, ticket médio e status operacional das Ordens de Serviço (OS)."
+
+- title: "Análise Cruzada"
+  url: "/manuais/analise-cruzada/"
+  icon: "rule"
+  version: "v1.0"
+  updated: "05/2026"
+  description: "Ferramenta de reconciliação fiscal que cruza dados entre EFD Contribuições, EFD ICMS, XMLs e Balancete para identificar divergências e falhas de escrituração."
+
+- title: "Apuração PIS/COFINS"
+  url: "/manuais/apuracao-piscofins/"
+  icon: "calculate"
+  version: "v1.0"
+  updated: "05/2026"
+  description: "Consolida débitos, créditos, isenções e rateios para calcular o resultado do período e o saldo apurado, com suporte a dados de EFD e Balancete."
+
+
