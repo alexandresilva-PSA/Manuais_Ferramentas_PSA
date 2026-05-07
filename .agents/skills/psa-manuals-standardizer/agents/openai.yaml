@@ -1,0 +1,4 @@
+interface:
+  display_name: "PSA Manuals"
+  short_description: "Padroniza manuais Jekyll da PSA"
+  default_prompt: "Use $psa-manuals-standardizer para criar, revisar ou padronizar manuais Jekyll da PSA."

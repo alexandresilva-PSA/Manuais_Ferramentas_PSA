@@ -110,4 +110,24 @@
   updated: "05/2026"
   description: "Consolida débitos, créditos, isenções e rateios para calcular o resultado do período e o saldo apurado, com suporte a dados de EFD e Balancete."
 
+- title: "Correções no SPED"
+  url: "/manuais/correcoes-sped/"
+  icon: "edit_note"
+  version: "v1.0"
+  updated: "05/2026"
+  description: "Revisão e ajuste em massa dos registros do SPED Contribuições, com cruzamento de XMLs, regras de NCM, edição controlada e exportação do histórico de correções."
+
+- title: "ICMS das Saídas"
+  url: "/manuais/icms-saidas/"
+  icon: "request_quote"
+  version: "v1.0"
+  updated: "05/2026"
+  description: "Apuração, conciliação por CFOP e análise por famílias fiscais das operações de saída, com suporte a correções manuais e validação de recolhimentos de ICMS."
+
+- title: "Mapa NCM"
+  url: "/manuais/mapa-ncm/"
+  icon: "schema"
+  version: "v1.0"
+  updated: "05/2026"
+  description: "Base central de parametrização de regras fiscais por NCM e segmento, com busca, cadastro, edição e auditoria das definições usadas nas demais ferramentas."
 
