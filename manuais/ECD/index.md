@@ -156,7 +156,7 @@ toc:
     <p>Clique na lista suspensa para selecionar o cliente desejado.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/3.1 Seleção de Cliente.png" class="img-screenshot" alt="Seleção de Cliente">
+            <img src="imagens/1-selecao-cliente.png" class="img-screenshot" alt="Seleção de Cliente">
         </div>
         <p class="img-caption">3.1 Seleção de Cliente</p>
     </div>
@@ -165,7 +165,7 @@ toc:
     <p>Selecione o contribuinte específico para a consulta.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/3.2 Seleção de Contribuinte.png" class="img-screenshot" alt="Seleção de Contribuinte">
+            <img src="imagens/2-selecao-contribuinte.png" class="img-screenshot" alt="Seleção de Contribuinte">
         </div>
         <p class="img-caption">3.2 Seleção de Contribuinte</p>
     </div>
@@ -174,7 +174,7 @@ toc:
     <p>Defina o intervalo de datas para a busca dos arquivos.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/3.3. Período de consulta.png" class="img-screenshot" alt="Período de consulta">
+            <img src="imagens/3-periodo-consulta.png" class="img-screenshot" alt="Período de consulta">
         </div>
         <p class="img-caption">3.3. Período de consulta</p>
     </div>
@@ -183,7 +183,7 @@ toc:
     <p>Com os filtros definidos, execute a consulta.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/3.4 Executando a Busca.png" class="img-screenshot" alt="Executando a Busca">
+            <img src="imagens/4-executando-busca.png" class="img-screenshot" alt="Executando a Busca">
         </div>
         <p class="img-caption">3.4 Executando a Busca</p>
     </div>
@@ -200,7 +200,7 @@ toc:
     <p>Após a busca, visualize a lista de arquivos encontrados.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/4.1 Lista de Arquivos.png" class="img-screenshot" alt="Lista de Arquivos">
+            <img src="imagens/5-lista-arquivos.png" class="img-screenshot" alt="Lista de Arquivos">
         </div>
         <p class="img-caption">4.1 Lista de Arquivos</p>
     </div>
@@ -210,7 +210,7 @@ toc:
     <p>Uma nova tela será aberta apresentando um menu lateral esquerdo contendo os Blocos da escrituração e um cabeçalho com os dados e totais da empresa.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/4.2 Análise detalhada de registros.png" class="img-screenshot" alt="Análise detalhada de registros">
+            <img src="imagens/6-analise-detalhada-registros.png" class="img-screenshot" alt="Análise detalhada de registros">
         </div>
         <p class="img-caption">4.2 Análise detalhada de registros</p>
     </div>
@@ -219,7 +219,7 @@ toc:
     <p>No menu lateral, clique em um dos Blocos para expandi-lo e selecione o registro específico que deseja consultar (por exemplo, o registro 0000). Os dados do registro selecionado serão exibidos em formato de tabela na área central. Utilize a barra de rolagem horizontal na parte inferior da tabela para visualizar todas as colunas de informações.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/4.3 Navegação pela análise detalhada.png" class="img-screenshot" alt="Navegação pela análise detalhada">
+            <img src="imagens/7-navegacao-analise-detalhada.png" class="img-screenshot" alt="Navegação pela análise detalhada">
         </div>
         <p class="img-caption">4.3 Navegação pela análise detalhada</p>
     </div>
@@ -236,7 +236,7 @@ toc:
     <p>De volta a lista de resultados, clique no ícone para baixar um arquivo original (.txt) único de forma rápida.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/5.1 Download Individual.png" class="img-screenshot" alt="Download Individual">
+            <img src="imagens/8-download-individual.png" class="img-screenshot" alt="Download Individual">
         </div>
         <p class="img-caption">5.1 Download Individual</p>
     </div>
@@ -245,7 +245,7 @@ toc:
     <p>Para baixar vários ECDs originais de uma vez, selecione múltiplos arquivos e baixe todos em um arquivo ZIP.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/5.2 Download em Lote.png" class="img-screenshot" alt="Download em Lote">
+            <img src="imagens/9-download-em-lote.png" class="img-screenshot" alt="Download em Lote">
         </div>
         <p class="img-caption">5.2 Download em Lote</p>
     </div>
@@ -262,7 +262,7 @@ toc:
     <p>Selecione um arquivo único e clique em Exportar Excel.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/6.1. Abrindo a janela de exportação.png" class="img-screenshot" alt="Abrindo a janela de exportação">
+            <img src="imagens/10-abrir-janela-exportacao.png" class="img-screenshot" alt="Abrindo a janela de exportação">
         </div>
         <p class="img-caption">6.1. Abrindo a janela de exportação</p>
     </div>
@@ -271,7 +271,7 @@ toc:
     <p>Escolha quais blocos e registros serão exportados para a planilha.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/6.2 Selecionando Registros.png" class="img-screenshot" alt="Selecionando Registros">
+            <img src="imagens/11-selecionando-registros.png" class="img-screenshot" alt="Selecionando Registros">
         </div>
         <p class="img-caption">6.2 Selecionando Registros</p>
     </div>
@@ -288,7 +288,7 @@ toc:
     <p>Salve suas configurações de seleção para uso futuro.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/7.1 Criando um Perfil.png" class="img-screenshot" alt="Criando um Perfil">
+            <img src="imagens/12-criando-perfil.png" class="img-screenshot" alt="Criando um Perfil">
         </div>
         <p class="img-caption">7.1 Criando um Perfil</p>
     </div>
@@ -297,7 +297,7 @@ toc:
     <p>Utilize perfis salvos para agilizar a exportação.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/7.2 Usando Perfis.png" class="img-screenshot" alt="Usando Perfis">
+            <img src="imagens/13-usando-perfis.png" class="img-screenshot" alt="Usando Perfis">
         </div>
         <p class="img-caption">7.2 Usando Perfis</p>
     </div>
@@ -306,7 +306,7 @@ toc:
     <p>Crie variações de perfis para diferentes tipos de análise.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/7.3 Múltiplos Perfis.png" class="img-screenshot" alt="Múltiplos Perfis">
+            <img src="imagens/14-multiplos-perfis.png" class="img-screenshot" alt="Múltiplos Perfis">
         </div>
         <p class="img-caption">7.3 Múltiplos Perfis</p>
     </div>
@@ -323,7 +323,7 @@ toc:
     <p>Acompanhe o status do processamento e aguarde a conclusão.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/8.1 Processamento.png" class="img-screenshot" alt="Processamento">
+            <img src="imagens/15-processamento.png" class="img-screenshot" alt="Processamento">
         </div>
         <p class="img-caption">8.1 Processamento</p>
     </div>
@@ -332,7 +332,7 @@ toc:
     <p>Após o processamento, o download será iniciado automaticamente.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/8.2 Download do Relatório.png" class="img-screenshot" alt="Download do Relatório">
+            <img src="imagens/16-download-relatorio.png" class="img-screenshot" alt="Download do Relatório">
         </div>
         <p class="img-caption">8.2 Download do Relatório</p>
     </div>
@@ -341,7 +341,7 @@ toc:
     <p>Após finalizar, retorne à tela inicial e clique em "Limpar filtros" para novas consultas.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/8.3 Retorno à Tela Inicial.png" class="img-screenshot" alt="Retorno à Tela Inicial">
+            <img src="imagens/17-retorno-tela-inicial.png" class="img-screenshot" alt="Retorno à Tela Inicial">
         </div>
         <p class="img-caption">8.3 Retorno à Tela Inicial</p>
     </div>

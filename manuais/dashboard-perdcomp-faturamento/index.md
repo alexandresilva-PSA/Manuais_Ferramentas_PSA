@@ -137,7 +137,7 @@ toc:
     </ul>
 
     <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 5 - Filtros da Pagina 2.png" class="img-screenshot" alt="Filtros do cliente"></div>
+        <div class="img-wrapper"><img src="imagens/Figura 6 - Filtros da Pagina 2.png" class="img-screenshot" alt="Filtros do cliente"></div>
         <p class="img-caption">Figura 6 - Captura da barra de filtros no topo da Página 2</p>
     </div>
 

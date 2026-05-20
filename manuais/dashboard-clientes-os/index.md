@@ -1,4 +1,4 @@
-\---
+---
 
 layout: manual
 
@@ -6,7 +6,7 @@ title: "Dashboard de Clientes e OS"
 
 versao: "1.0"
 
-github\_url: "https://github.com/psa-elevate/dashboard-clientes-os"
+github_url: "https://github.com/psa-elevate/dashboard-clientes-os"
 
 toc:
 
@@ -88,7 +88,7 @@ toc:
 
 &#x20;       title: "5.3. Tabela de detalhamento operacional"
 
-\---
+---
 
 
 
@@ -130,7 +130,7 @@ toc:
 
 &#x20;   <div class="img-container">
 
-&#x20;       <div class="img-wrapper"><img src="imagens/visao\_geral\_dashboard.png" class="img-screenshot" alt="Visão geral do dashboard"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/visao_geral_dashboard.png" class="img-screenshot" alt="Visão geral do dashboard"></div>
 
 &#x20;       <p class="img-caption">Figura 1 - Visão geral da estrutura de navegação do dashboard</p>
 
@@ -164,7 +164,7 @@ toc:
 
 &#x20;   <div class="img-container">
 
-&#x20;       <div class="img-wrapper"><img src="imagens/painel\_executivo.png" class="img-screenshot" alt="Painel executivo faturamento"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/painel_executivo.png" class="img-screenshot" alt="Painel executivo faturamento"></div>
 
 &#x20;       <p class="img-caption">Figura 2 - Visão geral do Painel Executivo de Faturamento</p>
 
@@ -190,7 +190,7 @@ toc:
 
 &#x20;   <div class="img-container">
 
-&#x20;       <div class="img-wrapper"><img src="imagens/filtros\_painel\_executivo.png" class="img-screenshot" alt="Filtros painel executivo"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/filtros_painel_executivo.png" class="img-screenshot" alt="Filtros painel executivo"></div>
 
 &#x20;       <p class="img-caption">Figura 3 - Barra de filtros do Painel Executivo</p>
 
@@ -214,7 +214,7 @@ toc:
 
 &#x20;   <div class="img-container">
 
-&#x20;       <div class="img-wrapper"><img src="imagens/kpis\_painel\_executivo.png" class="img-screenshot" alt="KPIs painel executivo"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/kpis_painel_executivo.png" class="img-screenshot" alt="KPIs painel executivo"></div>
 
 &#x20;       <p class="img-caption">Figura 4 - Indicadores principais de faturamento e clientes</p>
 
@@ -238,7 +238,7 @@ toc:
 
 &#x20;   <div class="img-container">
 
-&#x20;       <div class="img-wrapper"><img src="imagens/Gráfico de barras\_painel\_executivo.png" class="img-screenshot" alt="Gráfico faturamento mensal"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/Gráfico de barras_painel_executivo.png" class="img-screenshot" alt="Gráfico faturamento mensal"></div>
 
 &#x20;       <p class="img-caption">Figura 5 - Gráfico de barras de faturamento mensal</p>
 
@@ -246,7 +246,7 @@ toc:
 
 &#x20;   <div class="img-container">
 
-&#x20;       <div class="img-wrapper"><img src="imagens/Gráfico de pizza\_painel\_executivo.png" class="img-screenshot" alt="Gráfico categoria"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/Gráfico de pizza_painel_executivo.png" class="img-screenshot" alt="Gráfico categoria"></div>
 
 &#x20;       <p class="img-caption">Figura 6 - Distribuição de faturamento por categoria</p>
 
@@ -254,7 +254,7 @@ toc:
 
 &#x20;   <div class="img-container">
 
-&#x20;       <div class="img-wrapper"><img src="imagens/painel\_executivo\_Gráfico de barras.png" class="img-screenshot" alt="Gráfico tipo cliente"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/painel_executivo_Gráfico de barras.png" class="img-screenshot" alt="Gráfico tipo cliente"></div>
 
 &#x20;       <p class="img-caption">Figura 7 - Proporção de faturamento por tipo de cliente</p>
 
@@ -268,7 +268,7 @@ toc:
 
 &#x20;   <div class="img-container">
 
-&#x20;       <div class="img-wrapper"><img src="imagens/painel\_executivo\_Visão Consolidada\_Tabela.png" class="img-screenshot" alt="Tabela visão consolidada"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/painel_executivo_Visão Consolidada_Tabela.png" class="img-screenshot" alt="Tabela visão consolidada"></div>
 
 &#x20;       <p class="img-caption">Figura 8 - Tabela consolidada de faturamento por cliente</p>
 
@@ -302,7 +302,7 @@ toc:
 
 &#x20;   <div class="img-container">
 
-&#x20;       <div class="img-wrapper"><img src="imagens/painel\_executivo\_os.png" class="img-screenshot" alt="Painel executivo OS"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/painel_executivo_os.png" class="img-screenshot" alt="Painel executivo OS"></div>
 
 &#x20;       <p class="img-caption">Figura 9 - Visão geral do Painel de Ordens de Serviço</p>
 
@@ -316,7 +316,7 @@ toc:
 
 &#x20;   <div class="img-container">
 
-&#x20;       <div class="img-wrapper"><img src="imagens/filtros\_painel\_executivo\_os.png" class="img-screenshot" alt="Filtros OS"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/filtros_painel_executivo_os.png" class="img-screenshot" alt="Filtros OS"></div>
 
 &#x20;       <p class="img-caption">Figura 10 - Filtros específicos para gestão de OS</p>
 
@@ -330,7 +330,7 @@ toc:
 
 &#x20;   <div class="img-container">
 
-&#x20;       <div class="img-wrapper"><img src="imagens/Kpis\_painel\_executivo\_os.png" class="img-screenshot" alt="KPIs OS"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/Kpis_painel_executivo_os.png" class="img-screenshot" alt="KPIs OS"></div>
 
 &#x20;       <p class="img-caption">Figura 11 - Indicadores de volume de ordens ativas</p>
 
@@ -344,7 +344,7 @@ toc:
 
 &#x20;   <div class="img-container">
 
-&#x20;       <div class="img-wrapper"><img src="imagens/painel\_executivo\_os\_Gráfico de barras.png" class="img-screenshot" alt="Gráfico barras OS"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/painel_executivo_os_Gráfico de barras.png" class="img-screenshot" alt="Gráfico barras OS"></div>
 
 &#x20;       <p class="img-caption">Figura 12 - Ordens de serviço por status</p>
 
@@ -352,7 +352,7 @@ toc:
 
 &#x20;   <div class="img-container">
 
-&#x20;       <div class="img-wrapper"><img src="imagens/painel\_executivo\_os\_Gráfico de pizza.png" class="img-screenshot" alt="Gráfico pizza OS"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/painel_executivo_os_Gráfico de pizza.png" class="img-screenshot" alt="Gráfico pizza OS"></div>
 
 &#x20;       <p class="img-caption">Figura 13 - Distribuição de OS por categoria</p>
 
@@ -366,7 +366,7 @@ toc:
 
 &#x20;   <div class="img-container">
 
-&#x20;       <div class="img-wrapper"><img src="imagens/painel\_executivo\_os\_Tabela.png" class="img-screenshot" alt="Tabela analítica OS"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/painel_executivo_os_Tabela.png" class="img-screenshot" alt="Tabela analítica OS"></div>
 
 &#x20;       <p class="img-caption">Figura 14 - Listagem analítica de Ordens de Serviço</p>
 
@@ -400,7 +400,7 @@ toc:
 
 &#x20;   <div class="img-container">
 
-&#x20;       <div class="img-wrapper"><img src="imagens/painel\_operacional.png" class="img-screenshot" alt="Painel operacional"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/painel_operacional.png" class="img-screenshot" alt="Painel operacional"></div>
 
 &#x20;       <p class="img-caption">Figura 15 - Visão geral do Painel Operacional</p>
 
@@ -414,7 +414,7 @@ toc:
 
 &#x20;   <div class="img-container">
 
-&#x20;       <div class="img-wrapper"><img src="imagens/filtros\_painel\_operacional.png" class="img-screenshot" alt="Filtros operacionais"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/filtros_painel_operacional.png" class="img-screenshot" alt="Filtros operacionais"></div>
 
 &#x20;       <p class="img-caption">Figura 16 - Filtros da visão operacional</p>
 
@@ -422,7 +422,7 @@ toc:
 
 &#x20;   <div class="img-container">
 
-&#x20;       <div class="img-wrapper"><img src="imagens/Kpis\_filtros\_painel\_operacional.png" class="img-screenshot" alt="KPIs operacionais"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/Kpis_filtros_painel_operacional.png" class="img-screenshot" alt="KPIs operacionais"></div>
 
 &#x20;       <p class="img-caption">Figura 17 - Indicadores aplicados à visão operacional</p>
 
@@ -436,7 +436,7 @@ toc:
 
 &#x20;   <div class="img-container">
 
-&#x20;       <div class="img-wrapper"><img src="imagens/painel\_operacional\_Tabela.png" class="img-screenshot" alt="Tabela detalhamento"></div>
+&#x20;       <div class="img-wrapper"><img src="imagens/painel_operacional_Tabela.png" class="img-screenshot" alt="Tabela detalhamento"></div>
 
 &#x20;       <p class="img-caption">Figura 18 - Extrato operacional detalhado para auditoria</p>
 
