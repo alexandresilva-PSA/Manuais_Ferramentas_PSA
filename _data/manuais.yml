@@ -131,3 +131,9 @@
   updated: "05/2026"
   description: "Base central de parametrização de regras fiscais por NCM e segmento, com busca, cadastro, edição e auditoria das definições usadas nas demais ferramentas."
 
+- title: "Estrutura de Pastas do Drive (TAX – Clientes)"
+  url: "/manuais/estrutura-pastas-drive/"
+  icon: "folder_shared"
+  version: "v1.0"
+  updated: "06/2026"
+  description: "Guia da estrutura padrão de pastas dos clientes no Drive TAX – Clientes: pastas fixas, livres e depósitos, regras da coleta automática e checklist para evitar erros."
