@@ -44,6 +44,7 @@ jobs:
         run: npm ci
 
       - name: Generate PDFs
+        continue-on-error: true
         run: node scripts/generate_pdf.js
 
       - name: Upload artifact
