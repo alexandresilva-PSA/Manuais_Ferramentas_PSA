@@ -67,3 +67,10 @@
   version: "v1.0"
   updated: "03/2026"
   description: "Monitoramento técnico interno e consolidação dos indicadores de uso da API e do sistema."
+
+- title: "Estrutura de Pastas do Drive (TAX – Clientes)"
+  url: "/manuais/estrutura-pastas-drive/"
+  icon: "folder_shared"
+  version: "v1.0"
+  updated: "06/2026"
+  description: "Guia da estrutura padrão de pastas dos clientes no Drive TAX – Clientes: pastas fixas, livres e depósitos, regras da coleta automática e checklist para evitar erros."
