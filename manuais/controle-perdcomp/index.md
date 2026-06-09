@@ -4,24 +4,26 @@ title: "Controle de PERDCOMP"
 versao: "1.0"
 github_url: "https://github.com/psa-elevate/controle-perdcomp"
 toc:
-  - id: secao-1
-    title: "1. Acesso à Ferramenta"
+  - id: secao-intro
+    title: "1. Introdução"
+  - id: secao-acesso
+    title: "2. Acesso e Autenticação"
     items:
-      - id: secao-1-1
-        title: "1.1. Acesso ao site institucional"
-      - id: secao-1-2
-        title: "1.2. Selecionar a área de equipe"
-      - id: secao-1-3
-        title: "1.3. Acesso ao sistema"
-      - id: secao-1-4
-        title: "1.4. Selecionar ambiente"
+      - id: secao-acesso-1
+        title: "2.1. Acesso ao portal e área da equipe"
+      - id: secao-acesso-2
+        title: "2.2. Seleção da área de atuação"
+      - id: secao-acesso-3
+        title: "2.3. Login no sistema"
+      - id: secao-acesso-4
+        title: "2.4. Seleção do ambiente de trabalho"
+      - id: secao-acesso-5
+        title: "2.5. Hub de Ferramentas"
   - id: secao-2
-    title: "2. Dashboard de Ferramentas"
+    title: "3. Acessando a Ferramenta"
     items:
-      - id: secao-2-1
-        title: "2.1. Visualização do Dashboard"
       - id: secao-2-2
-        title: "2.2. Acessar a ferramenta"
+        title: "3.1. Acessar a ferramenta"
   - id: secao-3
     title: "3. Realizando Consulta"
     items:
@@ -88,71 +90,90 @@ toc:
         title: "8.3. Situações do PER"
 ---
 
-<div class="secao" id="secao-1">
+<!-- SEÇÃO INTRO -->
+<div class="secao" id="secao-intro">
   <div class="secao-header">
     <span class="secao-numero editable-text">1</span>
-    <h2 class="editable-text">Acesso à Ferramenta</h2>
+    <h2 class="editable-text">Introdução</h2>
   </div>
   <div class="secao-conteudo editable-area">
-    <p>Manual de Procedimentos - Ferramenta de Gestão de PER e DCOMP</p>
-    
-    <h3 id="secao-1-1">1.1 Acesso ao site institucional</h3>
-    <p>No navegador, acesse o link do site institucional da PSA Consultores: https://psaconsultores.com.br/.</p>
-    <p>Após acessar a página, localize o ícone de "Equipe" no canto superior direito da tela, ao lado do botão "Área do Cliente".</p>
-    <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 1 - Pagina inicial do site PSA Consultores.png" class="img-screenshot" alt="Página inicial do site PSA Consultores"></div>
-        <p class="img-caption">Figura 1 - Página inicial do site PSA Consultores</p>
-    </div>
-
-    <p>Posicione o cursor sobre o ícone de Equipe para visualizar o tooltip. Clique no ícone para prosseguir.</p>
-    <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 2 - Icone de Equipe com tooltip exibido.png" class="img-screenshot" alt="Ícone de Equipe com tooltip"></div>
-        <p class="img-caption">Figura 2 - Ícone de Equipe com tooltip exibido</p>
-    </div>
-
-    <h3 id="secao-1-2">1.2 Selecionar a área de equipe</h3>
-    <p>Na tela de seleção de área, escolha a opção "Digital" para acessar as ferramentas da área Digital.</p>
-    <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 3 - Tela de selecao da area de atuacao.png" class="img-screenshot" alt="Seleção da área de atuação"></div>
-        <p class="img-caption">Figura 3 - Tela de seleção da área de atuação</p>
-    </div>
-
-    <h3 id="secao-1-3">1.3 Acesso ao sistema</h3>
-    <p>Na tela de login do Sistema de Gestão de Demandas, insira suas credenciais de membro da equipe (email e senha) nos campos correspondentes e clique para entrar.</p>
-    <p>Caso tenha esquecido a senha, utilize a opção "Esqueci minha senha".</p>
-    <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 4 - Tela de login da Area da Equipe.png" class="img-screenshot" alt="Tela de login"></div>
-        <p class="img-caption">Figura 4 - Tela de login da Área da Equipe</p>
-    </div>
-
-    <h3 id="secao-1-4">1.4 Selecionar ambiente</h3>
-    <p>Após o login, será exibida a tela de seleção do ambiente de trabalho.</p>
-    <p>Para acessar a ferramenta de Controle de PERDCOMP, selecione a opção "Digital Dev", que é o ambiente de criação e desenvolvimento de ferramentas automatizadas.</p>
-    <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 5 - Selecao do ambiente Digital Dev.png" class="img-screenshot" alt="Seleção do ambiente Digital Dev"></div>
-        <p class="img-caption">Figura 5 - Seleção do ambiente Digital Dev</p>
-    </div>
+    <p>Este manual apresenta as funcionalidades da ferramenta <strong>Controle de PERDCOMP</strong>, parte integrante do sistema PSA Elevate. A ferramenta permite consultar, detalhar e gerenciar os processos de ressarcimento (PER) e compensação (DCOMP) de forma centralizada, facilitando o acompanhamento tributário por cliente e contribuinte.</p>
+    <p>O objetivo deste documento é orientar os analistas fiscais na utilização completa dos recursos disponíveis, desde a consulta e visualização dos PERs até o cadastro de DCOMPs e o registro de ressarcimentos.</p>
+    <h3>Principais Funcionalidades</h3>
+    <ul>
+        <li><strong>Consulta de PERs:</strong> Busca por cliente, contribuinte, situação, exercício e número de processo.</li>
+        <li><strong>Visualização e atualização de situação:</strong> Acesso aos detalhes de cada PER com possibilidade de atualizar o status.</li>
+        <li><strong>Gerenciamento de DCOMPs:</strong> Cadastro, edição e exclusão de declarações de compensação.</li>
+        <li><strong>Registro de ressarcimentos:</strong> Lançamento de valores efetivamente ressarcidos.</li>
+        <li><strong>Cadastro de novos PERs:</strong> Criação de pedidos de restituição ou ressarcimento.</li>
+    </ul>
   </div>
 </div>
 
+<!-- SEÇÃO ACESSO -->
+<div class="secao" id="secao-acesso">
+  <div class="secao-header">
+    <span class="secao-numero editable-text">2</span>
+    <h2 class="editable-text">Acesso e Autenticação</h2>
+  </div>
+  <div class="secao-conteudo editable-area">
+    <h3 id="secao-acesso-1">2.1. Acesso ao portal e área da equipe</h3>
+    <p>O acesso às ferramentas começa pelo portal corporativo da PSA Consultores. Acesse o link <a href="https://psaconsultores.com.br" target="_blank">https://psaconsultores.com.br</a> e clique no ícone de <strong>"Equipe"</strong>, localizado no canto superior direito da tela, para entrar na área restrita.</p>
+    <div class="img-container">
+        <div class="img-wrapper">
+            <img src="imagens/padrao-01-acesso-portal.png" class="img-screenshot" alt="Acesso à área da equipe no portal">
+        </div>
+        <p class="img-caption">Portal corporativo com destaque para o menu de acesso à Equipe</p>
+    </div>
+
+    <h3 id="secao-acesso-2">2.2. Seleção da área de atuação</h3>
+    <p>Na tela de departamentos, abra a lista suspensa e selecione a opção <strong>"Digital"</strong> para acessar o sistema de gestão de demandas e as ferramentas internas.</p>
+    <div class="img-container">
+        <div class="img-wrapper">
+            <img src="imagens/padrao-02-selecao-area.png" class="img-screenshot" alt="Seleção da área Digital">
+        </div>
+        <p class="img-caption">Seleção da área de competência Digital</p>
+    </div>
+
+    <h3 id="secao-acesso-3">2.3. Login no sistema</h3>
+    <p>A tela de autenticação será exibida. Insira suas credenciais corporativas (e-mail e senha) nos campos correspondentes e clique em <strong>"Entrar"</strong>. As credenciais garantem que você visualize apenas as permissões do seu respectivo perfil.</p>
+    <div class="img-container">
+        <div class="img-wrapper">
+            <img src="imagens/padrao-03-login.png" class="img-screenshot" alt="Tela de login preenchida">
+        </div>
+        <p class="img-caption">Preenchimento dos dados de acesso</p>
+    </div>
+
+    <h3 id="secao-acesso-4">2.4. Seleção do ambiente de trabalho</h3>
+    <p>Após o login, selecione o ambiente <strong>"Digital Dev"</strong>. Este é o ambiente de criação, desenvolvimento e utilização das ferramentas fiscais automatizadas.</p>
+    <div class="img-container">
+        <div class="img-wrapper">
+            <img src="imagens/padrao-04-ambiente-dev.png" class="img-screenshot" alt="Seleção do ambiente Digital Dev">
+        </div>
+        <p class="img-caption">Escolha do ambiente da área Digital</p>
+    </div>
+
+    <h3 id="secao-acesso-5">2.5. Hub de Ferramentas</h3>
+    <p>Ao entrar no ambiente Digital Dev, o sistema carregará o <strong>Hub de Ferramentas</strong>. Utilize a seção "Sessões em Andamento" para retomar trabalhos recentes ou localize a ferramenta desejada no painel central.</p>
+    <p>Para iniciar a operação, utilize o menu lateral ou identifique o card correspondente e clique no botão <strong>"Acessar Ferramenta"</strong>.</p>
+    <div class="img-container">
+        <div class="img-wrapper">
+            <img src="imagens/padrao-05-hub-ferramentas.png" class="img-screenshot" alt="Hub de Ferramentas">
+        </div>
+        <p class="img-caption">Visão geral do Hub de Ferramentas e sessões ativas</p>
+    </div>
+
+  </div>
+</div>
 
 <div class="secao" id="secao-2">
   <div class="secao-header">
-    <span class="secao-numero editable-text">2</span>
-    <h2 class="editable-text">Dashboard de Ferramentas</h2>
+    <span class="secao-numero editable-text">3</span>
+    <h2 class="editable-text">Acessando a Ferramenta</h2>
   </div>
   <div class="secao-conteudo editable-area">
-    
-    <h3 id="secao-2-1">2.1 Visualização do Dashboard</h3>
-    <p>O ambiente Digital Dev carregará inicialmente na aba Dashboard de Ferramentas.</p>
-    <p>A interface exibe o menu lateral à esquerda com as opções: Dashboard, Consulta de XMLs, Consulta SPED, DIFAL inteligente, Calculadora IBS/CBS, Controle PERDCOMP, Controle Balancetes, Gestão de clientes e Gerenciar dados.</p>
-    <p>Na área principal, são exibidos dados gerais como total de ferramentas disponíveis, ativas e em desenvolvimento.</p>
-    <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 6 - Dashboard de ferramentas do ambiente Digital Dev.png" class="img-screenshot" alt="Dashboard de ferramentas"></div>
-        <p class="img-caption">Figura 6 - Dashboard de ferramentas do ambiente Digital Dev</p>
-    </div>
 
-    <h3 id="secao-2-2">2.2 Acessar a ferramenta Controle PERDCOMP</h3>
+    <h3 id="secao-2-2">3.1. Acessar a ferramenta Controle PERDCOMP</h3>
     <p>No menu lateral esquerdo, clique na opção "Controle PERDCOMP". A página da ferramenta será carregada exibindo a seção de Filtros de Busca.</p>
     <p>Inicialmente, a área de resultados estará vazia, mostrando a mensagem para selecionar um cliente e contribuinte para visualizar os registros.</p>
     <div class="img-container">

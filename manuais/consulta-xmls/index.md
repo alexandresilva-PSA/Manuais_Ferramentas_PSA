@@ -1,33 +1,31 @@
----
+﻿---
 layout: manual
 title: "Consulta de XMLs"
 versao: "3.0"
 github_url: "https://github.com/psa-elevate/consulta-xmls"
 toc:
-  - id: secao-1
-    title: "1. Acesso inicial e autenticação"
+  - id: secao-intro
+    title: "1. Introdução"
+  - id: secao-acesso
+    title: "2. Acesso e Autenticação"
     items:
-      - id: secao-1-1
-        title: "1.1. Objetivo da ferramenta"
-      - id: secao-1-2
-        title: "1.2. Acesso ao portal"
-      - id: secao-1-3
-        title: "1.3. Navegação para área da equipe"
-      - id: secao-1-4
-        title: "1.4. Seleção da área de atuação"
-      - id: secao-1-5
-        title: "1.5. Login no sistema"
+      - id: secao-acesso-1
+        title: "2.1. Acesso ao portal e área da equipe"
+      - id: secao-acesso-2
+        title: "2.2. Seleção da área de atuação"
+      - id: secao-acesso-3
+        title: "2.3. Login no sistema"
+      - id: secao-acesso-4
+        title: "2.4. Seleção do ambiente de trabalho"
+      - id: secao-acesso-5
+        title: "2.5. Hub de Ferramentas"
   - id: secao-2
-    title: "2. Navegação no ambiente Digital Dev"
+    title: "3. Navegação no ambiente Digital Dev"
     items:
-      - id: secao-2-1
-        title: "2.1. Seleção do ambiente de trabalho"
-      - id: secao-2-2
-        title: "2.2. Visão geral do dashboard"
       - id: secao-2-3
-        title: "2.3. Abertura da ferramenta de consulta"
+        title: "3.1. Abertura da ferramenta de consulta"
       - id: secao-2-4
-        title: "2.4. Ajuste de visualização"
+        title: "3.2. Ajuste de visualização"
   - id: secao-3
     title: "3. Aplicação de filtros de consulta"
     items:
@@ -88,79 +86,86 @@ toc:
         title: "6.2. Limpeza de filtros"
 ---
 
-<div class="secao" id="secao-1">
+<!-- SEÇÃO INTRO -->
+<div class="secao" id="secao-intro">
   <div class="secao-header">
     <span class="secao-numero editable-text">1</span>
-    <h2 class="editable-text">Acesso inicial e autenticação</h2>
+    <h2 class="editable-text">Introdução</h2>
   </div>
   <div class="secao-conteudo editable-area">
-    <h3 id="secao-1-1">1.1. Objetivo da ferramenta</h3>
-    <p>A ferramenta de consulta de XMLs tem o objetivo de facilitar e automatizar o processo de consulta e extração de arquivos no formato XML, sejam eles NFe ou CTe. Para acessar a ferramenta, siga as instruções abaixo.</p>
+    <p>Este manual apresenta as funcionalidades da ferramenta <strong>Consulta de XMLs</strong>, parte integrante do sistema PSA Elevate. A ferramenta permite buscar, filtrar, visualizar, exportar e baixar arquivos no formato XML (NFe e CTe) de forma centralizada e eficiente.</p>
+    <p>O objetivo deste documento é orientar os analistas fiscais na utilização completa dos recursos disponíveis, desde a aplicação dos filtros de consulta até a exportação personalizada dos dados para Excel e o download dos arquivos originais.</p>
+    <div class="dica">
+        <span class="material-icons-round">info</span>
+        <p>Para uma consulta eficiente, certifique-se de preencher os filtros obrigatórios: cliente, contribuinte, tipo de documento (DOC), data início e data fim antes de acionar a busca.</p>
+    </div>
+  </div>
+</div>
 
-    <h3 id="secao-1-2">1.2. Acesso ao portal</h3>
-    <p>Acesse o site da PSA Consultores no link: <a href="https://psaconsultores.com.br" target="_blank">https://psaconsultores.com.br</a></p>
+<!-- SEÇÃO ACESSO -->
+<div class="secao" id="secao-acesso">
+  <div class="secao-header">
+    <span class="secao-numero editable-text">2</span>
+    <h2 class="editable-text">Acesso e Autenticação</h2>
+  </div>
+  <div class="secao-conteudo editable-area">
+    <h3 id="secao-acesso-1">2.1. Acesso ao portal e área da equipe</h3>
+    <p>O acesso às ferramentas começa pelo portal corporativo da PSA Consultores. Acesse o link <a href="https://psaconsultores.com.br" target="_blank">https://psaconsultores.com.br</a> e clique no ícone de <strong>"Equipe"</strong>, localizado no canto superior direito da tela, para entrar na área restrita.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/1.2. Acesso ao portal.png" class="img-screenshot" alt="Acesso ao portal">
+            <img src="imagens/padrao-01-acesso-portal.png" class="img-screenshot" alt="Acesso à área da equipe no portal">
         </div>
-        <p class="img-caption">Página inicial da PSA Consultores</p>
+        <p class="img-caption">Portal corporativo com destaque para o menu de acesso à Equipe</p>
     </div>
 
-    <h3 id="secao-1-3">1.3. Navegação para área da equipe</h3>
-    <p>Clique no ícone de equipe no canto superior direito, ao lado de área do cliente.</p>
+    <h3 id="secao-acesso-2">2.2. Seleção da área de atuação</h3>
+    <p>Na tela de departamentos, abra a lista suspensa e selecione a opção <strong>"Digital"</strong> para acessar o sistema de gestão de demandas e as ferramentas internas.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/1.3. Navegação para área da equipe.png" class="img-screenshot" alt="Navegação para área da equipe">
+            <img src="imagens/padrao-02-selecao-area.png" class="img-screenshot" alt="Seleção da área Digital">
         </div>
-        <p class="img-caption">Localização do botão da área da equipe</p>
+        <p class="img-caption">Seleção da área de competência Digital</p>
     </div>
 
-    <h3 id="secao-1-4">1.4. Seleção da área de atuação</h3>
-    <p>A página do sistema de gestão de demandas será aberta. Selecione a área de atuação da ferramenta correspondente. No caso da ferramenta de consulta de XML, escolha a área “Digital”.</p>
+    <h3 id="secao-acesso-3">2.3. Login no sistema</h3>
+    <p>A tela de autenticação será exibida. Insira suas credenciais corporativas (e-mail e senha) nos campos correspondentes e clique em <strong>"Entrar"</strong>. As credenciais garantem que você visualize apenas as permissões do seu respectivo perfil.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/1.4. Seleção da área de atuação.png" class="img-screenshot" alt="Seleção da área de atuação">
+            <img src="imagens/padrao-03-login.png" class="img-screenshot" alt="Tela de login preenchida">
         </div>
-        <p class="img-caption">Menu de seleção de área</p>
+        <p class="img-caption">Preenchimento dos dados de acesso</p>
     </div>
 
-    <h3 id="secao-1-5">1.5. Login no sistema</h3>
-    <p>Ao escolher a sua área, o sistema exigirá o login. Para isso, preencha com as suas credenciais de acesso (e-mail e senha). Em seguida, clique em “Entrar” para acessar a área digital.</p>
+    <h3 id="secao-acesso-4">2.4. Seleção do ambiente de trabalho</h3>
+    <p>Após o login, selecione o ambiente <strong>"Digital Dev"</strong>. Este é o ambiente de criação, desenvolvimento e utilização das ferramentas fiscais automatizadas.</p>
     <div class="img-container">
         <div class="img-wrapper">
-            <img src="imagens/1.5. Login no sistema.png" class="img-screenshot" alt="Login no sistema">
+            <img src="imagens/padrao-04-ambiente-dev.png" class="img-screenshot" alt="Seleção do ambiente Digital Dev">
         </div>
-        <p class="img-caption">Tela de autenticação do sistema</p>
+        <p class="img-caption">Escolha do ambiente da área Digital</p>
     </div>
+
+    <h3 id="secao-acesso-5">2.5. Hub de Ferramentas</h3>
+    <p>Ao entrar no ambiente Digital Dev, o sistema carregará o <strong>Hub de Ferramentas</strong>. Utilize a seção "Sessões em Andamento" para retomar trabalhos recentes ou localize a ferramenta desejada no painel central.</p>
+    <p>Para iniciar a operação, utilize o menu lateral ou identifique o card correspondente e clique no botão <strong>"Acessar Ferramenta"</strong>.</p>
+    <div class="img-container">
+        <div class="img-wrapper">
+            <img src="imagens/padrao-05-hub-ferramentas.png" class="img-screenshot" alt="Hub de Ferramentas">
+        </div>
+        <p class="img-caption">Visão geral do Hub de Ferramentas e sessões ativas</p>
+    </div>
+
   </div>
 </div>
 
 <div class="secao" id="secao-2">
   <div class="secao-header">
-    <span class="secao-numero editable-text">2</span>
+    <span class="secao-numero editable-text">3</span>
     <h2 class="editable-text">Navegação no ambiente Digital Dev</h2>
   </div>
   <div class="secao-conteudo editable-area">
-    <h3 id="secao-2-1">2.1. Seleção do ambiente de trabalho</h3>
-    <p>Com a área digital aberta, selecione o ambiente de trabalho correspondente. No caso da ferramenta de consulta de XML, escolha o ambiente “Digital Dev”. Este é o ambiente de criação e desenvolvimento de ferramentas automatizadas.</p>
-    <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/2.1. Seleção do ambiente de trabalho.png" class="img-screenshot" alt="Seleção do ambiente de trabalho">
-        </div>
-        <p class="img-caption">Opções de ambiente disponíveis</p>
-    </div>
-
-    <h3 id="secao-2-2">2.2. Visão geral do dashboard</h3>
-    <p>Dentro do ambiente da Digital Dev, o sistema carregará inicialmente na página de dashboard. Esta página mostra um resumo do total de ferramentas, ferramentas ativas e em desenvolvimento. Ela contém um menu lateral esquerdo com a lista das principais ferramentas disponíveis.</p>
-    <div class="img-container">
-        <div class="img-wrapper">
-            <img src="imagens/2.2. Visão geral do dashboard.png" class="img-screenshot" alt="Visão geral do dashboard">
-        </div>
-        <p class="img-caption">Dashboard inicial do ambiente Digital Dev</p>
-    </div>
-
-    <h3 id="secao-2-3">2.3. Abertura da ferramenta de consulta</h3>
-    <p>Para acessar a ferramenta de consulta de XML, clique em “Consulta de XMLs” no menu lateral. O sistema irá abrir a página da ferramenta. Inicialmente, nenhum dado será carregado.</p>
+    <h3 id="secao-2-3">3.1. Abertura da ferramenta de consulta</h3>
+    <p>Para acessar a ferramenta de consulta de XML, clique em "Consulta de XMLs" no menu lateral. O sistema irá abrir a página da ferramenta. Inicialmente, nenhum dado será carregado.</p>
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/2.3. Abertura da ferramenta de consulta.png" class="img-screenshot" alt="Abertura da ferramenta de consulta">
@@ -168,7 +173,7 @@ toc:
         <p class="img-caption">Navegação pelo menu lateral para a Consulta de XMLs</p>
     </div>
 
-    <h3 id="secao-2-4">2.4. Ajuste de visualização</h3>
+    <h3 id="secao-2-4">3.2. Ajuste de visualização</h3>
     <p>Para minimizar o painel lateral e ampliar a visualização da página da ferramenta, clique na seta no topo do painel, ao lado do título da ferramenta.</p>
     <div class="img-container">
         <div class="img-wrapper">
@@ -269,7 +274,7 @@ toc:
   </div>
   <div class="secao-conteudo editable-area">
     <h3 id="secao-4-1">4.1. Acionamento da consulta</h3>
-    <p>Após preencher os filtros necessários, clique no botão “Buscar” para realizar a consulta.</p>
+    <p>Após preencher os filtros necessários, clique no botão "Buscar" para realizar a consulta.</p>
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/4.1. Acionamento da consulta.png" class="img-screenshot" alt="Acionamento da consulta">
@@ -296,7 +301,7 @@ toc:
     </div>
 
     <h3 id="secao-4-4">4.4. Paginação dos resultados</h3>
-    <p>A tabela exibe um limite de 10 arquivos por página. Vá até o rodapé da tabela e clique no botão “Próximo” para avançar e visualizar as demais páginas, ou clique em “Anterior” para retroceder.</p>
+    <p>A tabela exibe um limite de 10 arquivos por página. Vá até o rodapé da tabela e clique no botão "Próximo" para avançar e visualizar as demais páginas, ou clique em "Anterior" para retroceder.</p>
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/4.4. Paginação dos resultados.png" class="img-screenshot" alt="Paginação dos resultados">
@@ -313,7 +318,7 @@ toc:
   </div>
   <div class="secao-conteudo editable-area">
     <h3 id="secao-5-1">5.1. Abertura do modal de exportação</h3>
-    <p>Para consolidar os dados em uma planilha, clique no botão “Exportar Excel” na barra superior. Uma janela será aberta. Atenção: a exportação engloba todos os arquivos carregados no filtro atual, e não apenas os que estão visíveis na página atual da tabela.</p>
+    <p>Para consolidar os dados em uma planilha, clique no botão "Exportar Excel" na barra superior. Uma janela será aberta. Atenção: a exportação engloba todos os arquivos carregados no filtro atual, e não apenas os que estão visíveis na página atual da tabela.</p>
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/5.1. Abertura do modal de exportação.png" class="img-screenshot" alt="Abertura do modal de exportação">
@@ -376,7 +381,7 @@ toc:
     </div>
 
     <h3 id="secao-5-8">5.8. Conclusão da exportação</h3>
-    <p>Após configurar as colunas desejadas, clique no botão verde “Exportar Excel” localizado no canto inferior direito da janela. O sistema processará os dados e fará o download da planilha consolidada.</p>
+    <p>Após configurar as colunas desejadas, clique no botão verde "Exportar Excel" localizado no canto inferior direito da janela. O sistema processará os dados e fará o download da planilha consolidada.</p>
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/5.8. Conclusão da exportação.png" class="img-screenshot" alt="Conclusão da exportação">
@@ -402,7 +407,7 @@ toc:
     </div>
 
     <h3 id="secao-6-2">6.2. Limpeza de filtros</h3>
-    <p>Para iniciar uma nova consulta, clique no botão “Limpar filtros”. Após esse processo, os filtros aplicados serão redefinidos e você poderá realizar uma nova busca.</p>
+    <p>Para iniciar uma nova consulta, clique no botão "Limpar filtros". Após esse processo, os filtros aplicados serão redefinidos e você poderá realizar uma nova busca.</p>
     <div class="img-container">
         <div class="img-wrapper">
             <img src="imagens/6.2. Limpeza de filtros.png" class="img-screenshot" alt="Limpeza de filtros">

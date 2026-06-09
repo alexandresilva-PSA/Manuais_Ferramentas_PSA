@@ -4,37 +4,50 @@ title: "Dashboard de Faturamento PERDCOMP"
 versao: "1.0"
 github_url: "https://github.com/psa-elevate/dashboard-perdcomp-faturamento"
 toc:
+  - id: secao-intro
+    title: "1. Introdução"
   - id: secao-1
-    title: "1. Visão geral do dashboard"
+    title: "2. Visão geral do dashboard"
   - id: secao-2
-    title: "2. Página 1 - Visão interna (Faturamento)"
+    title: "3. Página 1 - Visão interna (Faturamento)"
     items:
       - id: secao-2-1
-        title: "2.1. Filtros da página 1"
+        title: "3.1. Filtros da página 1"
       - id: secao-2-2
-        title: "2.2. Indicadores principais"
+        title: "3.2. Indicadores principais"
       - id: secao-2-3
-        title: "2.3. Tabela de detalhamento"
+        title: "3.3. Tabela de detalhamento"
   - id: secao-3
-    title: "3. Página 2 - Visão do cliente"
+    title: "4. Página 2 - Visão do cliente"
     items:
       - id: secao-3-1
-        title: "3.1. Visão geral do cliente"
+        title: "4.1. Visão geral do cliente"
       - id: secao-3-2
-        title: "3.2. Filtros da página 2"
+        title: "4.2. Filtros da página 2"
       - id: secao-3-3
-        title: "3.3. Indicadores do cliente"
+        title: "4.3. Indicadores do cliente"
       - id: secao-3-4
-        title: "3.4. Gráfico de impostos"
+        title: "4.4. Gráfico de impostos"
       - id: secao-3-5
-        title: "3.5. Gráfico DCOMP x PER"
+        title: "4.5. Gráfico DCOMP x PER"
       - id: secao-3-6
-        title: "3.6. Gráfico de linha do tempo"
+        title: "4.6. Gráfico de linha do tempo"
 ---
+
+<div class="secao" id="secao-intro">
+  <div class="secao-header">
+    <span class="secao-numero editable-text">1</span>
+    <h2 class="editable-text">Introdução</h2>
+  </div>
+  <div class="secao-conteudo editable-area">
+    <p>Este manual apresenta as funcionalidades do <strong>Dashboard de Faturamento PERDCOMP</strong>, ferramenta interna da PSA Consultores. O painel é dividido em duas visões complementares: a visão interna de faturamento, voltada para o acompanhamento operacional da equipe, e a visão do cliente, que reflete o painel disponibilizado externamente para acompanhamento dos processos.</p>
+    <p>O objetivo deste documento é orientar os analistas no uso das duas páginas do dashboard, desde a leitura dos indicadores e tabelas de detalhamento até a interpretação dos gráficos de acompanhamento dos PERs (ressarcimentos) e DCOMPs (compensações).</p>
+  </div>
+</div>
 
 <div class="secao" id="secao-1">
   <div class="secao-header">
-    <span class="secao-numero editable-text">1</span>
+    <span class="secao-numero editable-text">2</span>
     <h2 class="editable-text">Visão geral do dashboard</h2>
   </div>
   <div class="secao-conteudo editable-area">
@@ -43,7 +56,7 @@ toc:
         <li><strong>Página 1 (Visão Interna):</strong> Focada no acompanhamento do faturamento da PSA Consultores e no detalhamento geral dos pedidos.</li>
         <li><strong>Página 2 (Visão do Cliente):</strong> Visão que o cliente terá acesso para acompanhar o andamento dos seus PERs e compensações.</li>
     </ul>
-    
+
     <div class="img-container">
         <div class="img-wrapper"><img src="imagens/Figura 1 - Visao Geral do Faturamento.png" class="img-screenshot" alt="Visão geral da primeira página do dashboard"></div>
         <p class="img-caption">Figura 1 - Captura da tela inicial do relatório mostrando a visão geral da primeira página</p>
@@ -53,12 +66,12 @@ toc:
 
 <div class="secao" id="secao-2">
   <div class="secao-header">
-    <span class="secao-numero editable-text">2</span>
+    <span class="secao-numero editable-text">3</span>
     <h2 class="editable-text">Página 1 - Visão interna (Faturamento)</h2>
   </div>
   <div class="secao-conteudo editable-area">
-    
-    <h3 id="secao-2-1">2.1 Filtros da página 1</h3>
+
+    <h3 id="secao-2-1">3.1 Filtros da página 1</h3>
     <p>Na parte superior da primeira página, você encontra os seguintes filtros:</p>
     <ul>
         <li><strong>Cliente:</strong> Utilizado para selecionar o grupo ou família de clientes.</li>
@@ -74,7 +87,7 @@ toc:
         <p class="img-caption">Figura 2 - Captura focada apenas na barra superior da Página 1, mostrando as caixas de filtro</p>
     </div>
 
-    <h3 id="secao-2-2">2.2 Indicadores principais</h3>
+    <h3 id="secao-2-2">3.2 Indicadores principais</h3>
     <p>Abaixo dos filtros, há cartões que mostram os valores gerais:</p>
     <ul>
         <li><strong>Saldo disponível:</strong> Mostra o saldo atual dos pedidos.</li>
@@ -89,7 +102,7 @@ toc:
         <p class="img-caption">Figura 3 - Captura da linha de cartões com os números, logo abaixo dos filtros da Página 1</p>
     </div>
 
-    <h3 id="secao-2-3">2.3 Tabela de detalhamento</h3>
+    <h3 id="secao-2-3">3.3 Tabela de detalhamento</h3>
     <p>Na parte inferior, há uma tabela com a lista dos documentos. Ela possui as colunas: Nº do documento, Contribuinte, Tipo de documento, Trimestre, Imposto, Nº do PER utilizado na Dcomp, Valor ressarcido, Valor compensado, Faturamento PSA Consultores e Percentual aplicado.</p>
 
     <div class="img-container">
@@ -101,12 +114,12 @@ toc:
 
 <div class="secao" id="secao-3">
   <div class="secao-header">
-    <span class="secao-numero editable-text">3</span>
+    <span class="secao-numero editable-text">4</span>
     <h2 class="editable-text">Página 2 - Visão do cliente</h2>
   </div>
   <div class="secao-conteudo editable-area">
-    
-    <h3 id="secao-3-1">3.1 Visão geral do cliente</h3>
+
+    <h3 id="secao-3-1">4.1 Visão geral do cliente</h3>
     <p>A segunda página, acessada pela aba "Visão do cliente", é o painel que o cliente visualizará para acompanhar o andamento dos seus próprios pedidos. Ela contém filtros específicos, totalizadores e gráficos de análise.</p>
 
     <div class="img-container">
@@ -114,7 +127,7 @@ toc:
         <p class="img-caption">Figura 5 - Captura da tela inteira da aba "Visão do cliente"</p>
     </div>
 
-    <h3 id="secao-3-2">3.2 Filtros da página 2</h3>
+    <h3 id="secao-3-2">4.2 Filtros da página 2</h3>
     <p>O cliente pode utilizar os seguintes filtros na sua visão:</p>
     <ul>
         <li><strong>Contribuinte:</strong> Seleciona a empresa específica.</li>
@@ -124,11 +137,11 @@ toc:
     </ul>
 
     <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 5 - Filtros da Pagina 2.png" class="img-screenshot" alt="Filtros do cliente"></div>
+        <div class="img-wrapper"><img src="imagens/Figura 6 - Filtros da Pagina 2.png" class="img-screenshot" alt="Filtros do cliente"></div>
         <p class="img-caption">Figura 6 - Captura da barra de filtros no topo da Página 2</p>
     </div>
 
-    <h3 id="secao-3-3">3.3 Indicadores do cliente</h3>
+    <h3 id="secao-3-3">4.3 Indicadores do cliente</h3>
     <p>O cliente visualiza os seus valores consolidados nos cartões:</p>
     <ul>
         <li><strong>Saldo disponível</strong> e <strong>Saldo disponível + Selic</strong>.</li>
@@ -141,7 +154,7 @@ toc:
         <p class="img-caption">Figura 7 - Captura dos cartões com os valores no centro da Página 2</p>
     </div>
 
-    <h3 id="secao-3-4">3.4 Gráfico de impostos</h3>
+    <h3 id="secao-3-4">4.4 Gráfico de impostos</h3>
     <p>O gráfico de barras "Valor total compensado por tipo de imposto" mostra os valores divididos por impostos como INSS, PIS, IRPJ, COFINS, IRRF / CSRF e IRRF.</p>
 
     <div class="img-container">
@@ -149,7 +162,7 @@ toc:
         <p class="img-caption">Figura 8 - Captura do gráfico de barras de impostos na Página 2</p>
     </div>
 
-    <h3 id="secao-3-5">3.5 Gráfico DCOMP x PER</h3>
+    <h3 id="secao-3-5">4.5 Gráfico DCOMP x PER</h3>
     <p>O gráfico de pizza "Relação entre Total compensado e total ressarcido" mostra a proporção do valor total que vem de DCOMP (compensação) e a proporção que vem de PER (ressarcimento).</p>
 
     <div class="img-container">
@@ -157,7 +170,7 @@ toc:
         <p class="img-caption">Figura 9 - Captura do gráfico de pizza na Página 2</p>
     </div>
 
-    <h3 id="secao-3-6">3.6 Gráfico de linha do tempo</h3>
+    <h3 id="secao-3-6">4.6 Gráfico de linha do tempo</h3>
     <p>Na parte inferior, há um gráfico de linha do tempo que mostra a evolução do "Valor Total (Compensado + Ressarcido)" ao longo dos anos (de 2021 a 2026).</p>
 
     <div class="img-container">

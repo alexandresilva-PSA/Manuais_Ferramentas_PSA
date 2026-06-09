@@ -10,9 +10,13 @@ github\_url: ""
 
 toc:
 
+&nbsp; - id: secao-intro
+
+&nbsp;   title: "1. Introdução"
+
 &nbsp; - id: secao-1
 
-&nbsp;   title: "1. Primeiro Acesso e Redefinição de Senha"
+&nbsp;   title: "2. Primeiro Acesso e Redefinição de Senha"
 
 &nbsp;   items:
 
@@ -90,11 +94,33 @@ toc:
 
 
 
-<div class="secao" id="secao-1">
+<div class="secao" id="secao-intro">
 
 &nbsp; <div class="secao-header">
 
 &nbsp;   <span class="secao-numero editable-text">1</span>
+
+&nbsp;   <h2 class="editable-text">Introdução</h2>
+
+&nbsp; </div>
+
+&nbsp; <div class="secao-conteudo editable-area">
+
+&nbsp;   <p>Este manual apresenta as funcionalidades da <strong>Página do Cliente e Área de Chamados</strong> do portal PSA Consultores. A plataforma oferece ao cliente um espaço centralizado para gerenciar solicitações de atendimento, acompanhar o andamento de projetos e acessar documentos disponibilizados pela equipe.</p>
+
+&nbsp;   <p>O objetivo deste documento é orientar os usuários desde o primeiro acesso até a utilização plena dos recursos disponíveis, incluindo a abertura e o acompanhamento de chamados, a comunicação com os especialistas, o acompanhamento de projetos e o acesso à central de documentos.</p>
+
+&nbsp; </div>
+
+</div>
+
+
+
+<div class="secao" id="secao-1">
+
+&nbsp; <div class="secao-header">
+
+&nbsp;   <span class="secao-numero editable-text">2</span>
 
 &nbsp;   <h2 class="editable-text">Primeiro Acesso e Redefinição de Senha</h2>
 
