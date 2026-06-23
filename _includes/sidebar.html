@@ -18,6 +18,10 @@
                 <span class="material-icons-round expand-icon">chevron_right</span>
             </div>
             <div class="nav-group-content">
+                <a href="#{{ section.id }}" class="nav-item" id="nav-item-{{ section.id }}">
+                    <span class="material-icons-round">article</span>
+                    <span class="nav-item-text">{{ section.title }}</span>
+                </a>
                 {% for item in section.items %}
                 <a href="#{{ item.id }}" class="nav-item" id="nav-item-{{ item.id }}">
                     <span class="material-icons-round">{{ item.icon | default: 'description' }}</span>

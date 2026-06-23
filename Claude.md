@@ -2,6 +2,15 @@
 
 Guia de contexto para humanos e IAs trabalharem neste repositório sem precisar redescobrir a estrutura do projeto.
 
+## 0. Política de branch (IMPORTANTE)
+
+A branch de trabalho e de produção deste repositório é a **`main`**.
+
+- Faça commits e abra trabalho diretamente na **`main`** (ou em branches de feature que sejam mergeadas na `main`).
+- O deploy do GitHub Pages é disparado **somente por push na `main`** (ver `.github/workflows/deploy.yml`). Parar o trabalho em qualquer outra branch significa que nada vai ao ar.
+- A branch `develop` existe apenas como espelho/staging e atualmente está com conteúdo idêntico à `main`. Ela não é obrigatória e não dispara deploy.
+- Observação: instruções antigas que mandavam trabalhar "exclusivamente na `develop`" estão desatualizadas e não refletem o estado real do repositório nem o gatilho de deploy.
+
 ## 1. Resumo do projeto
 
 Este repositório é a central de manuais das ferramentas PSA Elevate / PSA Digital. Ele gera um site estático em Jekyll, publicado no GitHub Pages, com um hub inicial pesquisável e páginas de manuais operacionais ricas em capturas de tela.

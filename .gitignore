@@ -1,0 +1,8 @@
+# Dependências
+node_modules/
+
+# Build do Jekyll
+_site/
+
+# Manuais compilados (cópias planas duplicadas — não publicar)
+manuais/compilados/

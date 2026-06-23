@@ -1,6 +1,6 @@
 ---
 layout: manual
-title: "Dashboard de controle de uso (Externo)"
+title: "Dashboard de Controle de Uso (Externo)"
 versao: "1.0"
 github_url: "https://github.com/psa-elevate/dashboard-controle-uso"
 toc:
@@ -71,7 +71,7 @@ toc:
     <h3 id="secao-2-1">2.1. Visão geral da página</h3>
     <p>Apresenta a disposição completa dos filtros, indicadores de volume e a movimentação de arquivos.</p>
     <div class="img-container">
-        <div class="img-wrapper"><img src="{{ site.baseurl }}/manuais/dashboard-controle-de-uso-gestao/imagens/Figura 1 - Visao geral de arquivos.png" class="img-screenshot" alt="Visão geral da página de arquivos"></div>
+        <div class="img-wrapper"><img src="imagens/Figura 1 - Visao geral de arquivos.png" class="img-screenshot" alt="Visão geral da página de arquivos"></div>
         <p class="img-caption">Figura 1 - Visão geral da página de arquivos</p>
     </div>
 

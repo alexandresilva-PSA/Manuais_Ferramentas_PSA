@@ -1,6 +1,6 @@
 ---
 layout: manual
-title: "Dashboard de controle de uso (Interno)"
+title: "Dashboard de Controle de Uso (Interno)"
 versao: "1.0"
 github_url: "https://github.com/psa-elevate/dashboard-controle-uso"
 toc:
