@@ -6,3 +6,6 @@ _site/
 
 # Manuais compilados (cópias planas duplicadas — não publicar)
 manuais/compilados/
+
+# PDFs-fonte dentro dos manuais (não publicar)
+manuais/**/*.pdf

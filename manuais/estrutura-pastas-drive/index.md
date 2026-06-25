@@ -332,7 +332,7 @@ toc:
   </div>
   <div class="secao-conteudo editable-area">
     <p>A pasta <code>TAX – Clientes</code> é a ponte que abastece o banco de dados da PSA Digital.</p>
-    <p>Toda manhã, uma rotina automática varre as pastas dos clientes, identifica os arquivos novos depositados e os envia ao banco de dados. A partir dali, dashboards no Looker Studio, automações no n8n e ferramentas internas — DIFAL Inteligente, ICMS das Saídas, PERDcomp, entre outras — consomem esses dados.</p>
+    <p>Toda manhã, uma rotina automática varre as pastas dos clientes, identifica os arquivos novos depositados e os envia ao banco de dados. A partir dali, dashboards no Data Studio, automações no n8n e ferramentas internas — DIFAL Inteligente, ICMS das Saídas, PERDcomp, entre outras — consomem esses dados.</p>
     <p>Por isso, manter a estrutura padrão do drive é essencial. Pastas criadas no lugar errado, ou nomes alterados, causam erros silenciosos: arquivos não coletados, registros duplicados no banco, e divergências em apurações. Já aconteceu, e é evitável.</p>
   </div>
 </div>

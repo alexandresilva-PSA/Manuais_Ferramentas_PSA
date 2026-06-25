@@ -1,69 +1,68 @@
 ---
 layout: manual
-title: "Dashboard de Controle de Uso (Interno)"
-versao: "1.0"
+title: "Controle de Uso e Envio de Documentos (Interno)"
+versao: "2.0"
 github_url: "https://github.com/psa-elevate/dashboard-controle-uso"
 toc:
   - id: secao-intro
     title: "1. Introdução"
-  - id: secao-2
+  - id: secao-visao-geral
     title: "2. Visão geral do dashboard"
+  - id: secao-saude-api
+    title: "3. Saúde da API"
     items:
-      - id: secao-2-1
-        title: "2.1. Visão geral da página"
-      - id: secao-2-2
-        title: "2.2. Filtros disponíveis"
-      - id: secao-2-3
-        title: "2.3. Indicadores"
-      - id: secao-2-4
-        title: "2.4. Percentual de entradas e saídas adicionadas (NFe e CTe)"
-      - id: secao-2-5
-        title: "2.5. Total adicionado ao Drive por tipo de arquivo"
-      - id: secao-2-6
-        title: "2.6. Tabela geral controle de uso"
-  - id: secao-3
-    title: "3. Controle de uso"
+      - id: secao-saude-api-filtros
+        title: "3.1. Filtros disponíveis"
+      - id: secao-saude-api-indicadores
+        title: "3.2. Indicadores"
+      - id: secao-saude-api-graficos
+        title: "3.3. Gráficos"
+      - id: secao-saude-api-tabela
+        title: "3.4. Ranking de endpoints"
+  - id: secao-envio
+    title: "4. Envio de Documentos"
     items:
-      - id: secao-3-1
-        title: "3.1. Visão geral da página"
-      - id: secao-3-2
-        title: "3.2. Filtros disponíveis"
-      - id: secao-3-3
-        title: "3.3. Indicadores"
-      - id: secao-3-4
-        title: "3.4. Usuários com mais acessos"
-      - id: secao-3-5
-        title: "3.5. Consultas por tipo de documento"
-      - id: secao-3-6
-        title: "3.6. Clientes mais acessados por tipo de acesso"
-  - id: secao-4
-    title: "4. Detalhamento de operações"
+      - id: secao-envio-filtros
+        title: "4.1. Filtros disponíveis"
+      - id: secao-envio-indicadores
+        title: "4.2. Indicadores"
+      - id: secao-envio-graficos
+        title: "4.3. Gráficos"
+      - id: secao-envio-tabela
+        title: "4.4. Detalhamento de envios por usuário"
+  - id: secao-erros
+    title: "5. Envios errados"
     items:
-      - id: secao-4-1
-        title: "4.1. Visão geral da página"
-      - id: secao-4-2
-        title: "4.2. Filtros disponíveis"
-      - id: secao-4-3
-        title: "4.3. Indicadores"
-      - id: secao-4-4
-        title: "4.4. Tabela de operações por usuário"
-  - id: secao-5
-    title: "5. Controle de uso interno"
+      - id: secao-erros-filtros
+        title: "5.1. Filtros disponíveis"
+      - id: secao-erros-indicadores
+        title: "5.2. Indicadores"
+      - id: secao-erros-graficos
+        title: "5.3. Gráficos"
+      - id: secao-erros-tabela
+        title: "5.4. Ranking de erros por usuário"
+  - id: secao-consultas
+    title: "6. Uso da API"
     items:
-      - id: secao-5-1
-        title: "5.1. Visão geral da página"
-      - id: secao-5-2
-        title: "5.2. Filtros disponíveis"
-      - id: secao-5-3
-        title: "5.3. Indicadores"
-      - id: secao-5-4
-        title: "5.4. Método utilizado"
-      - id: secao-5-5
-        title: "5.5. Taxa de sucesso e falhas"
-      - id: secao-5-6
-        title: "5.6. Tipos de consulta"
-      - id: secao-5-7
-        title: "5.7. Consultas por usuário"
+      - id: secao-consultas-filtros
+        title: "6.1. Filtros disponíveis"
+      - id: secao-consultas-indicadores
+        title: "6.2. Indicadores"
+      - id: secao-consultas-graficos
+        title: "6.3. Gráficos"
+      - id: secao-consultas-tabela
+        title: "6.4. Ranking de usuários por consulta"
+  - id: secao-clientes
+    title: "7. Clientes & Contribuintes"
+    items:
+      - id: secao-clientes-filtros
+        title: "7.1. Filtros disponíveis"
+      - id: secao-clientes-indicadores
+        title: "7.2. Indicadores"
+      - id: secao-clientes-graficos
+        title: "7.3. Gráficos"
+      - id: secao-clientes-tabela
+        title: "7.4. Ranking de contribuintes consultados"
 ---
 
 <div class="secao" id="secao-intro">
@@ -72,232 +71,260 @@ toc:
     <h2 class="editable-text">Introdução</h2>
   </div>
   <div class="secao-conteudo editable-area">
-    <p>Este manual apresenta as funcionalidades do <strong>Dashboard de Controle de Uso (Interno)</strong>, parte integrante do sistema PSA Elevate. O painel centraliza as informações sobre o volume de consultas, o fluxo de upload de arquivos para o Drive e o monitoramento técnico das requisições via API, sendo destinado à equipe interna da PSA Consultores.</p>
-    <p>O objetivo deste documento é orientar a equipe interna na leitura dos indicadores de uso e no acompanhamento da saúde técnica da plataforma, abrangendo desde a análise de arquivos e comportamento de acesso até o controle de uso interno via API.</p>
+    <p>Este manual apresenta as funcionalidades do <strong>Controle de Uso e Envio de Documentos (Interno)</strong>, dashboard desenvolvido no Data Studio para o ecossistema PSA Elevate. O painel consolida, em uma única ferramenta, o monitoramento do volume de documentos enviados ao Drive da PSA, o acompanhamento dos erros cometidos nesses envios, o uso das consultas realizadas pela equipe e a saúde técnica das requisições feitas às APIs da plataforma.</p>
+    <p>Esta é a versão <strong>interna</strong>, destinada à equipe técnica e de gestão da PSA Consultores. Ela contém uma aba exclusiva de <strong>Saúde da API</strong>, voltada ao monitoramento de latência e taxa de erro das requisições, que não está presente na versão externa.</p>
+    <p>O objetivo deste documento é orientar a equipe na leitura dos indicadores e na interpretação dos gráficos e tabelas de cada página, apoiando a tomada de decisão sobre volumetria de dados, produtividade da equipe e estabilidade técnica do sistema.</p>
+    <div class="dica">
+      <span class="material-icons-round">lightbulb</span>
+      <p>As imagens deste manual são da página completa. Clique sobre qualquer captura para ampliar e navegar nos detalhes de cada gráfico ou tabela.</p>
+    </div>
   </div>
 </div>
 
-<div class="secao" id="secao-2">
+<div class="secao" id="secao-visao-geral">
   <div class="secao-header">
     <span class="secao-numero editable-text">2</span>
     <h2 class="editable-text">Visão geral do dashboard</h2>
   </div>
   <div class="secao-conteudo editable-area">
-    <p>Esta aba permite o acompanhamento primário do volume de consultas realizadas e a quantidade de arquivos adicionados ao Drive.</p>
-
-    <h3 id="secao-2-1">2.1. Visão geral da página</h3>
-    <p>Apresenta a disposição completa dos filtros, indicadores de volume e a movimentação de arquivos.</p>
-    <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 1 - Visao geral de arquivos.png" class="img-screenshot" alt="Visão geral de arquivos"></div>
-        <p class="img-caption">Figura 1 - Visão geral de arquivos</p>
-    </div>
-
-    <h3 id="secao-2-2">2.2. Filtros disponíveis</h3>
-    <p>O cabeçalho permite refinar os dados apresentados na tela:</p>
+    <p>O dashboard é organizado em <strong>páginas (abas) navegáveis</strong>, exibidas na barra de abas no topo do relatório. A navegação entre os temas é feita clicando na aba desejada. As abas disponíveis na versão interna são:</p>
     <ul>
-        <li><strong>Selecionar período:</strong> Permite definir a data inicial e final para a análise.</li>
-        <li><strong>Clientes:</strong> Permite filtrar as consultas por um grupo ou família de empresas.</li>
-        <li><strong>Empresas:</strong> Permite direcionar a análise para um contribuinte específico (CNPJ ou filial).</li>
-        <li><strong>Usuários:</strong> Filtra as ações realizadas por um membro específico da equipe.</li>
+      <li><strong>Saúde da API:</strong> monitoramento técnico de latência, taxa de erro e endpoints das requisições (exclusiva da versão interna).</li>
+      <li><strong>Envio de Documentos:</strong> volume de documentos enviados ao Drive pela equipe, distribuído por tipo e por analista.</li>
+      <li><strong>Envios errados:</strong> erros cometidos no envio de documentos, categorias predominantes e responsáveis.</li>
+      <li><strong>Uso da API:</strong> volume de consultas e chamadas à API por ferramenta e por usuário.</li>
+      <li><strong>Clientes &amp; Contribuintes:</strong> distribuição da atividade da equipe entre pastas de cliente e contribuintes atendidos.</li>
     </ul>
-    <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 2 - Filtros da visao geral de arquivos.png" class="img-screenshot" alt="Filtros da visão geral de arquivos"></div>
-        <p class="img-caption">Figura 2 - Filtros da visão geral de arquivos</p>
-    </div>
+    <p>Cada página possui sua própria barra de filtros no topo e uma faixa de indicadores logo abaixo, seguidas pelos gráficos e pela tabela de detalhamento.</p>
 
-    <h3 id="secao-2-3">2.3. Indicadores</h3>
-    <p>Os cartões apresentam o resumo numérico do cenário selecionado:</p>
-    <ul>
-        <li><strong>Total de consultas:</strong> A quantidade absoluta de buscas feitas na plataforma.</li>
-        <li><strong>Clientes consultados:</strong> O número de grupos ou famílias pesquisados.</li>
-        <li><strong>Empresas consultadas:</strong> A quantidade de contribuintes únicos acessados.</li>
-        <li><strong>Usuários ativos:</strong> O número de colaboradores que realizaram alguma operação.</li>
-        <li><strong>Consultas por usuário:</strong> A média de buscas dividida pelo número de usuários ativos.</li>
-        <li><strong>Duração média (s):</strong> O tempo médio de resposta das consultas.</li>
-    </ul>
     <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 3 - Indicadores da visao geral de arquivos.png" class="img-screenshot" alt="Indicadores da visão geral de arquivos"></div>
-        <p class="img-caption">Figura 3 - Indicadores da visão geral de arquivos</p>
-    </div>
-
-    <h3 id="secao-2-4">2.4. Percentual de entradas e saídas adicionadas (NFe e CTe)</h3>
-    <p>Este gráfico de rosca ilustra a divisão proporcional dos arquivos adicionados ao Drive, comparando o volume de documentos de entrada com os de saída.</p>
-    <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 4 - Grafico percentual de entradas e saidas.png" class="img-screenshot" alt="Gráfico percentual de entradas e saídas"></div>
-        <p class="img-caption">Figura 4 - Gráfico percentual de entradas e saídas</p>
-    </div>
-
-    <h3 id="secao-2-5">2.5. Total adicionado ao Drive por tipo de arquivo</h3>
-    <p>Este gráfico de barras apresenta a volumetria exata de arquivos armazenados, segregando o total entre os fluxos de entrada e saída.</p>
-    <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 5 - Grafico total adicionado ao drive.png" class="img-screenshot" alt="Gráfico total adicionado ao drive"></div>
-        <p class="img-caption">Figura 5 - Gráfico total adicionado ao drive</p>
-    </div>
-
-    <h3 id="secao-2-6">2.6. Tabela geral controle de uso</h3>
-    <p>A tabela funciona como o extrato detalhado das movimentações, identificando o usuário, o tipo de arquivo manipulado, a natureza da movimentação e a quantidade de arquivos adicionados.</p>
-    <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 6 - Tabela geral controle de uso.png" class="img-screenshot" alt="Tabela geral controle de uso"></div>
-        <p class="img-caption">Figura 6 - Tabela geral controle de uso</p>
+      <div class="img-wrapper"><img src="imagens/dashboard-visao-geral.png" class="img-screenshot" alt="Visão geral do dashboard com a barra de abas"></div>
+      <p class="img-caption">Figura 1 - Visão geral do dashboard, com a barra de abas no topo</p>
     </div>
   </div>
 </div>
 
-<div class="secao" id="secao-3">
+<div class="secao" id="secao-saude-api">
   <div class="secao-header">
     <span class="secao-numero editable-text">3</span>
-    <h2 class="editable-text">Controle de uso</h2>
+    <h2 class="editable-text">Saúde da API</h2>
   </div>
   <div class="secao-conteudo editable-area">
-    <p>Esta tela foca no perfil de acesso da equipe, destacando quem realiza mais buscas e quais tipos de documentos e clientes são mais demandados.</p>
+    <p>Aba exclusiva da versão interna, dedicada à equipe técnica para monitorar a estabilidade das requisições feitas às APIs da plataforma, evidenciando latência, taxa de erro e os endpoints mais críticos.</p>
 
-    <h3 id="secao-3-1">3.1. Visão geral da página</h3>
-    <p>Apresenta a visão macro do comportamento de uso da plataforma.</p>
-    <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 7 - Visao geral do controle de uso.png" class="img-screenshot" alt="Visão geral do controle de uso"></div>
-        <p class="img-caption">Figura 7 - Visão geral do controle de uso</p>
+    <div class="aviso">
+      <span class="material-icons-round">warning</span>
+      <p><strong>Atenção:</strong> Esta página não está disponível na versão externa (gestão) do dashboard.</p>
     </div>
 
-    <h3 id="secao-3-2">3.2. Filtros disponíveis</h3>
-    <p>Compartilha os mesmos filtros (Período, Clientes, Empresas e Usuários) descritos na visão geral do dashboard.</p>
     <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 8 - Filtros do controle de uso.png" class="img-screenshot" alt="Filtros do controle de uso"></div>
-        <p class="img-caption">Figura 8 - Filtros do controle de uso</p>
+      <div class="img-wrapper"><img src="imagens/saude-api-visao-geral.png" class="img-screenshot" alt="Visão geral da página de saúde da API"></div>
+      <p class="img-caption">Figura 2 - Visão geral da página de Saúde da API</p>
     </div>
 
-    <h3 id="secao-3-3">3.3. Indicadores</h3>
-    <p>Exibe os mesmos indicadores de volume de acesso da página anterior.</p>
-    <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 9 - Indicadores do controle de uso.png" class="img-screenshot" alt="Indicadores do controle de uso"></div>
-        <p class="img-caption">Figura 9 - Indicadores do controle de uso</p>
-    </div>
+    <h3 id="secao-saude-api-filtros">3.1. Filtros disponíveis</h3>
+    <p>O cabeçalho permite refinar a análise técnica das requisições:</p>
+    <ul>
+      <li><strong>Escolha o período:</strong> Define a data inicial e final da análise.</li>
+      <li><strong>Escolha o Endpoint:</strong> Filtra as requisições por endpoint específico da API.</li>
+      <li><strong>Escolha as ferramentas:</strong> Restringe a análise às chamadas originadas de uma ferramenta.</li>
+      <li><strong>Escolha o método da chamada:</strong> Segmenta pelo método HTTP utilizado (ex.: GET ou POST).</li>
+    </ul>
 
-    <h3 id="secao-3-4">3.4. Usuários com mais acessos</h3>
-    <p>Este gráfico classifica os membros da equipe com base no volume de atividade, identificando quem concentra as requisições.</p>
-    <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 10 - Grafico usuarios com mais acessos.png" class="img-screenshot" alt="Gráfico usuários com mais acessos"></div>
-        <p class="img-caption">Figura 10 - Gráfico usuários com mais acessos</p>
-    </div>
+    <h3 id="secao-saude-api-indicadores">3.2. Indicadores</h3>
+    <p>Os cartões resumem o desempenho técnico das requisições no período:</p>
+    <ul>
+      <li><strong>Taxa de erro no mês:</strong> Percentual de requisições que retornaram erro.</li>
+      <li><strong>Latência média (ms):</strong> Tempo médio de resposta das chamadas, em milissegundos.</li>
+      <li><strong>Latência p95 (ms):</strong> Tempo abaixo do qual 95% das chamadas são respondidas (percentil 95).</li>
+      <li><strong>Endpoint mais lento:</strong> Identifica o endpoint com o maior tempo de resposta.</li>
+    </ul>
 
-    <h3 id="secao-3-5">3.5. Consultas por tipo de documento</h3>
-    <p>Apresenta a distribuição das buscas de acordo com a categoria do documento fiscal (NF-e, DIFAL, EFD Contribuições, etc.).</p>
-    <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 11 - Grafico consultas por tipo de documento.png" class="img-screenshot" alt="Gráfico consultas por tipo de documento"></div>
-        <p class="img-caption">Figura 11 - Gráfico consultas por tipo de documento</p>
-    </div>
+    <h3 id="secao-saude-api-graficos">3.3. Gráficos</h3>
+    <p>A página apresenta três gráficos de análise:</p>
+    <ul>
+      <li><strong>Taxa de erro por mês:</strong> gráfico de linha com a evolução do percentual de erros, útil para identificar picos e tendências.</li>
+      <li><strong>Distribuição de status de resposta:</strong> gráfico de rosca com a proporção das respostas por status, evidenciando a participação das chamadas bem-sucedidas em relação às que retornaram erro.</li>
+      <li><strong>Ferramentas com maior latência:</strong> barras horizontais que ranqueiam as ferramentas pelo tempo de resposta das suas chamadas.</li>
+    </ul>
 
-    <h3 id="secao-3-6">3.6. Clientes mais acessados por tipo de acesso</h3>
-    <p>Elenca os grupos de empresas mais consultados. As barras utilizam cores para distinguir a intenção da busca entre "Consulta de dados" e "Exportação para Excel".</p>
-    <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 12 - Grafico clientes mais acessados.png" class="img-screenshot" alt="Gráfico clientes mais acessados"></div>
-        <p class="img-caption">Figura 12 - Gráfico clientes mais acessados</p>
-    </div>
+    <h3 id="secao-saude-api-tabela">3.4. Ranking de endpoints por chamadas e taxa de erro</h3>
+    <p>Tabela que lista os endpoints com o volume de chamadas e a respectiva taxa de erro, permitindo priorizar a investigação dos pontos mais utilizados ou mais instáveis.</p>
   </div>
 </div>
 
-<div class="secao" id="secao-4">
+<div class="secao" id="secao-envio">
   <div class="secao-header">
     <span class="secao-numero editable-text">4</span>
-    <h2 class="editable-text">Detalhamento de operações</h2>
+    <h2 class="editable-text">Envio de Documentos</h2>
   </div>
   <div class="secao-conteudo editable-area">
-    <p>Esta página fornece uma visão tabular focada em auditar quais funções cada colaborador executa dentro do sistema.</p>
+    <p>Esta página acompanha o volume de documentos enviados ao Drive da PSA pela equipe, com a distribuição por tipo de arquivo e por analista responsável.</p>
 
-    <h3 id="secao-4-1">4.1. Visão geral da página</h3>
-    <p>Apresenta a disposição da tabela de auditoria de ações cruzadas com os totais de uso.</p>
     <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 13 - Visao geral do detalhamento de operacoes.png" class="img-screenshot" alt="Visão geral do detalhamento de operações"></div>
-        <p class="img-caption">Figura 13 - Visão geral do detalhamento de operações</p>
+      <div class="img-wrapper"><img src="imagens/envio-visao-geral.png" class="img-screenshot" alt="Visão geral da página de envio de documentos"></div>
+      <p class="img-caption">Figura 3 - Visão geral da página de Envio de Documentos</p>
     </div>
 
-    <h3 id="secao-4-2">4.2. Filtros disponíveis</h3>
-    <p>Mantém o padrão de filtros (Período, Clientes, Empresas e Usuários).</p>
-    <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 14 - Filtros do detalhamento de operacoes.png" class="img-screenshot" alt="Filtros do detalhamento de operações"></div>
-        <p class="img-caption">Figura 14 - Filtros do detalhamento de operações</p>
-    </div>
+    <h3 id="secao-envio-filtros">4.1. Filtros disponíveis</h3>
+    <p>O cabeçalho permite refinar a análise dos envios:</p>
+    <ul>
+      <li><strong>Escolha o período:</strong> Define a data inicial e final da análise.</li>
+      <li><strong>Escolha o cliente:</strong> Filtra por um grupo ou família de empresas.</li>
+      <li><strong>Escolha o contribuinte:</strong> Direciona a análise para um contribuinte específico.</li>
+      <li><strong>Tipo de arquivo:</strong> Segmenta os envios por categoria de documento.</li>
+    </ul>
 
-    <h3 id="secao-4-3">4.3. Indicadores</h3>
-    <p>Exibe os indicadores padrão de volume das telas anteriores.</p>
-    <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 15 - Indicadores do detalhamento de operacoes.png" class="img-screenshot" alt="Indicadores do detalhamento de operações"></div>
-        <p class="img-caption">Figura 15 - Indicadores do detalhamento de operações</p>
-    </div>
+    <h3 id="secao-envio-indicadores">4.2. Indicadores</h3>
+    <p>Os cartões resumem o volume de envios no período:</p>
+    <ul>
+      <li><strong>Documentos enviados:</strong> Quantidade total de documentos enviados ao Drive.</li>
+      <li><strong>Usuários que enviaram:</strong> Número de colaboradores que realizaram envios.</li>
+      <li><strong>Média de envios por usuário:</strong> Média de documentos enviados por usuário ativo.</li>
+      <li><strong>Usuário com mais envios:</strong> Colaborador responsável pelo maior volume de envios.</li>
+    </ul>
 
-    <h3 id="secao-4-4">4.4. Tabela de operações por usuário</h3>
-    <p>A tabela detalha o volume de ações por usuário, dividindo a quantidade entre: Consulta de dados, Exportação para Excel, Atualização de dados no DW e Download de arquivo original.</p>
-    <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 16 - Tabela de operacoes por usuario.png" class="img-screenshot" alt="Tabela de operações por usuário"></div>
-        <p class="img-caption">Figura 16 - Tabela de operações por usuário</p>
-    </div>
+    <h3 id="secao-envio-graficos">4.3. Gráficos</h3>
+    <p>A página apresenta três gráficos de análise:</p>
+    <ul>
+      <li><strong>Total de documentos enviados por mês:</strong> barras com a evolução mensal do volume de envios ao Drive.</li>
+      <li><strong>Top usuários por documentos enviados:</strong> barras horizontais que ranqueiam os usuários pelo volume de documentos enviados.</li>
+      <li><strong>Total de documentos enviados por tipo de arquivo:</strong> barras com o volume segregado por categoria (NFe, CTe, EFD Contribuições, Balancete, EFD ICMS IPI, ECD, ECF, entre outros).</li>
+    </ul>
+
+    <h3 id="secao-envio-tabela">4.4. Detalhamento de envios por usuário</h3>
+    <p>Tabela que detalha os envios por usuário, com as colunas: usuário, tipo de documento predominante, total de documentos, percentual do total e data da última atualização.</p>
   </div>
 </div>
 
-<div class="secao" id="secao-5">
+<div class="secao" id="secao-erros">
   <div class="secao-header">
     <span class="secao-numero editable-text">5</span>
-    <h2 class="editable-text">Controle de uso interno</h2>
+    <h2 class="editable-text">Envios errados</h2>
   </div>
   <div class="secao-conteudo editable-area">
-    <p>Aba dedicada à equipe técnica para monitorar a estabilidade sistêmica e analisar o comportamento das requisições via API.</p>
+    <p>Esta página consolida os erros cometidos no envio de documentos, evidenciando as categorias predominantes e os responsáveis, para apoiar ações de correção e orientação da equipe.</p>
 
-    <h3 id="secao-5-1">5.1. Visão geral da página</h3>
-    <p>Apresenta a visão macro dos indicadores de sucesso e falha da API.</p>
     <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 17 - Visao geral do controle interno.png" class="img-screenshot" alt="Visão geral do controle interno"></div>
-        <p class="img-caption">Figura 17 - Visão geral do controle interno</p>
+      <div class="img-wrapper"><img src="imagens/erros-visao-geral.png" class="img-screenshot" alt="Visão geral da página de envios errados"></div>
+      <p class="img-caption">Figura 4 - Visão geral da página de Envios errados</p>
     </div>
 
-    <h3 id="secao-5-2">5.2. Filtros disponíveis</h3>
-    <p>Traz filtros específicos para o monitoramento:</p>
+    <h3 id="secao-erros-filtros">5.1. Filtros disponíveis</h3>
+    <p>O cabeçalho permite refinar a análise dos erros:</p>
     <ul>
-        <li><strong>Selecionar período:</strong> Permite definir a data da análise.</li>
-        <li><strong>Tipo de documento:</strong> Filtra as requisições por categoria fiscal.</li>
-        <li><strong>Tipo de operação:</strong> Isola as ações sistêmicas (consultas, exportações, etc.).</li>
-        <li><strong>Usuário:</strong> Direciona a análise para as requisições de uma credencial específica.</li>
+      <li><strong>Escolha o período:</strong> Define a data inicial e final da análise.</li>
+      <li><strong>Escolha o cliente:</strong> Filtra por um grupo ou família de empresas.</li>
+      <li><strong>Escolha o contribuinte:</strong> Direciona a análise para um contribuinte específico.</li>
+      <li><strong>Escolha o tipo de erro:</strong> Segmenta os erros pela categoria.</li>
     </ul>
-    <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 18 - Filtros do controle interno.png" class="img-screenshot" alt="Filtros do controle interno"></div>
-        <p class="img-caption">Figura 18 - Filtros do controle interno</p>
-    </div>
 
-    <h3 id="secao-5-3">5.3. Indicadores</h3>
-    <p>Complementa as métricas de acesso com indicadores de integridade:</p>
+    <h3 id="secao-erros-indicadores">5.2. Indicadores</h3>
+    <p>Os cartões resumem os erros no período:</p>
     <ul>
-        <li><strong>Consultas com falha:</strong> Volume absoluto de requisições que retornaram erro técnico.</li>
-        <li><strong>Consultas com sucesso:</strong> Volume absoluto de requisições concluídas adequadamente.</li>
+      <li><strong>Erros cometidos no mês:</strong> Quantidade total de erros registrados.</li>
+      <li><strong>Usuários que cometeram erros:</strong> Número de colaboradores com erros no período.</li>
+      <li><strong>Pastas de clientes com erro:</strong> Quantidade de pastas de clientes afetadas por erros.</li>
+      <li><strong>Usuário com mais erros:</strong> Colaborador com o maior volume de erros.</li>
     </ul>
+
+    <h3 id="secao-erros-graficos">5.3. Gráficos</h3>
+    <p>A página apresenta três gráficos de análise:</p>
+    <ul>
+      <li><strong>Erros cometidos por mês:</strong> barras com a evolução mensal da quantidade de erros.</li>
+      <li><strong>Erros cometidos por tipo de arquivo:</strong> barras que distribuem os erros pela categoria de documento (NFe, CTe, EFD ICMS IPI, EFD Contribuições, ICMS Saída, ECD, entre outros).</li>
+      <li><strong>Erros cometidos por categoria de erro:</strong> barras horizontais que agrupam os erros pela natureza da ocorrência (por exemplo, duplicidade por hash ou outras).</li>
+    </ul>
+
+    <h3 id="secao-erros-tabela">5.4. Ranking de erros cometidos por usuário</h3>
+    <p>Tabela que ranqueia os usuários pela quantidade de erros, com as colunas: usuário, erros, percentual do total e data do último erro registrado.</p>
+  </div>
+</div>
+
+<div class="secao" id="secao-consultas">
+  <div class="secao-header">
+    <span class="secao-numero editable-text">6</span>
+    <h2 class="editable-text">Uso da API</h2>
+  </div>
+  <div class="secao-conteudo editable-area">
+    <p>Esta página acompanha o volume de consultas e chamadas realizadas às APIs da plataforma, com a distribuição por tipo de operação, por ferramenta e por usuário.</p>
+
     <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 19 - Indicadores do controle interno.png" class="img-screenshot" alt="Indicadores do controle interno"></div>
-        <p class="img-caption">Figura 19 - Indicadores do controle interno</p>
+      <div class="img-wrapper"><img src="imagens/consultas-visao-geral.png" class="img-screenshot" alt="Visão geral da página de uso da API"></div>
+      <p class="img-caption">Figura 5 - Visão geral da página de Uso da API</p>
     </div>
 
-    <h3 id="secao-5-4">5.4. Método utilizado</h3>
-    <p>Este gráfico divide as requisições pelos métodos HTTP, comparando o volume de chamadas GET contra POST.</p>
+    <h3 id="secao-consultas-filtros">6.1. Filtros disponíveis</h3>
+    <p>O cabeçalho permite refinar a análise das consultas:</p>
+    <ul>
+      <li><strong>Escolha o período:</strong> Define a data inicial e final da análise.</li>
+      <li><strong>Escolha o cliente:</strong> Filtra por um grupo ou família de empresas.</li>
+      <li><strong>Escolha o contribuinte:</strong> Direciona a análise para um contribuinte específico.</li>
+      <li><strong>Escolha a ferramenta:</strong> Restringe as consultas a uma ferramenta da plataforma.</li>
+    </ul>
+
+    <h3 id="secao-consultas-indicadores">6.2. Indicadores</h3>
+    <p>Os cartões resumem o uso no período:</p>
+    <ul>
+      <li><strong>Consultas realizadas no mês:</strong> Quantidade total de consultas/chamadas realizadas.</li>
+      <li><strong>Usuários que realizaram consultas:</strong> Número de colaboradores que consultaram a plataforma.</li>
+      <li><strong>Total contribuintes consultados:</strong> Quantidade de contribuintes únicos acessados.</li>
+      <li><strong>Usuário com mais consultas:</strong> Colaborador com o maior volume de consultas.</li>
+    </ul>
+
+    <h3 id="secao-consultas-graficos">6.3. Gráficos</h3>
+    <p>A página apresenta três gráficos de análise:</p>
+    <ul>
+      <li><strong>Chamadas realizadas por mês:</strong> barras com a evolução mensal do volume de chamadas à API.</li>
+      <li><strong>Tipos das chamadas à API:</strong> barras que distribuem as chamadas pela operação acionada (consulta de dados, atualização de dados no DW, exportação para Excel e download de arquivo original).</li>
+      <li><strong>Top ferramentas mais consultadas:</strong> barras horizontais que ranqueiam as ferramentas pelo volume de consultas.</li>
+    </ul>
+
+    <h3 id="secao-consultas-tabela">6.4. Ranking de usuários por consulta</h3>
+    <p>Tabela que ranqueia os usuários pelo volume de chamadas realizadas à plataforma.</p>
+  </div>
+</div>
+
+<div class="secao" id="secao-clientes">
+  <div class="secao-header">
+    <span class="secao-numero editable-text">7</span>
+    <h2 class="editable-text">Clientes &amp; Contribuintes</h2>
+  </div>
+  <div class="secao-conteudo editable-area">
+    <p>Esta página apresenta a distribuição da atividade da equipe entre as pastas de cliente e os contribuintes atendidos, ajudando a identificar onde o esforço de consulta e envio está concentrado.</p>
+
     <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 20 - Grafico metodo utilizado.png" class="img-screenshot" alt="Gráfico método utilizado"></div>
-        <p class="img-caption">Figura 20 - Gráfico método utilizado</p>
+      <div class="img-wrapper"><img src="imagens/clientes-visao-geral.png" class="img-screenshot" alt="Visão geral da página de clientes e contribuintes"></div>
+      <p class="img-caption">Figura 6 - Visão geral da página de Clientes &amp; Contribuintes</p>
     </div>
 
-    <h3 id="secao-5-5">5.5. Taxa de sucesso e falhas</h3>
-    <p>Evidencia a integridade da API, demonstrando a proporção de consultas bem-sucedidas em relação às falhas.</p>
-    <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 21 - Grafico taxa de sucesso e falhas.png" class="img-screenshot" alt="Gráfico taxa de sucesso e falhas"></div>
-        <p class="img-caption">Figura 21 - Gráfico taxa de sucesso e falhas</p>
-    </div>
+    <h3 id="secao-clientes-filtros">7.1. Filtros disponíveis</h3>
+    <p>O cabeçalho permite refinar a análise da atividade:</p>
+    <ul>
+      <li><strong>Escolha o período:</strong> Define a data inicial e final da análise.</li>
+      <li><strong>Escolha o cliente:</strong> Filtra por um grupo ou família de empresas.</li>
+      <li><strong>Escolha o contribuinte:</strong> Direciona a análise para um contribuinte específico.</li>
+      <li><strong>Escolha o usuário:</strong> Restringe a análise à atividade de um colaborador.</li>
+    </ul>
 
-    <h3 id="secao-5-6">5.6. Tipos de consulta</h3>
-    <p>Quantifica as requisições agrupando-as pela funcionalidade acionada via API (Consulta, Exportação, Atualização, Download).</p>
-    <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 22 - Grafico tipos de consulta.png" class="img-screenshot" alt="Gráfico tipos de consulta"></div>
-        <p class="img-caption">Figura 22 - Gráfico tipos de consulta</p>
-    </div>
+    <h3 id="secao-clientes-indicadores">7.2. Indicadores</h3>
+    <p>Os cartões resumem a atividade no período:</p>
+    <ul>
+      <li><strong>Pastas de clientes atendidas no período:</strong> Quantidade de pastas de clientes com atividade.</li>
+      <li><strong>Contribuintes consultados pela equipe:</strong> Número de contribuintes únicos atendidos.</li>
+      <li><strong>Usuário com mais clientes consultados:</strong> Colaborador que acessou o maior número de clientes.</li>
+      <li><strong>Pasta com mais atividade:</strong> Pasta de cliente com o maior volume de atividade.</li>
+    </ul>
 
-    <h3 id="secao-5-7">5.7. Consultas por usuário</h3>
-    <p>Exibe quais credenciais de usuários estão gerando a maior carga de requisições diretas na API.</p>
-    <div class="img-container">
-        <div class="img-wrapper"><img src="imagens/Figura 23 - Grafico consultas por usuario uso interno.png" class="img-screenshot" alt="Gráfico consultas por usuário uso interno"></div>
-        <p class="img-caption">Figura 23 - Gráfico consultas por usuário uso interno</p>
-    </div>
+    <h3 id="secao-clientes-graficos">7.3. Gráficos</h3>
+    <p>A página apresenta três gráficos de análise:</p>
+    <ul>
+      <li><strong>Clientes que a equipe mais consultou:</strong> barras horizontais que ranqueiam os clientes pelo volume de consultas realizadas pela equipe.</li>
+      <li><strong>Pastas de clientes que mais receberam envios:</strong> barras horizontais que ranqueiam as pastas pelo volume de documentos recebidos.</li>
+      <li><strong>Contribuintes que a equipe mais consultou:</strong> barras horizontais que ranqueiam os contribuintes pelo volume de consultas.</li>
+    </ul>
+
+    <h3 id="secao-clientes-tabela">7.4. Ranking de contribuintes consultados pela equipe</h3>
+    <p>Tabela que lista os contribuintes consultados, com as colunas: contribuinte, consultas, percentual do total e data do evento mais recente.</p>
   </div>
 </div>

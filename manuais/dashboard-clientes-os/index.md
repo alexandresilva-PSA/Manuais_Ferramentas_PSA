@@ -102,7 +102,7 @@ toc:
 
   <div class="secao-conteudo editable-area">
 
-    <p>Este manual apresenta as funcionalidades do <strong>Dashboard de Clientes e OS</strong>, uma ferramenta estratégica desenvolvida no Looker Studio para o ecossistema PSA Elevate. O painel centraliza indicadores críticos de performance, permitindo o acompanhamento em tempo real do faturamento, do perfil da carteira de clientes e do status operacional das Ordens de Serviço (OS).</p>
+    <p>Este manual apresenta as funcionalidades do <strong>Dashboard de Clientes e OS</strong>, uma ferramenta estratégica desenvolvida no Data Studio para o ecossistema PSA Elevate. O painel centraliza indicadores críticos de performance, permitindo o acompanhamento em tempo real do faturamento, do perfil da carteira de clientes e do status operacional das Ordens de Serviço (OS).</p>
 
     <p>O objetivo deste documento é orientar gestores e analistas na exploração das três visões principais do relatório, facilitando a tomada de decisão baseada em dados consolidados e métricas de ticket médio e produtividade.</p>
 
